@@ -19,11 +19,15 @@ namespace BINAES_Proyecto.Forms
 
         private void frmPrestamo_Load(object sender, System.EventArgs e)
         {
-            MessageBox.Show("Antes de solicitar un prestamo, se requiere buscar el ejemplar deseado para saber su existencia.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             pnlFoundItem_Prestamo.Visible = false;
 
             cmbTipoBusqueda_Prestamo.Text = "Titulo completo";
+
+            pnlPrestamoContainer.BackColor = Color.FromArgb(5, 29, 64);
+
+            grpVerificarExistencia_Prestamo.BackColor = Color.White;
+
+            MessageBox.Show("Antes de solicitar un prestamo, se requiere buscar el ejemplar deseado para saber su existencia y disponibilidad.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnBuscar_Prestamo_Click(object sender, System.EventArgs e)
@@ -32,24 +36,113 @@ namespace BINAES_Proyecto.Forms
             {
                 case "Titulo completo":
 
-                    Ejemplar Buscado = PrestamoDAO.FiltrarPorTitulo(txtBusqueda_Prestamo.Text.Trim());
-
-                    if(Buscado != null)
+                    if(txtBusqueda_Prestamo.TextLength != 0)
                     {
-                        MessageBox.Show("Su ejemplar si existe.");
+                        Ejemplar Buscado = new Ejemplar();
 
-                        pnlFoundItem_Prestamo.Visible = true;
+                        Buscado = PrestamoDAO.TituloCompleto(txtBusqueda_Prestamo.Text.Trim());
 
-                        picFoundItem_Prestamo.Image = Image.FromFile(Buscado.Portada);
+                        if (Buscado.ID != -1)
+                        {
+                            MessageBox.Show("Su ejemplar si existe.");
+
+                            pnlFoundItem_Prestamo.BackColor = Color.White;
+
+                            pnlFoundItem_Prestamo.Visible = true;
+
+                            picFoundItem_Prestamo.Image = Image.FromFile(Buscado.Portada);
+
+                            lblNombre_prestamo.Text = "Titulo: " + Buscado.Nombre_Ejemplar;
+
+                            lblID_prestamo.Text = "ID de libro: " + Buscado.ID.ToString();
+
+                            lblColeccion_prestamo.Text = "Coleccion a la que pertenece: " + Buscado.Coleccion;
+
+                            lblAutor_Prestamo.Text = "Autor(es): " + Buscado.Autor;
+
+                            lblISBN_PRESTAMO.Text = "ISBN: " + Buscado.ISBN;
+
+                            lblISSN_PRESTAMO.Text = "ISSN: " + Buscado.ISSN; 
+                            
+                            lblDOI_PRESTAMO.Text= "DOI: " + Buscado.DOI;
+
+                            lblFecha_Prestamo.Text = "Fecha de publicacion: " + Buscado.Fecha_de_publicacion.ToShortDateString();
+
+                            lblEditorial_Prestamo.Text = "Editorial: " + Buscado.Editorial;
+
+                            lblFormato_Prestamo.Text = "Formato del material: " + Buscado.Formato;
+
+                            lblIdioma_Prestamo.Text = "Idioma: " + Buscado.Idioma;
+
+                            lbl_PC_prestamo.Text = "Palabras claves asociadas: " + Buscado.Palabras_clave;
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Su ejemplar no existe.");
+                        }
                     }
-                    else 
+                    else
                     {
-                        MessageBox.Show("Su ejemplar no existe.");
+                        MessageBox.Show("Ingrese texto en su barra de busqueda.");
                     }
                     
                     break;
 
                 case "Titulo parcial":
+
+                    if (txtBusqueda_Prestamo.TextLength != 0)
+                    {
+                        Ejemplar Buscado = new Ejemplar();
+
+                        Buscado = PrestamoDAO.TituloParcial(txtBusqueda_Prestamo.Text.Trim());
+
+                        if (Buscado.ID != -1)
+                        {
+                            MessageBox.Show("Su ejemplar si existe.");
+
+                            pnlFoundItem_Prestamo.BackColor = Color.White;
+
+                            pnlFoundItem_Prestamo.Visible = true;
+
+                            picFoundItem_Prestamo.Image = Image.FromFile(Buscado.Portada);
+
+                            lblNombre_prestamo.Text = "Titulo: " + Buscado.Nombre_Ejemplar;
+
+                            lblID_prestamo.Text = "ID de libro: " + Buscado.ID.ToString();
+
+                            lblColeccion_prestamo.Text = "Coleccion a la que pertenece: " + Buscado.Coleccion;
+
+                            lblAutor_Prestamo.Text = "Autor(es): " + Buscado.Autor;
+
+                            lblISBN_PRESTAMO.Text = "ISBN: " + Buscado.ISBN;
+
+                            lblISSN_PRESTAMO.Text = "ISSN: " + Buscado.ISSN;
+
+                            lblDOI_PRESTAMO.Text = "DOI: " + Buscado.DOI;
+
+                            lblFecha_Prestamo.Text = "Fecha de publicacion: " + Buscado.Fecha_de_publicacion.ToShortDateString();
+
+                            lblEditorial_Prestamo.Text = "Editorial: " + Buscado.Editorial;
+
+                            lblFormato_Prestamo.Text = "Formato del material: " + Buscado.Formato;
+
+                            lblIdioma_Prestamo.Text = "Idioma: " + Buscado.Idioma;
+
+                            lbl_PC_prestamo.Text = "Palabras claves asociadas: " + Buscado.Palabras_clave;
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Su ejemplar no existe.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese texto en su barra de busqueda.");
+                    }
+
+
                     break;
                 case "Autor":
                     break;

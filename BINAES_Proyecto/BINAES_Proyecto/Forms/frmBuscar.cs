@@ -294,5 +294,10 @@ namespace BINAES_Proyecto.Forms
 
             }
         }
+
+        private void frmBuscar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

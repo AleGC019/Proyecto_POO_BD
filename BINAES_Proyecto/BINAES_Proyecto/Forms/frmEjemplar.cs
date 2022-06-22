@@ -383,7 +383,7 @@ namespace BINAES_Proyecto.Forms
                         }
                         else
                         {
-                            MessageBox.Show("La imagen ya existe y pertenece a otro material.", "Error en importacion.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                            MessageBox.Show("La imagen ya existe en el directorio de recursos.", "Error en importacion.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
                         }
                     }
 

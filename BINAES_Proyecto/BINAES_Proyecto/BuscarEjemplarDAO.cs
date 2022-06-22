@@ -76,11 +76,10 @@ namespace BINAES_Proyecto
                     "INNER JOIN AUTOR ON AUTOR.id_ejemplar = EJEMPLAR.id " +
                     "INNER JOIN COLECCION ON COLECCION.id = EJEMPLAR.id_coleccion " +
                     "INNER JOIN PALABRAS_CLAVE ON PALABRAS_CLAVE.id_ejemplar = EJEMPLAR.id " +
-                    "WHERE EJEMPLAR.nombre like %@titulobuscar% GROUP BY EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre, AUTOR.autor, EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial, FORMATO.formato, IDIOMA.idioma ";
-
+                    "WHERE EJEMPLAR.nombre LIKE @titulobuscar GROUP BY EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre, AUTOR.autor, EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial, FORMATO.formato, IDIOMA.idioma ";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@titulobuscar",  titulo);
+                command.Parameters.AddWithValue("@titulobuscar", '%' + titulo + '%');
 
                 connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
@@ -94,7 +93,7 @@ namespace BINAES_Proyecto
                         eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
                         eje.Idioma = reader["iidioma"].ToString();
                         eje.Editorial = reader["eeditorial"].ToString();
-                        eje.Formato= reader["fformato"].ToString();
+                        eje.Formato = reader["fformato"].ToString();
                         eje.Autor = reader["aautor"].ToString();
                         eje.ISBN = reader["isbn"].ToString();
                         eje.ISSN = reader["issn"].ToString();
@@ -106,6 +105,7 @@ namespace BINAES_Proyecto
                 }
                 connection.Close();
             }
+
             return lista;
         }
 
