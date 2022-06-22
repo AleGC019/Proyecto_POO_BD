@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BINAES_Proyecto.Forms;
+using System.IO;
+using BINAES_Proyecto.Properties;
 
 namespace BINAES_Proyecto
 {
@@ -117,7 +119,14 @@ namespace BINAES_Proyecto
 
         private void frmBinaesMain_Load(object sender, EventArgs e)
         {
-                
+            try
+            {
+                imgDAO.CargaInicialIMG();
+            }
+            catch(Exception E)
+            {
+                MessageBox.Show("Error en carga de imagenes en base de datos.");
+            }
         }
     }
 }

@@ -120,6 +120,7 @@
     <Compile Include="Genero.cs" />
     <Compile Include="GeneroDAO.cs" />
     <Compile Include="Idioma.cs" />
+    <Compile Include="imgDAO.cs" />
     <Compile Include="Objetivos.cs" />
     <Compile Include="Palabras_Clave.cs" />
     <Compile Include="PrestamoDAO.cs" />
