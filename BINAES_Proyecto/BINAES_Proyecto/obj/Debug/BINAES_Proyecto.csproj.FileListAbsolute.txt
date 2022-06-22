@@ -1,0 +1,121 @@
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.AssemblyReference.cache
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Properties.Resources.resources
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.GenerateResource.cache
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesMain.resources
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmInicio.resources
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmBuscar.resources
+C:\Users\User\Documents\CICLO1_2022\POO\code\repasoP1\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmUsuario.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmBuscar.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmInicio.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmUsuario.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesMain.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Properties.Resources.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.GenerateResource.cache
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmColeccion.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.AssemblyReference.cache
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmBuscar.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmColeccion.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmInicio.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmUsuario.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesMain.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Properties.Resources.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.GenerateResource.cache
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.AssemblyReference.cache
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmBuscar.resources
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmColeccion.resources
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmInicio.resources
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmUsuario.resources
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesMain.resources
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Properties.Resources.resources
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.GenerateResource.cache
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
+C:\Users\fereg\Desktop\POO_BDD_PROYECTO\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
+C:\Users\User\Desktop\CambiarForms\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEjemplar.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEjemplar.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.AssemblyReference.cache
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmBuscar.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmColeccion.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEjemplar.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmInicio.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmUsuario.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesMain.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Properties.Resources.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.GenerateResource.cache
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmInicioSesion.resources
+C:\Users\alegc\Documents\Proyecto a retocar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEvento.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmBuscar.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmColeccion.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEjemplar.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEvento.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmInicio.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmUsuario.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesMain.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmInicioSesion.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Properties.Resources.resources
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.GenerateResource.cache
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
+C:\Users\User\Desktop\repoUpdated\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe.config
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.exe
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\BINAES_Proyecto.pdb
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.AssemblyReference.cache
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.SuggestedBindingRedirects.cache
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmBuscar.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmColeccion.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEjemplar.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmEvento.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmInicio.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmPrestamo.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmUsuario.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesMain.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmInicioSesion.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Properties.Resources.resources
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.GenerateResource.cache
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
+C:\Users\alegc\Documents\EventosModificar\POO_Proyecto_Repo2\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb

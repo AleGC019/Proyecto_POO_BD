@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FAAF475-7413-461D-8611-545B4A16469B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BINAES_Proyecto</RootNamespace>
+    <AssemblyName>BINAES_Proyecto</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Area.cs" />
+    <Compile Include="Autor.cs" />
+    <Compile Include="BuscarEjemplarDAO.cs" />
+    <Compile Include="EventoDAO.cs" />
+    <Compile Include="Coleccion.cs" />
+    <Compile Include="Editorial.cs" />
+    <Compile Include="EditorialDAO.cs" />
+    <Compile Include="Ejemplar.cs" />
+    <Compile Include="EjemplarDAO.cs" />
+    <Compile Include="Evento.cs" />
+    <Compile Include="Formato.cs" />
+    <Compile Include="Forms\frmBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBuscar.Designer.cs">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmColeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmColeccion.Designer.cs">
+      <DependentUpon>frmColeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEjemplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEjemplar.Designer.cs">
+      <DependentUpon>frmEjemplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEvento.Designer.cs">
+      <DependentUpon>frmEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmPrestamo.Designer.cs">
+      <DependentUpon>frmPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReserva.Designer.cs">
+      <DependentUpon>frmReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsuario.Designer.cs">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBinaesMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBinaesMain.Designer.cs">
+      <DependentUpon>frmBinaesMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioSesion.Designer.cs">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genero.cs" />
+    <Compile Include="GeneroDAO.cs" />
+    <Compile Include="Idioma.cs" />
+    <Compile Include="Objetivos.cs" />
+    <Compile Include="Palabras_Clave.cs" />
+    <Compile Include="PrestamoDAO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tipo.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioDAO.cs" />
+    <EmbeddedResource Include="Forms\frmBuscar.resx">
+      <DependentUpon>frmBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmColeccion.resx">
+      <DependentUpon>frmColeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEjemplar.resx">
+      <DependentUpon>frmEjemplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEvento.resx">
+      <DependentUpon>frmEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmPrestamo.resx">
+      <DependentUpon>frmPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsuario.resx">
+      <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBinaesMain.resx">
+      <DependentUpon>frmBinaesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioSesion.resx">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoQueElVientoSeLlevo.jpg" />
+    <None Include="Resources\LosMiserables.jpg" />
+    <None Include="Resources\PedroParamo.jpg" />
+    <None Include="Resources\CienAniosDeSoledad.jpg" />
+    <None Include="Resources\HarryPotterYLaPiedraFilosofal.jpg" />
+    <None Include="Resources\CrimenYCastigo.jpg" />
+    <None Include="Resources\CodigoDaVinci.jpg" />
+    <None Include="Resources\ElSenorDeLosAnillos.jpg" />
+    <Content Include="Resources\Imagen1Inicio.png" />
+    <Content Include="Resources\Imagen2Inicio.png" />
+    <Content Include="Resources\Imagen3Inicio.png" />
+    <Content Include="Resources\Imagen4Inicio.png" />
+    <Content Include="Resources\Imagen5Inicio.png" />
+    <Content Include="Resources\Imagen6Inicio.png" />
+    <Content Include="Resources\Imagen7Inicio.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
