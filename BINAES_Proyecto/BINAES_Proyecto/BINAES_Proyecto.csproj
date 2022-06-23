@@ -58,6 +58,18 @@
     <Compile Include="Area.cs" />
     <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
+    <Compile Include="frmCrearAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearAutor.Designer.cs">
+      <DependentUpon>frmCrearAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrearEditorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearEditorial.Designer.cs">
+      <DependentUpon>frmCrearEditorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="EventoDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="Editorial.cs" />
@@ -120,6 +132,12 @@
     <Compile Include="frmBinaesMain.Designer.cs">
       <DependentUpon>frmBinaesMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCrearPalabrasClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrearPalabrasClave.Designer.cs">
+      <DependentUpon>frmCrearPalabrasClave.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +179,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBinaesMain.resx">
       <DependentUpon>frmBinaesMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearAutor.resx">
+      <DependentUpon>frmCrearAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearEditorial.resx">
+      <DependentUpon>frmCrearEditorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrearPalabrasClave.resx">
+      <DependentUpon>frmCrearPalabrasClave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>

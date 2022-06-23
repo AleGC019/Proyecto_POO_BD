@@ -31,6 +31,22 @@ namespace BINAES_Proyecto.Forms
             cmbAreaColeccion.DisplayMember = "areaNombre";
             cmbAreaColeccion.DataSource = GeneroDAO.CargarDatosArea();
 
+
+            cmbActualizarGenero.DataSource = null;
+            cmbActualizarGenero.ValueMember = "generoID";
+            cmbActualizarGenero.DisplayMember = "generoNombre";
+            cmbActualizarGenero.DataSource = GeneroDAO.CargarDatos();
+            
+            cmbActualizarTipo.DataSource = null;
+            cmbActualizarTipo.ValueMember = "tipoID";
+            cmbActualizarTipo.DisplayMember = "tipoNombre";
+            cmbActualizarTipo.DataSource = GeneroDAO.CargarDatosTipo();
+
+            cmbActualizarArea.DataSource = null;
+            cmbActualizarArea.ValueMember = "areaID";
+            cmbActualizarArea.DisplayMember = "areaNombre";
+            cmbActualizarArea.DataSource = GeneroDAO.CargarDatosArea();
+
         }
 
         private void btnMostrarColeccion_Click(object sender, EventArgs e)
@@ -51,6 +67,28 @@ namespace BINAES_Proyecto.Forms
             
             GeneroDAO.IngresarColeccion(col);
             MessageBox.Show("Ingresado con éxito");
+        }
+
+
+        private void btnEliminarColeccion_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtidEliminarColeccion.Text);
+            GeneroDAO.EliminarColeccion(id);
+
+            MessageBox.Show("Colección con id: " + id + " eliminada con éxito");
+        }
+
+        private void btnActualizarColeccion_Click(object sender, EventArgs e)
+        {
+            Coleccion col = new Coleccion();
+            col.coleccionID = Convert.ToInt32(txtIDActualizarColeccion.Text);
+            col.coleccionNombre = txtActualizarColeccion.Text;
+            col.generoID = Convert.ToInt32(cmbActualizarGenero.SelectedValue);
+            col.tipoID = Convert.ToInt32(cmbActualizarTipo.SelectedValue);
+            col.areaID = Convert.ToInt32(cmbActualizarArea.SelectedValue);
+            
+            GeneroDAO.ActualizarColeccion(col);
+            MessageBox.Show("datos actualizados");
         }
     }
 }

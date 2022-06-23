@@ -35,11 +35,8 @@ namespace BINAES_Proyecto
                 command.ExecuteNonQuery();
                 connection.Close();
             }
-            
-            Palabras_Clave PalabrasClave= new Palabras_Clave(ejem.Palabras_clave,EjemplarDAO.nuevoidEejmplar());
-            InsertarNuevaPalabraClave(PalabrasClave);
-            
-            
+            //Palabras_Clave PalabrasClave= new Palabras_Clave(ejem.Palabras_clave,EjemplarDAO.nuevoidEejmplar());
+           //InsertarNuevaPalabraClave(PalabrasClave);
 
         }
 
@@ -99,7 +96,34 @@ namespace BINAES_Proyecto
                 command.ExecuteNonQuery();
                 connection.Close();
             }
+            
+            
+        }
+        
+        // crear nuevo autor 
+        
+        public static void InsertarNuevoAutor(Autor autor)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string nonquery =
+                    "INSERT INTO AUTOR (autor, id_ejemplar)" +
+                    "VALUES (@autor, @id_ejemplar)";
 
+                SqlCommand command = new SqlCommand(nonquery, connection);
+                command.Parameters.AddWithValue("@autor", autor.nombreAutor);
+                command.Parameters.AddWithValue("@id_ejemplar", autor.ejemplarID);
+                
+                
+                
+              
+                    
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            
             
         }
 

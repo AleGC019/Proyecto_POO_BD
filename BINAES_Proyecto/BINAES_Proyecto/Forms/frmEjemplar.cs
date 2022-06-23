@@ -48,25 +48,18 @@ namespace BINAES_Proyecto.Forms
             ejem.ISBN = txtIsbn.Text;
             ejem.ISSN = txtissn.Text;
             ejem.DOI = txtDoi.Text;
-            ejem.Palabras_clave = txtPalabraClave1.Text;
-            ejem.Palabras_clave = txtPalabraClave2.Text;
-            ejem.Palabras_clave = txtPalabraClave3.Text;
+            
             
             
             EjemplarDAO.IngresarEjemplar(ejem);
-            MessageBox.Show("Ingresado con éxito");
+            MessageBox.Show("Ingresado con éxito el numero de id de este ejemplar es " + EjemplarDAO.nuevoidEejmplar());
         }
         
 
         private void btnCrearEditorial_Click(object sender, EventArgs e)
         {
-            Editorial edit = new Editorial();
-            edit.nombreEditorial = txtNuevaEditorial.Text;
+            new frmCrearEditorial().Show();
             
-            
-            EditorialDAO.InsertarNuevaEditorial(edit);
-            MessageBox.Show("Editorial ingresada con éxito");
-            Update();
         }
 
 
@@ -394,6 +387,16 @@ namespace BINAES_Proyecto.Forms
                 MessageBox.Show("Importe de imagen no completado. Intente en otro momento.", "Error en importacion.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnCrearPalabrasClave_Click(object sender, EventArgs e)
+        {
+            new frmCrearPalabrasClave().Show();
+        }
+
+        private void btnCrearAutor_Click(object sender, EventArgs e)
+        {
+            new frmCrearAutor().Show();
         }
     } 
 }
