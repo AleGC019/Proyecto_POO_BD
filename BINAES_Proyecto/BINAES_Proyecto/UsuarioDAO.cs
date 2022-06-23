@@ -14,8 +14,8 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string nonquery =
-                    "INSERT INTO USUARIO (nombre, ocupacion, direccion, correo, telefono, institucion)" +
-                    "VALUES (@nuevonombre, @nuevaocupacion, @nuevadireccion, @nuevocorreo, @nuevotelefono, @nuevainstitucion)";
+                    "INSERT INTO USUARIO (nombre, ocupacion, direccion, correo, telefono, institucion, fotografia)" +
+                    "VALUES (@nuevonombre, @nuevaocupacion, @nuevadireccion, @nuevocorreo, @nuevotelefono, @nuevainstitucion, @nuevafotografia)";
 
                 SqlCommand command = new SqlCommand(nonquery, connection);
                 command.Parameters.AddWithValue("@nuevonombre", user.UsuarioNombre);
@@ -24,6 +24,7 @@ namespace BINAES_Proyecto
                 command.Parameters.AddWithValue("@nuevocorreo", user.UserCorreo);
                 command.Parameters.AddWithValue("@nuevotelefono", user.UserTelefono);
                 command.Parameters.AddWithValue("@nuevainstitucion", user.UserInstitucion);
+                command.Parameters.AddWithValue("@nuevafotografia", user.fotoUsuario);
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -129,6 +130,60 @@ namespace BINAES_Proyecto
                 connection.Close();
 
             }
+        }
+        
+        
+        public static List<Usuario> AdminLoginInfo(string nombre, string contra)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            List<Usuario> Listausu = new List<Usuario>();
+
+            using (SqlConnection connection = new SqlConnection(cadena)){
+                string query = "SELECT USUARIO.nombre AS 'usuario', USUARIO.contra AS 'contra'" +
+                               "FROM USUARIO " +
+                               "WHERE USUARIO.nombre like @nombre AND Usuario.contra like @contra";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", nombre);
+                command.Parameters.AddWithValue("@contra", contra);
+                
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader()){
+                    while (reader.Read())
+                    {
+                        Usuario usu = new Usuario();
+                        usu.UsuarioNombre = reader["usuario"].ToString();
+                        usu.Contra = reader["contra"].ToString();
+                    }   
+                }
+                connection.Close();
+            }
+            return Listausu;
+        }
+        
+        public static Usuario AdminLoginInfo2(string nombre, string contra)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            Usuario Listausu = new Usuario();
+
+            using (SqlConnection connection = new SqlConnection(cadena)){
+                string query = "SELECT USUARIO.nombre AS 'usuario', USUARIO.contra AS 'contra'" +
+                               "FROM USUARIO " +
+                               "WHERE USUARIO.nombre like @nombre AND USUARIO.contra like @contra";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@nombre", nombre);
+                command.Parameters.AddWithValue("@contra", contra);
+                
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader()){
+                    while (reader.Read())
+                    {
+                        Listausu.UsuarioNombre = reader["usuario"].ToString();
+                        Listausu.Contra = reader["contra"].ToString();
+                    }   
+                }
+                connection.Close();
+            }
+            return Listausu;
         }
     }
 }

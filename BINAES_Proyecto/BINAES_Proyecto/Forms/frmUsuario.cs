@@ -10,6 +10,8 @@ namespace BINAES_Proyecto.Forms
 {
     public partial class frmUsuario : Form
     {
+        
+        public string imagen { get; set; }
         public frmUsuario()
         {
             InitializeComponent();
@@ -25,6 +27,9 @@ namespace BINAES_Proyecto.Forms
             user.UserInstitucion = txtInstitucion.Text;
             user.UserTelefono = txtTelefono.Text;
             user.UserCorreo = txt.Text;
+            user.fotoUsuario = imagen;
+
+            picImagenUsuario.Image = new Bitmap(imagen);
     
             UsuarioDAO.IngresarUsuario(user);
             MessageBox.Show("Ingresado con exito");
@@ -73,7 +78,7 @@ namespace BINAES_Proyecto.Forms
             renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, ms);
             var imageTemporal = new Bitmap(ms);
             var imagen = new Bitmap(imageTemporal, new Size(new Point(200, 200)));
-            picQR.BackgroundImage = imagen;
+            
 
             imagen.Save("imagen.png", ImageFormat.Png);
             btnGuardar.Enabled = true;
@@ -92,6 +97,23 @@ namespace BINAES_Proyecto.Forms
             }
 
             imgFinal.Dispose();
+        }
+
+
+        private void btnAgregarImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog obtener = new OpenFileDialog();
+            obtener.InitialDirectory = "C:\\";
+            obtener.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp, *.png)| *.jpg; *.jpeg; *.gif; *.bmp, *.png";
+            
+            if(obtener.ShowDialog() == DialogResult.OK)
+            {
+                imagen = obtener.FileName;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una foto");
+            }
         }
     }
 }
