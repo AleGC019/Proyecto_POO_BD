@@ -133,9 +133,21 @@ namespace BINAES_Proyecto.Forms
             eve.Finalizacion_del_evento = Convert.ToDateTime(dtpFinalizacion.Value);
             eve.Portada = "0000";
             eve.Objetivos = txtobjetivo.Text;
+
+            if (EventoDAO.VerificarDisponibilidadFechas(eve) == true)
+            {
+                EventoDAO.IngresarEvento(eve);
+                MessageBox.Show("Ingresado con éxito");
+            }
+            else
+            {
+                MessageBox.Show("Este evento no puede ser ingresado, ya que el área será utilizada en ese horario");
+            }
             
-            EventoDAO.IngresarEvento(eve);
-            MessageBox.Show("Ingresado con exito");
+            
+            
+            
+            
         }
     }
 }
