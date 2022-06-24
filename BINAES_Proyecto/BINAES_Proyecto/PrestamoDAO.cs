@@ -49,139 +49,245 @@ namespace BINAES_Proyecto
             return existence;
         }
 
-        public static Ejemplar TituloCompleto(string titulo)
+        public static Ejemplar TituloCompleto(string titulo_buscado)
         {
-            string cadena = Resources.Cadena_Conexion;
+            string cadena_conexion = Resources.Cadena_Conexion;
 
             Ejemplar eje = new Ejemplar();
 
-            eje.ID = -1;
-
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
-                string query =
-                    "SELECT EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre AS 'cnombre', AUTOR.autor AS 'aautor', EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial AS 'eeditorial', FORMATO.formato AS 'fformato', IDIOMA.idioma AS 'iidioma', STRING_AGG(PALABRAS_CLAVE.palabra, ', ') 'Palabras_clave' " +
-                    "fROM EJEMPLAR INNER JOIN EDITORIAL ON EJEMPLAR.id_editorial = EDITORIAL.id " +
-                    "INNER JOIN IDIOMA  ON IDIOMA.id = EJEMPLAR.id_idioma " +
-                    " INNER JOIN FORMATO ON FORMATO.id = EJEMPLAR.id_formato " +
-                    "INNER JOIN AUTOR ON AUTOR.id_ejemplar = EJEMPLAR.id " +
-                    "INNER JOIN COLECCION ON COLECCION.id = EJEMPLAR.id_coleccion " +
-                    "INNER JOIN PALABRAS_CLAVE ON PALABRAS_CLAVE.id_ejemplar = EJEMPLAR.id " +
-                    "WHERE EJEMPLAR.nombre = @titulobuscar GROUP BY EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre, AUTOR.autor, EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial, FORMATO.formato, IDIOMA.idioma ";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@titulobuscar", titulo);
-
-                connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        eje.Portada = reader["imagen_portada"].ToString();
-                        eje.ID = Convert.ToInt32(reader["id"].ToString());
-                        eje.Nombre_Ejemplar = reader["nombre"].ToString();
-                        eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
-                        eje.Idioma = reader["iidioma"].ToString();
-                        eje.Editorial = reader["eeditorial"].ToString();
-                        eje.Formato = reader["fformato"].ToString();
-                        eje.Autor = reader["aautor"].ToString();
-                        eje.ISBN = reader["isbn"].ToString();
-                        eje.ISSN = reader["issn"].ToString();
-                        eje.DOI = reader["doi"].ToString();
-                        eje.Coleccion = reader["cnombre"].ToString();
-                        eje.Palabras_clave = reader["Palabras_clave"].ToString();
-                    }
-                }
-                connection.Close();
-            }
-            return eje;
-        }
-
-        public static Ejemplar TituloParcial(string titulo)
-        {
-            string cadena = Resources.Cadena_Conexion;
-
-            Ejemplar eje = new Ejemplar();
-
-            List<Ejemplar> quantityVerifier = new List<Ejemplar>();
+            List<Ejemplar> lista = new List<Ejemplar>();
 
             eje.ID = -1;
 
             try
             {
-                using (SqlConnection connection = new SqlConnection(cadena))
+                using (SqlConnection conexion_actual = new SqlConnection(cadena_conexion))
                 {
-                    string query =
-                        "SELECT EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre AS 'cnombre', AUTOR.autor AS 'aautor', EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial AS 'eeditorial', FORMATO.formato AS 'fformato', IDIOMA.idioma AS 'iidioma', STRING_AGG(PALABRAS_CLAVE.palabra, ', ') 'Palabras_clave' " +
-                        "fROM EJEMPLAR INNER JOIN EDITORIAL ON EJEMPLAR.id_editorial = EDITORIAL.id " +
-                        "INNER JOIN IDIOMA  ON IDIOMA.id = EJEMPLAR.id_idioma " +
-                        " INNER JOIN FORMATO ON FORMATO.id = EJEMPLAR.id_formato " +
-                        "INNER JOIN AUTOR ON AUTOR.id_ejemplar = EJEMPLAR.id " +
-                        "INNER JOIN COLECCION ON COLECCION.id = EJEMPLAR.id_coleccion " +
-                        "INNER JOIN PALABRAS_CLAVE ON PALABRAS_CLAVE.id_ejemplar = EJEMPLAR.id " +
-                        "WHERE EJEMPLAR.nombre like @titulobuscar GROUP BY EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre, AUTOR.autor, EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial, FORMATO.formato, IDIOMA.idioma ";
+                    string consulta;
 
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@titulobuscar", '%' + titulo + '%');
+                    consulta = "SELECT EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre AS 'nombre_coleccion', " +
+                                "AUTOR.autor, EJEMPLAR.isbn, EJEMPLAR.issn, EJEMPLAR.doi, EJEMPLAR.fecha_publicada, EDITORIAL.editorial, " +
+                                "FORMATO.formato, IDIOMA.idioma, STRING_AGG(PALABRAS_CLAVE.palabra, ', ') 'Palabras_clave' FROM EJEMPLAR " +
+                                "INNER JOIN EDITORIAL ON EJEMPLAR.id_editorial = EDITORIAL.id INNER JOIN IDIOMA  ON IDIOMA.id = EJEMPLAR.id_idioma " +
+                                "INNER JOIN FORMATO ON FORMATO.id = EJEMPLAR.id_formato INNER JOIN AUTOR ON AUTOR.id_ejemplar = EJEMPLAR.id " +
+                                "INNER JOIN COLECCION ON COLECCION.id = EJEMPLAR.id_coleccion INNER JOIN PALABRAS_CLAVE ON PALABRAS_CLAVE.id_ejemplar = EJEMPLAR.id " +
+                                "WHERE EJEMPLAR.nombre = @titulo GROUP BY    EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre, AUTOR.autor, " +
+                                "EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial, FORMATO.formato, IDIOMA.idioma;";
 
-                    connection.Open();
-                    using (SqlDataReader reader = command.ExecuteReader())
+                    SqlCommand comando = new SqlCommand(consulta, conexion_actual);
+
+                    comando.Parameters.AddWithValue("@titulo", titulo_buscado);
+
+                    conexion_actual.Open();
+
+                    using (SqlDataReader lector = comando.ExecuteReader())
                     {
-                        while (reader.Read())
+                        while (lector.Read())
                         {
-                            eje.Portada = reader["imagen_portada"].ToString();
-                            eje.ID = Convert.ToInt32(reader["id"].ToString());
-                            eje.Nombre_Ejemplar = reader["nombre"].ToString();
-                            eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
-                            eje.Idioma = reader["iidioma"].ToString();
-                            eje.Editorial = reader["eeditorial"].ToString();
-                            eje.Formato = reader["fformato"].ToString();
-                            eje.Autor = reader["aautor"].ToString();
-                            eje.ISBN = reader["isbn"].ToString();
-                            eje.ISSN = reader["issn"].ToString();
-                            eje.DOI = reader["doi"].ToString();
-                            eje.Coleccion = reader["cnombre"].ToString();
-                            eje.Palabras_clave = reader["Palabras_clave"].ToString();
+                            eje.ID = Convert.ToInt32(lector["id"].ToString());
 
-                            Ejemplar tempItem = new Ejemplar();
+                            eje.Nombre_Ejemplar = lector["nombre"].ToString();
 
-                            tempItem.Portada = reader["imagen_portada"].ToString();
-                            tempItem.ID = Convert.ToInt32(reader["id"].ToString());
-                            tempItem.Nombre_Ejemplar = reader["nombre"].ToString();
-                            tempItem.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
-                            tempItem.Idioma = reader["iidioma"].ToString();
-                            tempItem.Editorial = reader["eeditorial"].ToString();
-                            tempItem.Formato = reader["fformato"].ToString();
-                            tempItem.Autor = reader["aautor"].ToString();
-                            tempItem.ISBN = reader["isbn"].ToString();
-                            tempItem.ISSN = reader["issn"].ToString();
-                            tempItem.DOI = reader["doi"].ToString();
-                            tempItem.Coleccion = reader["cnombre"].ToString();
-                            tempItem.Palabras_clave = reader["Palabras_clave"].ToString();
+                            eje.Portada = lector["imagen_portada"].ToString();
 
-                            quantityVerifier.Add(tempItem);
+                            eje.Coleccion = lector["nombre_coleccion"].ToString();
 
+                            eje.Autor = lector["autor"].ToString();
+
+                            eje.ISBN = lector["isbn"].ToString();
+
+                            eje.ISSN = lector["issn"].ToString();
+
+                            eje.DOI = lector["doi"].ToString();
+
+                            eje.Fecha_de_publicacion = Convert.ToDateTime(lector["fecha_publicada"].ToString());
+
+                            eje.Editorial = lector["editorial"].ToString();
+
+                            eje.Formato = lector["formato"].ToString();
+
+                            eje.Idioma = lector["idioma"].ToString();
+
+                            eje.Palabras_clave = lector["Palabras_clave"].ToString();
+
+                            lista.Add(eje);
                         }
                     }
-                    connection.Close();
 
-                    if(quantityVerifier.Count > 1)
-                    {
-                        MessageBox.Show("Existe mas de un titulo con su titulo parcial.");
+                    conexion_actual.Close();
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+            }
 
-                        eje.ID = -1;
-                    }
+            if (lista.Count > 1)
+            {
+                MessageBox.Show("Existe más de un título con su palabra parcial." + Environment.NewLine + "Sea un poco más específico o intente con título completo, " +
+                                "por favor.", "Coincidencia de resultados.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
 
+                eje.ID = -1;
+
+                return eje;
+            }
+            else
+            {
+                return eje;
+            }
+        }
+
+        public static Ejemplar TituloParcial(string titulo_buscado)
+        {
+            string cadena_conexion = Resources.Cadena_Conexion;
+
+            Ejemplar eje = new Ejemplar();
+
+            List<Ejemplar> lista = new List<Ejemplar>();
+
+            eje.ID = -1;
+
+            try
+            {
+                using (SqlConnection conexion_actual = new SqlConnection(cadena_conexion))
+                {
+                    string consulta;
+
+                    consulta =  "SELECT EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre AS 'nombre_coleccion', " +
+                                "AUTOR.autor, EJEMPLAR.isbn, EJEMPLAR.issn, EJEMPLAR.doi, EJEMPLAR.fecha_publicada, EDITORIAL.editorial, " +
+                                "FORMATO.formato, IDIOMA.idioma, STRING_AGG(PALABRAS_CLAVE.palabra, ', ') 'Palabras_clave' FROM EJEMPLAR " +
+                                "INNER JOIN EDITORIAL ON EJEMPLAR.id_editorial = EDITORIAL.id INNER JOIN IDIOMA  ON IDIOMA.id = EJEMPLAR.id_idioma " +
+                                "INNER JOIN FORMATO ON FORMATO.id = EJEMPLAR.id_formato INNER JOIN AUTOR ON AUTOR.id_ejemplar = EJEMPLAR.id " +
+                                "INNER JOIN COLECCION ON COLECCION.id = EJEMPLAR.id_coleccion INNER JOIN PALABRAS_CLAVE ON PALABRAS_CLAVE.id_ejemplar = EJEMPLAR.id " +
+                                "WHERE EJEMPLAR.nombre LIKE @titulo GROUP BY    EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre, AUTOR.autor, " +
+                                "EJEMPLAR.isbn, issn, doi, fecha_publicada, EDITORIAL.editorial, FORMATO.formato, IDIOMA.idioma;";
+
+                    SqlCommand comando = new SqlCommand(consulta, conexion_actual);
+
+                    comando.Parameters.AddWithValue("@titulo", '%' + titulo_buscado + '%');
+
+                    conexion_actual.Open();
+
+                        using (SqlDataReader lector = comando.ExecuteReader())
+                        {
+                            while (lector.Read())
+                            {
+                                eje.ID = Convert.ToInt32(lector["id"].ToString());
+
+                                eje.Nombre_Ejemplar = lector["nombre"].ToString();
+
+                                eje.Portada = lector["imagen_portada"].ToString();
+                                
+                                eje.Coleccion = lector["nombre_coleccion"].ToString();
+                                
+                                eje.Autor = lector["autor"].ToString();
+
+                                eje.ISBN = lector["isbn"].ToString();
+
+                                eje.ISSN = lector["issn"].ToString();
+
+                                eje.DOI = lector["doi"].ToString();
+
+                                eje.Fecha_de_publicacion = Convert.ToDateTime(lector["fecha_publicada"].ToString());
+
+                                eje.Editorial = lector["editorial"].ToString();
+
+                                eje.Formato = lector["formato"].ToString();
+
+                                eje.Idioma = lector["idioma"].ToString();
+
+                                eje.Palabras_clave = lector["Palabras_clave"].ToString();
+
+                                lista.Add(eje);
+                            }
+                        }
+                    
+                    conexion_actual.Close();
                 }
             }
             catch(Exception E)
             {
-                MessageBox.Show("Error en busqueda");
+                MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
 
-            MessageBox.Show(quantityVerifier.Count.ToString());
+            if (lista.Count > 1)
+            {
+                MessageBox.Show("Existe más de un título con su palabra parcial." + Environment.NewLine + "Sea un poco más específico o intente con título completo, " +
+                                "por favor.", "Coincidencia de resultados.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
 
-            return eje;
+                eje.ID = -1;
+
+                return eje;
+            }
+            else
+            {
+                return eje;
+            }
+        }
+
+        public static void VerifyPrestamo (Ejemplar v_eje)
+        {
+            bool prestado = true;
+
+            string fecha_hoy = DateTime.Now.ToString();
+
+            PrestamoEjemplar comparacion_base = new PrestamoEjemplar();
+
+            comparacion_base.id = -1;
+
+            string cadena_conexion = Resources.Cadena_Conexion;
+
+            try
+            {
+                using (SqlConnection conexion_actual = new SqlConnection(cadena_conexion))
+                {
+                    string consulta;
+
+                    consulta =  "SELECT PRESTAMO.id, EJEMPLAR.nombre, PRESTAMO.prestamo_devolucion_hora_fecha, " +
+                                "PRESTAMO.prestamo_entrega_hora_fecha FROM EJEMPLAR INNER JOIN PRESTAMO ON PRESTAMO.id_ejemplar = EJEMPLAR.id " +
+                                "WHERE EJEMPLAR.nombre = @titulo;";
+
+                    SqlCommand comando = new SqlCommand(consulta, conexion_actual);
+
+                    comando.Parameters.AddWithValue("@titulo", v_eje.Nombre_Ejemplar);
+
+                    conexion_actual.Open();
+
+                        using (SqlDataReader lector = comando.ExecuteReader())
+                        {
+                            while (lector.Read())
+                            {
+                                comparacion_base.id = Convert.ToInt32(lector["id"].ToString());
+
+                                comparacion_base.nombre = lector["nombre"].ToString();
+
+                                //comparacion_base.entrega = lector.GetDateTime(["prestamo_entrega_hora_fecha"]);
+
+                                int colIndex = lector.GetOrdinal("prestamo_entrega_hora_fecha");
+                                
+                                if (!lector.IsDBNull(colIndex))
+                                    comparacion_base.entrega = lector.GetDateTime(colIndex);
+                            //comparacion_base.devolucion = lector["prestamo_devolucion_hora_fecha"].ToString();
+                        }
+                        }
+
+                    conexion_actual.Close();
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+            }
+
+            MessageBox.Show(v_eje.Fecha_de_publicacion.ToString());
+            MessageBox.Show(fecha_hoy);
+
+            /*if (comparacion_base.id != -1)
+            {
+                MessageBox.Show(comparacion_base.entrega);
+                MessageBox.Show(fecha_hoy);
+            }*/
+
         }
     }
 }

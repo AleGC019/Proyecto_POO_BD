@@ -12,6 +12,8 @@ namespace BINAES_Proyecto.Forms
 {
     public partial class frmPrestamo : Form
     {
+        public Ejemplar Buscado { get; set; }
+
         public frmPrestamo()
         {
             InitializeComponent();
@@ -21,13 +23,14 @@ namespace BINAES_Proyecto.Forms
         {
             pnlFoundItem_Prestamo.Visible = false;
 
-            cmbTipoBusqueda_Prestamo.Text = "Titulo completo";
-
             pnlPrestamoContainer.BackColor = Color.FromArgb(5, 29, 64);
+
+            cmbTipoBusqueda_Prestamo.Text = "Titulo completo";
 
             grpVerificarExistencia_Prestamo.BackColor = Color.White;
 
-            MessageBox.Show("Antes de solicitar un prestamo, se requiere buscar el ejemplar deseado para saber su existencia y disponibilidad.", "AVISO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Antes de solicitar un prestamo, se requiere buscar el ejemplar deseado para saber su existencia y disponibilidad.", "AVISO", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnBuscar_Prestamo_Click(object sender, System.EventArgs e)
@@ -38,17 +41,15 @@ namespace BINAES_Proyecto.Forms
 
                     if(txtBusqueda_Prestamo.TextLength != 0)
                     {
-                        Ejemplar Buscado = new Ejemplar();
-
                         Buscado = PrestamoDAO.TituloCompleto(txtBusqueda_Prestamo.Text.Trim());
 
                         if (Buscado.ID != -1)
                         {
-                            MessageBox.Show("Su ejemplar si existe.");
-
-                            pnlFoundItem_Prestamo.BackColor = Color.White;
+                            MessageBox.Show("Su ejemplar si existe en la base de datos.", "CONFIRMACION DE EXISTENCIA.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             pnlFoundItem_Prestamo.Visible = true;
+
+                            pnlFoundItem_Prestamo.BackColor = Color.White;                         
 
                             picFoundItem_Prestamo.Image = Image.FromFile(Buscado.Portada);
 
@@ -75,16 +76,16 @@ namespace BINAES_Proyecto.Forms
                             lblIdioma_Prestamo.Text = "Idioma: " + Buscado.Idioma;
 
                             lbl_PC_prestamo.Text = "Palabras claves asociadas: " + Buscado.Palabras_clave;
-
                         }
-                        else
+                        /*else
                         {
-                            MessageBox.Show("Su ejemplar no existe.");
-                        }
+                            MessageBox.Show("Los parametros de busqueda no coinciden con algun titulo de la base de datos.", "INEXISTENCIA DE MATERIAL.", 
+                                            MessageBoxButtons.OK, MessageBoxIcon.Question);
+                        }*/
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese texto en su barra de busqueda.");
+                        MessageBox.Show("Ingrese texto en la barra de busqueda para proseguir.", "Sin parametros de busqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     
                     break;
@@ -93,17 +94,16 @@ namespace BINAES_Proyecto.Forms
 
                     if (txtBusqueda_Prestamo.TextLength != 0)
                     {
-                        Ejemplar Buscado = new Ejemplar();
 
                         Buscado = PrestamoDAO.TituloParcial(txtBusqueda_Prestamo.Text.Trim());
 
                         if (Buscado.ID != -1)
                         {
-                            MessageBox.Show("Su ejemplar si existe.");
-
-                            pnlFoundItem_Prestamo.BackColor = Color.White;
+                            MessageBox.Show("Su ejemplar si existe en la base de datos.", "CONFIRMACION DE EXISTENCIA.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             pnlFoundItem_Prestamo.Visible = true;
+
+                            pnlFoundItem_Prestamo.BackColor = Color.White;
 
                             picFoundItem_Prestamo.Image = Image.FromFile(Buscado.Portada);
 
@@ -130,95 +130,28 @@ namespace BINAES_Proyecto.Forms
                             lblIdioma_Prestamo.Text = "Idioma: " + Buscado.Idioma;
 
                             lbl_PC_prestamo.Text = "Palabras claves asociadas: " + Buscado.Palabras_clave;
-
                         }
-                        else
+                        /*else
                         {
-                            MessageBox.Show("Su ejemplar no existe.");
-                        }
+                            MessageBox.Show("Los parametros de busqueda no coinciden con algun titulo de la base de datos.", "INEXISTENCIA DE MATERIAL.",
+                                            MessageBoxButtons.OK, MessageBoxIcon.Question);
+                        }*/
                     }
                     else
                     {
-                        MessageBox.Show("Ingrese texto en su barra de busqueda.");
+                        MessageBox.Show("Ingrese texto en la barra de busqueda para proseguir.", "Sin parametros de busqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
 
+                    break;
 
-                    break;
-                case "Autor":
-                    break;
-                case "Fisico":
-                    break;
-                case "Mostrar todos":
-                    break;
                 default:
                     break;
             }
+        }
 
-
-            if(cmbTipoBusqueda_Prestamo.Text == "Titulo completo") // Aqui pones el nombre que le hayas puesto a la combobox
-            {
-                /*
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorTitulo(txtBuscarEjemplar.Text.Trim()); // Ponele el nombre de la txt box
-                txtBuscarEjemplar.Clear();
-
-                dgvResultadosBusqueda.DataSource = null;
-                dgvResultadosBusqueda.DataSource = resultado;
-
-            }
-            else if (cmbOpcionesBuscar.Text == "Titulo parcial")
-            {
-
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorTituloParcial(txtBuscarEjemplar.Text.Trim());
-                txtBuscarEjemplar.Clear();
-                dgvResultadosBusqueda.DataSource = null;
-                dgvResultadosBusqueda.DataSource = resultado;
-
-            }
-            else if (cmbOpcionesBuscar.Text == "Autor")
-            {
-
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorAutor(txtBuscarEjemplar.Text.Trim());
-                txtBuscarEjemplar.Clear();
-                dgvResultadosBusqueda.DataSource = null;
-                dgvResultadosBusqueda.DataSource = resultado;
-
-            }
-            else if (cmbOpcionesBuscar.Text == "Fisico")
-            {
-                txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
-
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(txtBuscarEjemplar.Text.Trim());
-                txtBuscarEjemplar.Clear();
-                dgvResultadosBusqueda.DataSource = null;
-                dgvResultadosBusqueda.DataSource = resultado;
-
-            }
-            else if (cmbOpcionesBuscar.Text == "Digital")
-            {
-                txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorFormato(txtBuscarEjemplar.Text.Trim());
-                txtBuscarEjemplar.Clear();
-                dgvResultadosBusqueda.DataSource = null;
-                dgvResultadosBusqueda.DataSource = resultado;
-
-            }
-            else if (cmbOpcionesBuscar.Text == "Mostrar todos")
-            {
-                txtBuscarEjemplar.Text = cmbOpcionesBuscar.Text;
-                List<Ejemplar> resultado = BuscarEjemplarDAO.General();
-                txtBuscarEjemplar.Clear();
-                dgvResultadosBusqueda.DataSource = null;
-                dgvResultadosBusqueda.DataSource = resultado;
-
-            }
-            else
-            {
-
-                List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorPalabraClave(txtBuscarEjemplar.Text.Trim()); // Ponele el nombre de la txt box
-                txtBuscarEjemplar.Clear();
-                dgvResultadosBusqueda.DataSource = null;
-                dgvResultadosBusqueda.DataSource = resultado;*/
-            }
+        private void picFoundItem_Prestamo_Click(object sender, EventArgs e)
+        {
+            PrestamoDAO.VerifyPrestamo(Buscado);
         }
     }
 }
