@@ -11,7 +11,7 @@ namespace BINAES_Proyecto
 {
     internal static class PrestamoDAO
     {
-        public static bool TitleSearch(string titulo)
+        /*public static bool TitleSearch(string titulo)
         {
             bool existence = false;
 
@@ -47,17 +47,15 @@ namespace BINAES_Proyecto
                 }
             }
             return existence;
-        }
+        }*/
 
         public static Ejemplar TituloCompleto(string titulo_buscado)
         {
-            string cadena_conexion = Resources.Cadena_Conexion;
-
             Ejemplar eje = new Ejemplar();
 
-            List<Ejemplar> lista = new List<Ejemplar>();
-
             eje.ID = -1;
+
+            string cadena_conexion = Resources.Cadena_Conexion;
 
             try
             {
@@ -65,7 +63,7 @@ namespace BINAES_Proyecto
                 {
                     string consulta;
 
-                    consulta = "SELECT EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre AS 'nombre_coleccion', " +
+                    consulta =  "SELECT EJEMPLAR.id, EJEMPLAR.nombre, EJEMPLAR.imagen_portada, COLECCION.nombre AS 'nombre_coleccion', " +
                                 "AUTOR.autor, EJEMPLAR.isbn, EJEMPLAR.issn, EJEMPLAR.doi, EJEMPLAR.fecha_publicada, EDITORIAL.editorial, " +
                                 "FORMATO.formato, IDIOMA.idioma, STRING_AGG(PALABRAS_CLAVE.palabra, ', ') 'Palabras_clave' FROM EJEMPLAR " +
                                 "INNER JOIN EDITORIAL ON EJEMPLAR.id_editorial = EDITORIAL.id INNER JOIN IDIOMA  ON IDIOMA.id = EJEMPLAR.id_idioma " +
@@ -76,76 +74,62 @@ namespace BINAES_Proyecto
 
                     SqlCommand comando = new SqlCommand(consulta, conexion_actual);
 
-                    comando.Parameters.AddWithValue("@titulo", titulo_buscado);
+                        comando.Parameters.AddWithValue("@titulo", titulo_buscado);
 
                     conexion_actual.Open();
 
-                    using (SqlDataReader lector = comando.ExecuteReader())
-                    {
-                        while (lector.Read())
+                        using (SqlDataReader lector = comando.ExecuteReader())
                         {
-                            eje.ID = Convert.ToInt32(lector["id"].ToString());
+                            while (lector.Read())
+                            {
+                                eje.ID = Convert.ToInt32(lector["id"].ToString());
 
-                            eje.Nombre_Ejemplar = lector["nombre"].ToString();
+                                eje.Nombre_Ejemplar = lector["nombre"].ToString();
 
-                            eje.Portada = lector["imagen_portada"].ToString();
+                                eje.Portada = lector["imagen_portada"].ToString();
 
-                            eje.Coleccion = lector["nombre_coleccion"].ToString();
+                                eje.Coleccion = lector["nombre_coleccion"].ToString();
 
-                            eje.Autor = lector["autor"].ToString();
+                                eje.Autor = lector["autor"].ToString();
 
-                            eje.ISBN = lector["isbn"].ToString();
+                                eje.ISBN = lector["isbn"].ToString();
 
-                            eje.ISSN = lector["issn"].ToString();
+                                eje.ISSN = lector["issn"].ToString();
 
-                            eje.DOI = lector["doi"].ToString();
+                                eje.DOI = lector["doi"].ToString();
 
-                            eje.Fecha_de_publicacion = Convert.ToDateTime(lector["fecha_publicada"].ToString());
+                                eje.Fecha_de_publicacion = Convert.ToDateTime(lector["fecha_publicada"].ToString());
 
-                            eje.Editorial = lector["editorial"].ToString();
+                                eje.Editorial = lector["editorial"].ToString();
 
-                            eje.Formato = lector["formato"].ToString();
+                                eje.Formato = lector["formato"].ToString();
 
-                            eje.Idioma = lector["idioma"].ToString();
+                                eje.Idioma = lector["idioma"].ToString();
 
-                            eje.Palabras_clave = lector["Palabras_clave"].ToString();
-
-                            lista.Add(eje);
+                                eje.Palabras_clave = lector["Palabras_clave"].ToString();
+                            }
                         }
-                    }
 
                     conexion_actual.Close();
                 }
             }
             catch (Exception E)
             {
-                MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Error en busqueda dentro de la base de datos.", "Conflicto en la busqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
 
-            if (lista.Count > 1)
-            {
-                MessageBox.Show("Existe más de un título con su palabra parcial." + Environment.NewLine + "Sea un poco más específico o intente con título completo, " +
-                                "por favor.", "Coincidencia de resultados.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-
-                eje.ID = -1;
-
-                return eje;
-            }
-            else
-            {
-                return eje;
-            }
+            return eje;
         }
 
         public static Ejemplar TituloParcial(string titulo_buscado)
         {
-            string cadena_conexion = Resources.Cadena_Conexion;
-
             Ejemplar eje = new Ejemplar();
 
             List<Ejemplar> lista = new List<Ejemplar>();
 
             eje.ID = -1;
+
+            string cadena_conexion = Resources.Cadena_Conexion;
 
             try
             {
@@ -164,7 +148,7 @@ namespace BINAES_Proyecto
 
                     SqlCommand comando = new SqlCommand(consulta, conexion_actual);
 
-                    comando.Parameters.AddWithValue("@titulo", '%' + titulo_buscado + '%');
+                        comando.Parameters.AddWithValue("@titulo", '%' + titulo_buscado + '%');
 
                     conexion_actual.Open();
 
@@ -198,6 +182,34 @@ namespace BINAES_Proyecto
 
                                 eje.Palabras_clave = lector["Palabras_clave"].ToString();
 
+                                /*Ejemplar TEST = new Ejemplar();
+
+                                TEST.ID = Convert.ToInt32(lector["id"].ToString());
+
+                                TEST.Nombre_Ejemplar = lector["nombre"].ToString();
+
+                                TEST.Portada = lector["imagen_portada"].ToString();
+
+                                TEST.Coleccion = lector["nombre_coleccion"].ToString();
+
+                                TEST.Autor = lector["autor"].ToString();
+
+                                TEST.ISBN = lector["isbn"].ToString();
+
+                                TEST.ISSN = lector["issn"].ToString();
+
+                                TEST.DOI = lector["doi"].ToString();
+
+                                TEST.Fecha_de_publicacion = Convert.ToDateTime(lector["fecha_publicada"].ToString());
+
+                                TEST.Editorial = lector["editorial"].ToString();
+
+                                TEST.Formato = lector["formato"].ToString();
+
+                                TEST.Idioma = lector["idioma"].ToString();
+
+                                TEST.Palabras_clave = lector["Palabras_clave"].ToString();*/
+
                                 lista.Add(eje);
                             }
                         }
@@ -207,15 +219,12 @@ namespace BINAES_Proyecto
             }
             catch(Exception E)
             {
-                MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Error en busqueda dentro de la base de datos.", "Conflicto en la busqueda.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
 
             if (lista.Count > 1)
             {
-                MessageBox.Show("Existe más de un título con su palabra parcial." + Environment.NewLine + "Sea un poco más específico o intente con título completo, " +
-                                "por favor.", "Coincidencia de resultados.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-
-                eje.ID = -1;
+                eje.ID = 0;
 
                 return eje;
             }
@@ -228,8 +237,6 @@ namespace BINAES_Proyecto
         public static void VerifyPrestamo (Ejemplar v_eje)
         {
             bool prestado = true;
-
-            string fecha_hoy = DateTime.Now.ToString();
 
             PrestamoEjemplar comparacion_base = new PrestamoEjemplar();
 
@@ -261,14 +268,11 @@ namespace BINAES_Proyecto
 
                                 comparacion_base.nombre = lector["nombre"].ToString();
 
-                                //comparacion_base.entrega = lector.GetDateTime(["prestamo_entrega_hora_fecha"]);
+                                comparacion_base.entrega = (DateTime)lector["prestamo_entrega_hora_fecha"];
 
-                                int colIndex = lector.GetOrdinal("prestamo_entrega_hora_fecha");
-                                
-                                if (!lector.IsDBNull(colIndex))
-                                    comparacion_base.entrega = lector.GetDateTime(colIndex);
-                            //comparacion_base.devolucion = lector["prestamo_devolucion_hora_fecha"].ToString();
-                        }
+                                comparacion_base.entrega = (DateTime)lector["prestamo_devolucion_hora_fecha"];
+                      
+                            }
                         }
 
                     conexion_actual.Close();
@@ -279,8 +283,21 @@ namespace BINAES_Proyecto
                 MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
 
-            MessageBox.Show(v_eje.Fecha_de_publicacion.ToString());
-            MessageBox.Show(fecha_hoy);
+            if(DateTime.Now > comparacion_base.devolucion)
+            {
+                MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.");
+            }
+            if(DateTime.Now < comparacion_base.devolucion)
+            {
+                if(DateTime.Now > comparacion_base.entrega)
+                {
+                    MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado.");
+                }
+            }
+
+
+            MessageBox.Show(DateTime.Now.ToString("G"));
+            MessageBox.Show(comparacion_base.entrega.ToString("G"));
 
             /*if (comparacion_base.id != -1)
             {

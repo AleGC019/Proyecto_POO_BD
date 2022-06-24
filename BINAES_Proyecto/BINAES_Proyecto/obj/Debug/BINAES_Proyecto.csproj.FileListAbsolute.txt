@@ -272,3 +272,15 @@ C:\Users\User\Desktop\repoLogin\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\
 C:\Users\User\Desktop\repoLogin\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearEditorial.resources
 C:\Users\User\Desktop\repoLogin\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearPalabrasClave.resources
 C:\Users\User\Desktop\repoLogin\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearAutor.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\Gma.QrCodeNet.Encoding.dll
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\QRCodeDecoderLibrary.dll
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\QRCodeEncoderLibrary.dll
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\Gma.QrCodeNet.Encoding.pdb
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\Gma.QrCodeNet.Encoding.xml
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\QRCodeDecoderLibrary.pdb
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\QRCodeDecoderLibrary.xml
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\bin\Debug\QRCodeEncoderLibrary.xml
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearAutor.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearEditorial.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearPalabrasClave.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CopyComplete

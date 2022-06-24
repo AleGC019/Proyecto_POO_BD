@@ -58,6 +58,12 @@
     <Compile Include="Area.cs" />
     <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
+    <Compile Include="Forms\Registro_Prestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Registro_Prestamo.Designer.cs">
+      <DependentUpon>Registro_Prestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCrearAutor.cs">
       <SubType>Form</SubType>
     </Compile>

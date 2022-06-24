@@ -29,18 +29,18 @@ namespace BINAES_Proyecto.Forms
 
             grpVerificarExistencia_Prestamo.BackColor = Color.White;
 
-            MessageBox.Show("Antes de solicitar un prestamo, se requiere buscar el ejemplar deseado para saber su existencia y disponibilidad.", "AVISO", 
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            /*MessageBox.Show("Antes de solicitar un prestamo, se requiere buscar el ejemplar deseado para saber su existencia y disponibilidad.", "AVISO", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
 
         private void btnBuscar_Prestamo_Click(object sender, System.EventArgs e)
         {
-            switch (cmbTipoBusqueda_Prestamo.Text)
+            if (txtBusqueda_Prestamo.TextLength > 0)
             {
-                case "Titulo completo":
+                switch (cmbTipoBusqueda_Prestamo.Text)
+                {
+                    case "Titulo completo":
 
-                    if(txtBusqueda_Prestamo.TextLength != 0)
-                    {
                         Buscado = PrestamoDAO.TituloCompleto(txtBusqueda_Prestamo.Text.Trim());
 
                         if (Buscado.ID != -1)
@@ -77,27 +77,21 @@ namespace BINAES_Proyecto.Forms
 
                             lbl_PC_prestamo.Text = "Palabras claves asociadas: " + Buscado.Palabras_clave;
                         }
-                        /*else
+                        else if (Buscado.ID == -1)
                         {
-                            MessageBox.Show("Los parametros de busqueda no coinciden con algun titulo de la base de datos.", "INEXISTENCIA DE MATERIAL.", 
+                            MessageBox.Show("El parametro de busqueda brindado no coincide con ningun material." + Environment.NewLine + 
+                                            "En busqueda por titulo completo, asegurese de ingresar integramente el nombre del ejemplar deseado.", "Advertencia.", 
                                             MessageBoxButtons.OK, MessageBoxIcon.Question);
-                        }*/
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ingrese texto en la barra de busqueda para proseguir.", "Sin parametros de busqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                        }
+                    
                     
                     break;
 
-                case "Titulo parcial":
-
-                    if (txtBusqueda_Prestamo.TextLength != 0)
-                    {
+                    case "Titulo parcial":
 
                         Buscado = PrestamoDAO.TituloParcial(txtBusqueda_Prestamo.Text.Trim());
 
-                        if (Buscado.ID != -1)
+                        if (Buscado.ID > 0)
                         {
                             MessageBox.Show("Su ejemplar si existe en la base de datos.", "CONFIRMACION DE EXISTENCIA.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -131,21 +125,27 @@ namespace BINAES_Proyecto.Forms
 
                             lbl_PC_prestamo.Text = "Palabras claves asociadas: " + Buscado.Palabras_clave;
                         }
-                        /*else
+                        else if (Buscado.ID == -1)
                         {
                             MessageBox.Show("Los parametros de busqueda no coinciden con algun titulo de la base de datos.", "INEXISTENCIA DE MATERIAL.",
                                             MessageBoxButtons.OK, MessageBoxIcon.Question);
-                        }*/
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ingrese texto en la barra de busqueda para proseguir.", "Sin parametros de busqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+                        }
+                        else if (Buscado.ID == 0)
+                        {
+                            MessageBox.Show("Existe más de un título con su palabra parcial." + Environment.NewLine + "Sea un poco más específico o intente con título completo.",
+                                            "Coincidencia de resultados.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
 
-                    break;
+                        }
 
-                default:
+                        break;
+
+                    default:
                     break;
+                }
+            }
+            else if (txtBusqueda_Prestamo.TextLength == 0)
+            {
+                MessageBox.Show("Ingrese texto en la barra de busqueda para proseguir.", "Sin parametros de busqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
