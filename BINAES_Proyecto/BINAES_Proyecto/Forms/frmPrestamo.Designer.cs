@@ -62,14 +62,13 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlFoundItem_Prestamo.SuspendLayout();
             this.tlpFoundItem_Prestamo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFoundItem_Prestamo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picFoundItem_Prestamo)).BeginInit();
             this.pnlPrestamoContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpVerificarExistencia_Prestamo
             // 
-            this.grpVerificarExistencia_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpVerificarExistencia_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.grpVerificarExistencia_Prestamo.Controls.Add(this.tableLayoutPanel1);
             this.grpVerificarExistencia_Prestamo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.grpVerificarExistencia_Prestamo.Location = new System.Drawing.Point(11, 20);
@@ -77,13 +76,11 @@ namespace BINAES_Proyecto.Forms
             this.grpVerificarExistencia_Prestamo.Size = new System.Drawing.Size(536, 117);
             this.grpVerificarExistencia_Prestamo.TabIndex = 0;
             this.grpVerificarExistencia_Prestamo.TabStop = false;
-            this.grpVerificarExistencia_Prestamo.Text = "Busqueda de material";
+            this.grpVerificarExistencia_Prestamo.Text = "Búsqueda de material";
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 6;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -108,9 +105,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnBuscar_Prestamo
             // 
-            this.btnBuscar_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar_Prestamo.Location = new System.Drawing.Point(369, 7);
             this.btnBuscar_Prestamo.Name = "btnBuscar_Prestamo";
             this.tableLayoutPanel1.SetRowSpan(this.btnBuscar_Prestamo, 3);
@@ -122,9 +117,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtBusqueda_Prestamo
             // 
-            this.txtBusqueda_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBusqueda_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.txtBusqueda_Prestamo, 2);
             this.txtBusqueda_Prestamo.Location = new System.Drawing.Point(29, 50);
             this.txtBusqueda_Prestamo.Name = "txtBusqueda_Prestamo";
@@ -133,14 +126,11 @@ namespace BINAES_Proyecto.Forms
             // 
             // cmbTipoBusqueda_Prestamo
             // 
-            this.cmbTipoBusqueda_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmbTipoBusqueda_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left)));
             this.cmbTipoBusqueda_Prestamo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoBusqueda_Prestamo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbTipoBusqueda_Prestamo.FormattingEnabled = true;
-            this.cmbTipoBusqueda_Prestamo.Items.AddRange(new object[] {
-            "Titulo completo",
-            "Titulo parcial"});
+            this.cmbTipoBusqueda_Prestamo.Items.AddRange(new object[] {"Titulo completo", "Titulo parcial"});
             this.cmbTipoBusqueda_Prestamo.Location = new System.Drawing.Point(160, 7);
             this.cmbTipoBusqueda_Prestamo.Name = "cmbTipoBusqueda_Prestamo";
             this.cmbTipoBusqueda_Prestamo.Size = new System.Drawing.Size(177, 21);
@@ -148,21 +138,18 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblTipoBusqueda_Prestamo
             // 
-            this.lblTipoBusqueda_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTipoBusqueda_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipoBusqueda_Prestamo.AutoSize = true;
             this.lblTipoBusqueda_Prestamo.Location = new System.Drawing.Point(29, 4);
             this.lblTipoBusqueda_Prestamo.Name = "lblTipoBusqueda_Prestamo";
             this.lblTipoBusqueda_Prestamo.Size = new System.Drawing.Size(125, 13);
             this.lblTipoBusqueda_Prestamo.TabIndex = 0;
-            this.lblTipoBusqueda_Prestamo.Text = "Tipo de busqueda:";
+            this.lblTipoBusqueda_Prestamo.Text = "Tipo de busqueda";
             this.lblTipoBusqueda_Prestamo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlFoundItem_Prestamo
             // 
-            this.pnlFoundItem_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlFoundItem_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFoundItem_Prestamo.Controls.Add(this.tlpFoundItem_Prestamo);
             this.pnlFoundItem_Prestamo.Location = new System.Drawing.Point(11, 143);
             this.pnlFoundItem_Prestamo.Name = "pnlFoundItem_Prestamo";
@@ -171,9 +158,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // tlpFoundItem_Prestamo
             // 
-            this.tlpFoundItem_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpFoundItem_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpFoundItem_Prestamo.ColumnCount = 2;
             this.tlpFoundItem_Prestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
             this.tlpFoundItem_Prestamo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
@@ -214,9 +199,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // picFoundItem_Prestamo
             // 
-            this.picFoundItem_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picFoundItem_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.picFoundItem_Prestamo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picFoundItem_Prestamo.Location = new System.Drawing.Point(3, 37);
             this.picFoundItem_Prestamo.Name = "picFoundItem_Prestamo";
@@ -230,9 +213,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblEncontrado
             // 
-            this.lblEncontrado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEncontrado.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEncontrado.AutoSize = true;
             this.tlpFoundItem_Prestamo.SetColumnSpan(this.lblEncontrado, 2);
             this.lblEncontrado.Location = new System.Drawing.Point(3, 0);
@@ -352,9 +333,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // pnlPrestamoContainer
             // 
-            this.pnlPrestamoContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlPrestamoContainer.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPrestamoContainer.Controls.Add(this.grpVerificarExistencia_Prestamo);
             this.pnlPrestamoContainer.Controls.Add(this.pnlFoundItem_Prestamo);
             this.pnlPrestamoContainer.Location = new System.Drawing.Point(12, 12);
@@ -374,7 +353,7 @@ namespace BINAES_Proyecto.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 481);
             this.Controls.Add(this.pnlPrestamoContainer);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmPrestamo";
             this.Text = "frmPrestamo";
             this.Load += new System.EventHandler(this.frmPrestamo_Load);
@@ -384,10 +363,9 @@ namespace BINAES_Proyecto.Forms
             this.pnlFoundItem_Prestamo.ResumeLayout(false);
             this.tlpFoundItem_Prestamo.ResumeLayout(false);
             this.tlpFoundItem_Prestamo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFoundItem_Prestamo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picFoundItem_Prestamo)).EndInit();
             this.pnlPrestamoContainer.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
 
         #endregion

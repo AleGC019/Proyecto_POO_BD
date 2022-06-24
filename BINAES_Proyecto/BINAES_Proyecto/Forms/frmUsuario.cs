@@ -70,7 +70,7 @@ namespace BINAES_Proyecto.Forms
         {
             QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
             QrCode qrCode = new QrCode();
-            qrEncoder.TryEncode(txtValor.Text,out qrCode);
+            qrEncoder.TryEncode(txtValor1.Text,out qrCode);
             GraphicsRenderer renderer = new GraphicsRenderer(new FixedCodeSize(400, QuietZoneModules.Zero),Brushes.Black,Brushes.White);
 
             MemoryStream ms = new MemoryStream();
@@ -78,7 +78,7 @@ namespace BINAES_Proyecto.Forms
             renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, ms);
             var imageTemporal = new Bitmap(ms);
             var imagen = new Bitmap(imageTemporal, new Size(new Point(200, 200)));
-            
+            picQR.BackgroundImage = imagen;
 
             imagen.Save("imagen.png", ImageFormat.Png);
             btnGuardar.Enabled = true;
@@ -86,7 +86,7 @@ namespace BINAES_Proyecto.Forms
         
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Image imgFinal = (Image)panelResultado.BackgroundImage.Clone();
+            Image imgFinal = (Image)picQR.BackgroundImage.Clone();
             SaveFileDialog CajaDeDialogoGuardar = new SaveFileDialog();
             CajaDeDialogoGuardar.AddExtension = true;
             CajaDeDialogoGuardar.Filter = "Image PNG (*.png)|*.png";

@@ -285,3 +285,8 @@ C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug
 C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearPalabrasClave.resources
 C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CopyComplete
 C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.RegistroPrestamo.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmReserva.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearAutor.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearEditorial.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearPalabrasClave.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.RegistroPrestamo.resources

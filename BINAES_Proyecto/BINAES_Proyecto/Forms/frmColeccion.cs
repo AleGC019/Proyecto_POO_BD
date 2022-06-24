@@ -90,5 +90,10 @@ namespace BINAES_Proyecto.Forms
             GeneroDAO.ActualizarColeccion(col);
             MessageBox.Show("datos actualizados");
         }
+
+        private void txtActualizarColeccion_TextChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

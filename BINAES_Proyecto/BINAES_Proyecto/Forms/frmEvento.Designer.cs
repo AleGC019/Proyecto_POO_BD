@@ -31,6 +31,7 @@ namespace BINAES_Proyecto.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEvento));
             this.tbcEventos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tlpBusqueda = new System.Windows.Forms.TableLayoutPanel();
@@ -61,11 +62,11 @@ namespace BINAES_Proyecto.Forms
             this.tbcEventos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tlpBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEvento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvEvento)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEvento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picEvento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.nudCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcEventos
@@ -73,7 +74,7 @@ namespace BINAES_Proyecto.Forms
             this.tbcEventos.Controls.Add(this.tabPage1);
             this.tbcEventos.Controls.Add(this.tabPage2);
             this.tbcEventos.Controls.Add(this.tabPage3);
-            this.tbcEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbcEventos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.tbcEventos.Location = new System.Drawing.Point(12, 11);
             this.tbcEventos.Name = "tbcEventos";
             this.tbcEventos.SelectedIndex = 0;
@@ -93,7 +94,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // tlpBusqueda
             // 
-            this.tlpBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpBusqueda.ColumnCount = 3;
             this.tlpBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tlpBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -113,9 +114,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(446, 3);
             this.btnBuscar.Name = "btnBuscar";
@@ -127,7 +128,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // dgvEvento
             // 
-            this.dgvEvento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEvento.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEvento.BackgroundColor = System.Drawing.Color.White;
             this.dgvEvento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlpBusqueda.SetColumnSpan(this.dgvEvento, 3);
@@ -138,7 +139,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtBuscarEvento
             // 
-            this.txtBuscarEvento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarEvento.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarEvento.Location = new System.Drawing.Point(169, 3);
             this.txtBuscarEvento.Name = "txtBuscarEvento";
             this.txtBuscarEvento.Size = new System.Drawing.Size(271, 21);
@@ -146,10 +147,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // cmbEvento
             // 
-            this.cmbEvento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbEvento.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbEvento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEvento.FormattingEnabled = true;
-            this.cmbEvento.Items.AddRange(new object[] { "Eventos", "Nombre del evento" });
+            this.cmbEvento.Items.AddRange(new object[] {"Eventos", "Nombre del evento"});
             this.cmbEvento.Location = new System.Drawing.Point(3, 3);
             this.cmbEvento.Name = "cmbEvento";
             this.cmbEvento.Size = new System.Drawing.Size(160, 23);
@@ -227,9 +228,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblInformacion
             // 
-            this.lblInformacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInformacion.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.lblInformacion, 6);
-            this.lblInformacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInformacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblInformacion.Location = new System.Drawing.Point(42, 26);
             this.lblInformacion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInformacion.Name = "lblInformacion";
@@ -239,10 +240,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnAgregarE
             // 
-            this.btnAgregarE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
+            this.btnAgregarE.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarE.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
             this.tableLayoutPanel3.SetColumnSpan(this.btnAgregarE, 4);
-            this.btnAgregarE.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarE.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnAgregarE.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAgregarE.Location = new System.Drawing.Point(361, 348);
             this.btnAgregarE.Margin = new System.Windows.Forms.Padding(2);
@@ -255,7 +256,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtNombreE
             // 
-            this.txtNombreE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreE.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.txtNombreE, 5);
             this.txtNombreE.Location = new System.Drawing.Point(42, 80);
             this.txtNombreE.Margin = new System.Windows.Forms.Padding(2);
@@ -265,9 +266,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblnombreE
             // 
-            this.lblnombreE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblnombreE.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.lblnombreE, 4);
-            this.lblnombreE.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombreE.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblnombreE.Location = new System.Drawing.Point(42, 52);
             this.lblnombreE.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblnombreE.Name = "lblnombreE";
@@ -278,9 +279,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblarea
             // 
-            this.lblarea.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblarea.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.lblarea, 4);
-            this.lblarea.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblarea.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblarea.Location = new System.Drawing.Point(42, 104);
             this.lblarea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblarea.Name = "lblarea";
@@ -291,46 +292,46 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblInicio
             // 
-            this.lblInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInicio.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.lblInicio, 4);
-            this.lblInicio.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInicio.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblInicio.Location = new System.Drawing.Point(42, 156);
             this.lblInicio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInicio.Name = "lblInicio";
             this.lblInicio.Size = new System.Drawing.Size(155, 26);
             this.lblInicio.TabIndex = 5;
-            this.lblInicio.Text = "Hora y fecha de Inicio; ";
+            this.lblInicio.Text = "Hora y fecha de inicio ";
             this.lblInicio.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.label9, 2);
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label9.Location = new System.Drawing.Point(401, 26);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 26);
             this.label9.TabIndex = 9;
-            this.label9.Text = "Fotografia";
+            this.label9.Text = "Fotografía";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // lblFinal
             // 
-            this.lblFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFinal.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.lblFinal, 5);
-            this.lblFinal.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinal.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblFinal.Location = new System.Drawing.Point(42, 208);
             this.lblFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFinal.Name = "lblFinal";
             this.lblFinal.Size = new System.Drawing.Size(195, 26);
             this.lblFinal.TabIndex = 10;
-            this.lblFinal.Text = "Hora y fecha de finalizacion";
+            this.lblFinal.Text = "Hora y fecha de finalización";
             this.lblFinal.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // cmbEArea
             // 
-            this.cmbEArea.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbEArea.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.cmbEArea, 5);
             this.cmbEArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEArea.FormattingEnabled = true;
@@ -341,7 +342,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // dtpIniico
             // 
-            this.dtpIniico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpIniico.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.dtpIniico, 6);
             this.dtpIniico.Location = new System.Drawing.Point(43, 185);
             this.dtpIniico.Name = "dtpIniico";
@@ -350,7 +351,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // dtpFinalizacion
             // 
-            this.dtpFinalizacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFinalizacion.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.dtpFinalizacion, 6);
             this.dtpFinalizacion.Location = new System.Drawing.Point(43, 237);
             this.dtpFinalizacion.Name = "dtpFinalizacion";
@@ -359,7 +360,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // picEvento
             // 
-            this.picEvento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.picEvento.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.picEvento, 6);
             this.picEvento.Location = new System.Drawing.Point(322, 81);
             this.picEvento.Name = "picEvento";
@@ -370,33 +371,33 @@ namespace BINAES_Proyecto.Forms
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudCantidad.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.nudCantidad, 4);
             this.nudCantidad.Location = new System.Drawing.Point(362, 297);
-            this.nudCantidad.Maximum = new decimal(new int[] { 400, 0, 0, 0 });
-            this.nudCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            this.nudCantidad.Maximum = new decimal(new int[] {400, 0, 0, 0});
+            this.nudCantidad.Minimum = new decimal(new int[] {1, 0, 0, 0});
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(154, 21);
             this.nudCantidad.TabIndex = 21;
             this.nudCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.nudCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            this.nudCantidad.Value = new decimal(new int[] {1, 0, 0, 0});
             // 
             // lblAsistentes
             // 
-            this.lblAsistentes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAsistentes.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.lblAsistentes, 4);
-            this.lblAsistentes.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsistentes.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblAsistentes.Location = new System.Drawing.Point(361, 276);
             this.lblAsistentes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAsistentes.Name = "lblAsistentes";
             this.lblAsistentes.Size = new System.Drawing.Size(156, 18);
             this.lblAsistentes.TabIndex = 14;
-            this.lblAsistentes.Text = "Cantidad de asistentes:";
+            this.lblAsistentes.Text = "Cantidad de asistentes";
             this.lblAsistentes.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAgregar.BackColor = System.Drawing.SystemColors.Highlight;
             this.tableLayoutPanel3.SetColumnSpan(this.btnAgregar, 4);
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
@@ -410,20 +411,20 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblObjetivo
             // 
-            this.lblObjetivo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblObjetivo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.lblObjetivo, 5);
-            this.lblObjetivo.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObjetivo.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblObjetivo.Location = new System.Drawing.Point(42, 276);
             this.lblObjetivo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblObjetivo.Name = "lblObjetivo";
             this.lblObjetivo.Size = new System.Drawing.Size(195, 18);
             this.lblObjetivo.TabIndex = 24;
-            this.lblObjetivo.Text = "Ingrese el objetivo del evento:";
+            this.lblObjetivo.Text = "Ingrese el objetivo del evento";
             this.lblObjetivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtobjetivo
             // 
-            this.txtobjetivo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtobjetivo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.SetColumnSpan(this.txtobjetivo, 5);
             this.txtobjetivo.Location = new System.Drawing.Point(42, 296);
             this.txtobjetivo.Margin = new System.Windows.Forms.Padding(2);
@@ -447,6 +448,7 @@ namespace BINAES_Proyecto.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 465);
             this.Controls.Add(this.tbcEventos);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmEvento";
             this.Text = "frmEvento";
             this.Load += new System.EventHandler(this.frmEvento_Load);
@@ -454,13 +456,13 @@ namespace BINAES_Proyecto.Forms
             this.tabPage1.ResumeLayout(false);
             this.tlpBusqueda.ResumeLayout(false);
             this.tlpBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEvento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvEvento)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picEvento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picEvento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.nudCantidad)).EndInit();
             this.ResumeLayout(false);
         }
 
