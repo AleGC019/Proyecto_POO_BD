@@ -40,25 +40,25 @@ namespace BINAES_Proyecto
             string cadena = Resources.Cadena_Conexion;
             MessageBox.Show("Cadena: " + cadena);
 
-            
-            
+
+
             //conectar a la BD 
             using (SqlConnection connection = new SqlConnection(cadena))
-                
+
             {
                 string query = "SELECT id, nombre, ocupacion, direccion, correo, telefono, institucion FROM USUARIO";
                 SqlCommand command = new SqlCommand(query, connection);
                 MessageBox.Show("Queary configurada");
-                
+
                 //abrir la conexion, ejecutar la query 
                 connection.Open();
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    
+
                     while (reader.Read())
                     {
                         Usuario user = new Usuario();
-                        
+
                         user.UsuarioID = Convert.ToInt32(reader["id"].ToString());
                         user.UsuarioNombre = reader["nombre"].ToString();
                         user.UserOcupacion = reader["ocupacion"].ToString();
@@ -66,9 +66,9 @@ namespace BINAES_Proyecto
                         user.UserCorreo = reader["correo"].ToString();
                         user.UserTelefono = reader["telefono"].ToString();
                         user.UserInstitucion = reader["institucion"].ToString();
-                        
+
                         ListaUsuarios.Add(user);
-                        
+
 
                     }
                 }
@@ -78,7 +78,7 @@ namespace BINAES_Proyecto
 
             return ListaUsuarios;
         }
-        
+
         public static bool EliminarUsuario(int id)
         {
             bool exito = true;
@@ -92,14 +92,14 @@ namespace BINAES_Proyecto
                     SqlCommand command = new SqlCommand(query, connection);
 
                     command.Parameters.AddWithValue("@id", id);
-                    
+
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();
                 }
 
             }
-            catch(Exception)
+            catch (Exception)
             {
                 exito = false;
             }
@@ -124,62 +124,66 @@ namespace BINAES_Proyecto
                 command.Parameters.AddWithValue("@nuevotelefono", user.UserTelefono);
                 command.Parameters.AddWithValue("@nuevainstitucin", user.UserInstitucion);
                 command.Parameters.AddWithValue("@id", user.UsuarioID);
-                
+
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
 
             }
         }
-        
-        
+
+
         public static List<Usuario> AdminLoginInfo(string nombre, string contra)
         {
             string cadena = Resources.Cadena_Conexion;
             List<Usuario> Listausu = new List<Usuario>();
 
-            using (SqlConnection connection = new SqlConnection(cadena)){
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
                 string query = "SELECT USUARIO.nombre AS 'usuario', USUARIO.contra AS 'contra'" +
                                "FROM USUARIO " +
                                "WHERE USUARIO.nombre like @nombre AND Usuario.contra like @contra";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@nombre", nombre);
                 command.Parameters.AddWithValue("@contra", contra);
-                
+
                 connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader()){
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
                     while (reader.Read())
                     {
                         Usuario usu = new Usuario();
                         usu.UsuarioNombre = reader["usuario"].ToString();
                         usu.Contra = reader["contra"].ToString();
-                    }   
+                    }
                 }
                 connection.Close();
             }
             return Listausu;
         }
-        
+
         public static Usuario AdminLoginInfo2(string nombre, string contra)
         {
             string cadena = Resources.Cadena_Conexion;
             Usuario Listausu = new Usuario();
 
-            using (SqlConnection connection = new SqlConnection(cadena)){
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
                 string query = "SELECT USUARIO.nombre AS 'usuario', USUARIO.contra AS 'contra'" +
-                               "FROM USUARIO " +
-                               "WHERE USUARIO.nombre like @nombre AND USUARIO.contra like @contra";
+                               "FROM USUARIO WHERE USUARIO.nombre like @nombre AND USUARIO.contra like @contra";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@nombre", nombre);
                 command.Parameters.AddWithValue("@contra", contra);
-                
+
                 connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader()){
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
                     while (reader.Read())
                     {
                         Listausu.UsuarioNombre = reader["usuario"].ToString();
                         Listausu.Contra = reader["contra"].ToString();
-                    }   
+                        //Listausu.rol = reader["rol"].ToString();
+                    }
                 }
                 connection.Close();
             }
@@ -187,3 +191,4 @@ namespace BINAES_Proyecto
         }
     }
 }
+

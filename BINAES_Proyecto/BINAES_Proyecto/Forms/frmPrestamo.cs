@@ -14,9 +14,13 @@ namespace BINAES_Proyecto.Forms
     {
         public Ejemplar Buscado { get; set; }
 
-        public frmPrestamo()
+        public Usuario usu { get; set; }
+
+        public frmPrestamo(Usuario Actual_User)
         {
             InitializeComponent();
+
+            usu = Actual_User;
         }
 
         private void frmPrestamo_Load(object sender, System.EventArgs e)
@@ -138,7 +142,7 @@ namespace BINAES_Proyecto.Forms
                         }
 
                         break;
-
+                        
                     default:
                     break;
                 }
@@ -152,6 +156,8 @@ namespace BINAES_Proyecto.Forms
         private void picFoundItem_Prestamo_Click(object sender, EventArgs e)
         {
             PrestamoDAO.VerifyPrestamo(Buscado);
+
+            //using(frmRe)
         }
     }
 }

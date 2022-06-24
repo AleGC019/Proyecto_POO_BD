@@ -19,9 +19,13 @@ namespace BINAES_Proyecto
         private int tempIndex;
         private Form ActiveForm;
 
-        public frmBinaesMain()
+        Usuario Usuario_Actual;
+
+        public frmBinaesMain(Usuario Actual_user)
         {
             InitializeComponent();
+
+            Usuario_Actual = Actual_user;
         }
 
         private void ActivateButton(Object btnSender)
@@ -107,7 +111,7 @@ namespace BINAES_Proyecto
         private void btnPrestamos_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new Forms.frmPrestamo(),sender);
+            OpenChildForm(new Forms.frmPrestamo(Usuario_Actual),sender);
         }
 
         private void btnReservas_Click_1(object sender, EventArgs e)
@@ -122,11 +126,18 @@ namespace BINAES_Proyecto
             try
             {
                 imgDAO.CargaInicialIMG();
+
+
             }
             catch(Exception E)
             {
                 MessageBox.Show("Error en carga de imagenes en base de datos.");
             }
+        }
+
+        private void frmBinaesMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

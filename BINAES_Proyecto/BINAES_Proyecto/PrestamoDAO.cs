@@ -236,11 +236,11 @@ namespace BINAES_Proyecto
 
         public static void VerifyPrestamo (Ejemplar v_eje)
         {
-            bool prestado = true;
+            bool prestado;
 
             PrestamoEjemplar comparacion_base = new PrestamoEjemplar();
 
-            comparacion_base.id = -1;
+            comparacion_base.id_prestamo = 0;
 
             string cadena_conexion = Resources.Cadena_Conexion;
 
@@ -250,8 +250,8 @@ namespace BINAES_Proyecto
                 {
                     string consulta;
 
-                    consulta =  "SELECT PRESTAMO.id, EJEMPLAR.nombre, PRESTAMO.prestamo_devolucion_hora_fecha, " +
-                                "PRESTAMO.prestamo_entrega_hora_fecha FROM EJEMPLAR INNER JOIN PRESTAMO ON PRESTAMO.id_ejemplar = EJEMPLAR.id " +
+                    consulta =  "SELECT PRESTAMO.id, PRESTAMO.prestamo_entrega_hora_fecha, PRESTAMO.prestamo_devolucion_hora_fecha" +
+                                " FROM EJEMPLAR INNER JOIN PRESTAMO ON PRESTAMO.id_ejemplar = EJEMPLAR.id " +
                                 "WHERE EJEMPLAR.nombre = @titulo;";
 
                     SqlCommand comando = new SqlCommand(consulta, conexion_actual);
@@ -264,13 +264,11 @@ namespace BINAES_Proyecto
                         {
                             while (lector.Read())
                             {
-                                comparacion_base.id = Convert.ToInt32(lector["id"].ToString());
-
-                                comparacion_base.nombre = lector["nombre"].ToString();
+                                comparacion_base.id_prestamo = (Int32)lector["id"];
 
                                 comparacion_base.entrega = (DateTime)lector["prestamo_entrega_hora_fecha"];
 
-                                comparacion_base.entrega = (DateTime)lector["prestamo_devolucion_hora_fecha"];
+                                comparacion_base.devolucion = (DateTime)lector["prestamo_devolucion_hora_fecha"];
                       
                             }
                         }
@@ -283,28 +281,24 @@ namespace BINAES_Proyecto
                 MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
 
-            if(DateTime.Now > comparacion_base.devolucion)
+            if(comparacion_base.id_prestamo != 0)
+            {
+                if (DateTime.Now > comparacion_base.devolucion)
+                {
+                    MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.");
+                }
+                if (DateTime.Now < comparacion_base.devolucion)
+                {
+                    if (DateTime.Now > comparacion_base.entrega)
+                    {
+                        MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado.");
+                    }
+                }
+            }
+            else
             {
                 MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.");
             }
-            if(DateTime.Now < comparacion_base.devolucion)
-            {
-                if(DateTime.Now > comparacion_base.entrega)
-                {
-                    MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado.");
-                }
-            }
-
-
-            MessageBox.Show(DateTime.Now.ToString("G"));
-            MessageBox.Show(comparacion_base.entrega.ToString("G"));
-
-            /*if (comparacion_base.id != -1)
-            {
-                MessageBox.Show(comparacion_base.entrega);
-                MessageBox.Show(fecha_hoy);
-            }*/
-
         }
     }
 }

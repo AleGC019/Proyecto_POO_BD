@@ -4,10 +4,7 @@ namespace BINAES_Proyecto
 {
     public class PrestamoEjemplar
     {
-        public int id { get; set; }
-
-        public string nombre { get; set; }
-
+        public int id_prestamo { get; set; }
         public DateTime entrega { get; set; }
 
         public DateTime devolucion { get; set; }

@@ -41,7 +41,7 @@ namespace BINAES_Proyecto
             {
                 this.Hide();
                 
-                frmBinaesMain frmAux = new frmBinaesMain();
+                frmBinaesMain frmAux = new frmBinaesMain(usu);
                 frmAux.Show();
             }
 
