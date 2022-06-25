@@ -42,7 +42,15 @@ namespace BINAES_Proyecto
 
                 Usuario usu = UsuarioDAO.AdminLoginInfo2(nombre, contra);
 
-                if (usu != null)
+                if (usu != null  && usu.id_rol == 1)
+                {
+                    MessageBox.Show("Inicio de sesion correcto.", "Inicio de sesion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+
+                    frmBinaesMain frmAux = new frmBinaesMain(usu);
+                    frmAux.Show();
+                }
+                else if(usu != null  && usu.id_rol == 2)
                 {
                     MessageBox.Show("Inicio de sesion correcto.", "Inicio de sesion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
@@ -52,7 +60,7 @@ namespace BINAES_Proyecto
                 }
                 else
                 {
-                    MessageBox.Show("Credenciales erróneas!", "Blockbuster", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Credenciales erróneas!", "BINAES", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             

@@ -11,8 +11,12 @@ namespace BINAES_Proyecto
         public string UserDireccion { get; set; }
         public string UserCorreo { get; set; }
         public string fotoUsuario { get; set; }
+        
         public Bitmap fotoUsuarioAUX { get; set; }
         public string UserTelefono { get; set; }
         public string UserInstitucion { get; set; }
+        
+        public int id_rol { get; set; }
+        
     }
 }

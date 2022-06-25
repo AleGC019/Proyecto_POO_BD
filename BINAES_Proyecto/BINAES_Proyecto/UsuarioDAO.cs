@@ -194,13 +194,14 @@ namespace BINAES_Proyecto
 
             using (SqlConnection connection = new SqlConnection(cadena))
             {
-                string query = "SELECT nombre, contra, ocupacion FROM USUARIO " +
+                string query = "SELECT nombre, contra, id_rol FROM USUARIO " +
                                 "WHERE nombre = @nombre AND contra = @contra;";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 
                 command.Parameters.AddWithValue("@nombre", nombre);
                 command.Parameters.AddWithValue("@contra", contra);
+                //command.Parameters.AddWithValue("@id_rol", id_rol);
 
                 connection.Open();
 
@@ -211,8 +212,8 @@ namespace BINAES_Proyecto
                             UsuarioBuscado.UsuarioNombre = reader["nombre"].ToString();
 
                             UsuarioBuscado.Contra = reader["contra"].ToString();
-                            
-                            UsuarioBuscado.UserOcupacion = reader["ocupacion"].ToString();
+
+                            UsuarioBuscado.id_rol = Convert.ToInt32(reader["id_rol"].ToString());
                         }
                     }
 
