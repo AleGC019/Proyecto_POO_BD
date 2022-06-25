@@ -38,16 +38,18 @@ namespace BINAES_Proyecto
             // 
             // txtNuevaEditorial
             // 
-            this.txtNuevaEditorial.Location = new System.Drawing.Point(133, 155);
+            this.txtNuevaEditorial.Location = new System.Drawing.Point(89, 101);
+            this.txtNuevaEditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNuevaEditorial.Name = "txtNuevaEditorial";
-            this.txtNuevaEditorial.Size = new System.Drawing.Size(155, 26);
+            this.txtNuevaEditorial.Size = new System.Drawing.Size(105, 20);
             this.txtNuevaEditorial.TabIndex = 0;
             // 
             // btnAgregarEditorial
             // 
-            this.btnAgregarEditorial.Location = new System.Drawing.Point(138, 221);
+            this.btnAgregarEditorial.Location = new System.Drawing.Point(92, 144);
+            this.btnAgregarEditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarEditorial.Name = "btnAgregarEditorial";
-            this.btnAgregarEditorial.Size = new System.Drawing.Size(171, 50);
+            this.btnAgregarEditorial.Size = new System.Drawing.Size(114, 32);
             this.btnAgregarEditorial.TabIndex = 1;
             this.btnAgregarEditorial.Text = "Agregar Editorial";
             this.btnAgregarEditorial.UseVisualStyleBackColor = true;
@@ -55,21 +57,24 @@ namespace BINAES_Proyecto
             // 
             // lblNuevaEditorial
             // 
-            this.lblNuevaEditorial.Location = new System.Drawing.Point(128, 99);
+            this.lblNuevaEditorial.Location = new System.Drawing.Point(85, 64);
+            this.lblNuevaEditorial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNuevaEditorial.Name = "lblNuevaEditorial";
-            this.lblNuevaEditorial.Size = new System.Drawing.Size(159, 21);
+            this.lblNuevaEditorial.Size = new System.Drawing.Size(106, 14);
             this.lblNuevaEditorial.TabIndex = 2;
             this.lblNuevaEditorial.Text = "Nueva Editorial";
             // 
             // frmCrearEditorial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 526);
+            this.ClientSize = new System.Drawing.Size(293, 342);
             this.Controls.Add(this.lblNuevaEditorial);
             this.Controls.Add(this.btnAgregarEditorial);
             this.Controls.Add(this.txtNuevaEditorial);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCrearEditorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CrearEditorial";
             this.ResumeLayout(false);
             this.PerformLayout();

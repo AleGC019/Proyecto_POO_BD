@@ -53,10 +53,14 @@ namespace BINAES_Proyecto.Forms
 
         private void btnMostrarColeccion_Click(object sender, EventArgs e)
         {
-
-
+            
+            
             dgvMostrarUser.DataSource = null;
             dgvMostrarUser.DataSource = ColeccionDAO.MostrarColeccion();
+            //Quitar Columnas
+            dgvMostrarUser.Columns["generoID"].Visible = false;
+            dgvMostrarUser.Columns["tipoID"].Visible = false;
+            dgvMostrarUser.Columns["areaID"].Visible = false;
 
 
         }

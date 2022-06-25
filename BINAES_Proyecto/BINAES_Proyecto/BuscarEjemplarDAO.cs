@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BINAES_Proyecto.Properties;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace BINAES_Proyecto
 {
@@ -37,6 +38,7 @@ namespace BINAES_Proyecto
                     {
                         Ejemplar eje = new Ejemplar();
                         eje.Portada = reader["imagen_portada"].ToString();
+                        eje.fotoEjemplarAUX = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Nombre_Ejemplar = reader["nombre"].ToString();
                         eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
@@ -88,6 +90,7 @@ namespace BINAES_Proyecto
                     {
                         Ejemplar eje = new Ejemplar();
                         eje.Portada = reader["imagen_portada"].ToString();
+                        eje.fotoEjemplarAUX = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Nombre_Ejemplar = reader["nombre"].ToString();
                         eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
@@ -141,6 +144,7 @@ namespace BINAES_Proyecto
                     {
                         Ejemplar eje = new Ejemplar();
                         eje.Portada = reader["imagen_portada"].ToString();
+                        eje.fotoEjemplarAUX = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Nombre_Ejemplar = reader["nombre"].ToString();
                         eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
@@ -192,6 +196,7 @@ namespace BINAES_Proyecto
                     {
                         Ejemplar eje = new Ejemplar();
                         eje.Portada = reader["imagen_portada"].ToString();
+                        eje.fotoEjemplarAUX = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Nombre_Ejemplar = reader["nombre"].ToString();
                         eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
@@ -243,6 +248,7 @@ namespace BINAES_Proyecto
                     {
                         Ejemplar eje = new Ejemplar();
                         eje.Portada = reader["imagen_portada"].ToString();
+                        eje.fotoEjemplarAUX = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Nombre_Ejemplar = reader["nombre"].ToString();
                         eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());
@@ -290,6 +296,7 @@ namespace BINAES_Proyecto
                     {
                         Ejemplar eje = new Ejemplar();
                         eje.Portada = reader["imagen_portada"].ToString();
+                        eje.fotoEjemplarAUX = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Nombre_Ejemplar = reader["nombre"].ToString();
                         eje.Fecha_de_publicacion = Convert.ToDateTime(reader["fecha_publicada"].ToString());

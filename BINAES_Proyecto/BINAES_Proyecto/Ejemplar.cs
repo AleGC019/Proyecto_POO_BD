@@ -11,14 +11,12 @@ namespace BINAES_Proyecto
     public class Ejemplar
     {
         public int ID { get; set; }
+        public Bitmap fotoEjemplarAUX { get; set; }
         public string Nombre_Ejemplar { get; set; }
         public string Portada { get; set; }
         public string Coleccion { get; set; }
         public string Autor { get; set; }
         
-        public string fotoEjemplar{ get; set; }
-        
-        public Bitmap fotoEjemplarAUX { get; set; }
         public string ISBN { get; set; }
         public string ISSN { get; set; }
         public string DOI { get; set; }
