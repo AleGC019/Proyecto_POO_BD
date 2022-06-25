@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 
@@ -7,6 +8,7 @@ namespace BINAES_Proyecto.Forms
 {
     public partial class frmEjemplar : Form
     {
+        public string imagen { get; set; }
         public frmEjemplar()
         {
             InitializeComponent();
@@ -33,6 +35,27 @@ namespace BINAES_Proyecto.Forms
             cmbIdioma.ValueMember = "idIdioma";
             cmbIdioma.DisplayMember = "nombreIdioma";
             cmbIdioma.DataSource = EjemplarDAO.CargarDatosIdiomas();
+            
+            //cargar combos para la tab de editar 
+            cmbColeccionActualizar.DataSource = null;
+            cmbColeccionActualizar.ValueMember = "coleccionID";
+            cmbColeccionActualizar.DisplayMember = "coleccionNombre";
+            cmbColeccionActualizar.DataSource = EjemplarDAO.CargarDatosColeccion();
+
+            cmbActualizarEditorial.DataSource = null;
+            cmbActualizarEditorial.ValueMember = "editorialID";
+            cmbActualizarEditorial.DisplayMember = "nombreEditorial";
+            cmbActualizarEditorial.DataSource = EjemplarDAO.CargarDatosEditorial();
+
+            cmbActualizarFormato.DataSource = null;
+            cmbActualizarFormato.ValueMember = "formatoID";
+            cmbActualizarFormato.DisplayMember = "nombreFormato";
+            cmbActualizarFormato.DataSource = EjemplarDAO.CargarDatosFormato();
+            
+            c.DataSource = null;
+            c.ValueMember = "idIdioma";
+            c.DisplayMember = "nombreIdioma";
+            c.DataSource = EjemplarDAO.CargarDatosIdiomas();
         }
 
         private void btnCrearEjemplar_Click(object sender, EventArgs e)
@@ -44,12 +67,12 @@ namespace BINAES_Proyecto.Forms
             ejem.Editorial = cmbEditorial.SelectedValue.ToString();
             ejem.Formato = cmbFomato.SelectedValue.ToString();
             ejem.Idioma = cmbIdioma.SelectedValue.ToString();
-            ejem.Portada = txtFotografia.Text;
+            ejem.Portada = imagen;
             ejem.ISBN = txtIsbn.Text;
             ejem.ISSN = txtissn.Text;
             ejem.DOI = txtDoi.Text;
-            
-            
+
+            picImagenEjemplar.Image = new Bitmap(imagen);
             
             EjemplarDAO.IngresarEjemplar(ejem);
             MessageBox.Show("Ingresado con éxito el numero de id de este ejemplar es " + EjemplarDAO.nuevoidEejmplar());
@@ -347,47 +370,7 @@ namespace BINAES_Proyecto.Forms
         {
             throw new System.NotImplementedException();
         }
-
-        private void txtFotografia_DoubleClick(object sender, EventArgs e)
-        {
-            string local_route;
-
-            try
-            {
-                using (OpenFileDialog VentanaImagen = new OpenFileDialog())
-                {
-                    VentanaImagen.InitialDirectory = @"c:\\";
-
-                    VentanaImagen.Filter = "jpg files (*.jpg)|*.jpg|png files (*.png)|*.png";
-
-                    string DebugRoute = @"RESOURCES\IMAGE\";
-
-                    if (VentanaImagen.ShowDialog() == DialogResult.OK)
-                    {
-                        local_route = AppDomain.CurrentDomain.BaseDirectory + DebugRoute + Path.GetFileName(VentanaImagen.FileName);
-
-                        if (!File.Exists(local_route))
-                        {
-                            File.Copy(VentanaImagen.FileName, local_route);
-
-                            txtFotografia.Text = local_route;
-
-                            MessageBox.Show("¡Imagen importada exitosamente!", "Importación correcta.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("La imagen ya existe en el directorio de recursos.", "Error en importacion.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
-                        }
-                    }
-
-                }
-            }
-            catch (Exception E)
-            {
-                MessageBox.Show("Importe de imagen no completado. Intente en otro momento.", "Error en importacion.", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
-            }
-
-        }
+        
 
         private void btnCrearPalabrasClave_Click(object sender, EventArgs e)
         {
@@ -397,6 +380,41 @@ namespace BINAES_Proyecto.Forms
         private void btnCrearAutor_Click(object sender, EventArgs e)
         {
             new frmCrearAutor().Show();
+        }
+
+        private void btnAgregarImagenEjemplar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog obtener = new OpenFileDialog();
+            obtener.InitialDirectory = "C:\\";
+            obtener.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp, *.png)| *.jpg; *.jpeg; *.gif; *.bmp, *.png";
+            
+            if(obtener.ShowDialog() == DialogResult.OK)
+            {
+                imagen = obtener.FileName;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una foto");
+            }
+        }
+
+        private void btnActualizarEejmplar_Click(object sender, EventArgs e)
+        {
+            Ejemplar ejem  = new Ejemplar();
+            ejem.ID = Convert.ToInt32(txtIDActualizarEjemplar.Text);
+            ejem.Nombre_Ejemplar = txtActualizarNombreEjemplar.Text;
+            ejem.Fecha_de_publicacion = Convert.ToDateTime(txtActualizarFechaEjemplar.Text);
+            ejem.Coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
+            ejem.Formato = cmbActualizarFormato.SelectedValue.ToString();
+            ejem.ISBN = txtissn.Text;
+            ejem.ISSN = txtissn.Text;
+            ejem.DOI = txtDoi.Text;
+            ejem.Portada = imagen;
+            
+            
+            EjemplarDAO.ActualizarEjemplar(ejem);
+            MessageBox.Show("datos actualizados");
+            
         }
     } 
 }

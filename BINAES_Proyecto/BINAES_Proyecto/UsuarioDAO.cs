@@ -231,6 +231,8 @@ namespace BINAES_Proyecto
                 return UsuarioBuscado;
             }
         }
+        
+        
     }
 }
 

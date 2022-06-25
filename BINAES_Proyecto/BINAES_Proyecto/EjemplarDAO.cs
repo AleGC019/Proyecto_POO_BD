@@ -250,6 +250,37 @@ namespace BINAES_Proyecto
             return lista;
         }
         
+        
+        public static void ActualizarEjemplar(Ejemplar ejem )
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string noquery =
+                    "UPDATE EJEMPLAR SET nombre = @nuevonombre, fecha_publicacion = @nuevafecha_publicacion, imagen_portada = @nuevaimagen_portada, id_idioma = @nuevoid_idioma, id_editorial = @nuevoid_editorial, id_formato = @nuevoid_formato, isbn =  @nuevaisbn, issn = @nuevoissn, doi = @nuevodoi, id_coleccion = @nueoid_coleccion " +
+                    "WHERE id = @id";
+
+                SqlCommand command = new SqlCommand(noquery, connection);
+                command.Parameters.AddWithValue("@nuevonombre", ejem.Nombre_Ejemplar);
+                command.Parameters.AddWithValue("@nuevafecha_publicacion", ejem.Fecha_de_publicacion);
+                command.Parameters.AddWithValue("@nuevaimagen_portada", ejem.Portada);
+                command.Parameters.AddWithValue("@nuevoid_idioma", ejem.Idioma);
+                command.Parameters.AddWithValue("@nuevoid_editorial", ejem.Editorial);
+                command.Parameters.AddWithValue("@nuevoid_formato", ejem.Formato);
+                command.Parameters.AddWithValue("@nuevaisbn", ejem.ISBN);
+                command.Parameters.AddWithValue("@nuevoissn", ejem.ISSN);
+                command.Parameters.AddWithValue("@nuevodoi", ejem.DOI);
+                command.Parameters.AddWithValue("@nueoid_coleccion", ejem.Coleccion);
+                command.Parameters.AddWithValue("@id", ejem.ID);
+                
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
+        
 
 
     }

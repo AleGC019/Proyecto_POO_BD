@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,10 @@ namespace BINAES_Proyecto
         public string Portada { get; set; }
         public string Coleccion { get; set; }
         public string Autor { get; set; }
-        //fotografia 
+        
+        public string fotoEjemplar{ get; set; }
+        
+        public Bitmap fotoEjemplarAUX { get; set; }
         public string ISBN { get; set; }
         public string ISSN { get; set; }
         public string DOI { get; set; }

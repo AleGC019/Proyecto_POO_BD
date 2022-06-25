@@ -297,7 +297,9 @@ namespace BINAES_Proyecto.Forms
 
         private void frmBuscar_Load(object sender, EventArgs e)
         {
-
+            pnlFoundItem_PrestamoBuscar.Visible = false;
+            
+            // en el click del data grid view tenemos que cambiarlo a true 
         }
     }
 }
