@@ -18,11 +18,9 @@ namespace BINAES_Proyecto
 
         public List<Usuario> usuarios { get; set; }
 
-        public frmRegistroPrestamo(Usuario usuario_PrestamoGral, Ejemplar actualEjemplar)
+        public frmRegistroPrestamo( Ejemplar actualEjemplar)
         {
             InitializeComponent();
-
-            actualUser = usuario_PrestamoGral;
 
             eje = actualEjemplar;
         }

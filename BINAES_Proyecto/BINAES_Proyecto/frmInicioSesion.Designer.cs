@@ -39,13 +39,13 @@ namespace BINAES_Proyecto
             this.txtContra = new System.Windows.Forms.TextBox();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.picLogoInicio = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize) (this.picLogoInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicio)).BeginInit();
             this.SuspendLayout();
             // 
             // lblError
             // 
             this.lblError.BackColor = System.Drawing.Color.Transparent;
-            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblError.Location = new System.Drawing.Point(262, 327);
             this.lblError.Name = "lblError";
@@ -69,7 +69,7 @@ namespace BINAES_Proyecto
             // lblContra
             // 
             this.lblContra.BackColor = System.Drawing.Color.Transparent;
-            this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContra.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblContra.Location = new System.Drawing.Point(111, 289);
             this.lblContra.Name = "lblContra";
@@ -79,7 +79,7 @@ namespace BINAES_Proyecto
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblUsuario.Location = new System.Drawing.Point(146, 252);
             this.lblUsuario.Name = "lblUsuario";
@@ -116,7 +116,7 @@ namespace BINAES_Proyecto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(586, 419);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnLogIn);
@@ -126,13 +126,13 @@ namespace BINAES_Proyecto
             this.Controls.Add(this.txtusuario);
             this.Controls.Add(this.picLogoInicio);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmInicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BINAES";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmInicioSesion_FormClosed);
             this.Load += new System.EventHandler(this.frmInicioSesion_Load);
-            ((System.ComponentModel.ISupportInitialize) (this.picLogoInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogoInicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }

@@ -47,7 +47,7 @@ namespace BINAES_Proyecto
                     MessageBox.Show("Inicio de sesion correcto.", "Inicio de sesion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
 
-                    frmBinaesMain frmAux = new frmBinaesMain(usu);
+                    frmBinaesMain frmAux = new frmBinaesMain();
                     frmAux.Show();
                 }
                 else if(usu != null  && usu.id_rol == 2)
@@ -55,7 +55,7 @@ namespace BINAES_Proyecto
                     MessageBox.Show("Inicio de sesion correcto.", "Inicio de sesion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
 
-                    frmBinaesUsuario frmAux = new frmBinaesUsuario(usu);
+                    frmBinaesUsuario frmAux = new frmBinaesUsuario();
                     frmAux.Show();
                 }
                 else

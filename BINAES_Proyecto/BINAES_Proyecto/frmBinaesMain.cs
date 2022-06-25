@@ -21,11 +21,10 @@ namespace BINAES_Proyecto
 
         public Usuario actualUser { get; set; }
 
-        public frmBinaesMain(Usuario usuario_inicioSesion)
+        public frmBinaesMain()
         {
             InitializeComponent();
-
-            actualUser = usuario_inicioSesion;
+            
         }
         //
 
@@ -112,7 +111,7 @@ namespace BINAES_Proyecto
         private void btnPrestamos_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new Forms.frmPrestamo(actualUser),sender);
+            OpenChildForm(new Forms.frmPrestamo(),sender);
         }
 
         private void btnReservas_Click_1(object sender, EventArgs e)
@@ -139,6 +138,16 @@ namespace BINAES_Proyecto
         private void frmBinaesMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+            frmInicioSesion frmAux = new frmInicioSesion();
+            frmAux.Show();
+            
+            
         }
     }
 }

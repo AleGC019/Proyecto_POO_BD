@@ -16,11 +16,9 @@ namespace BINAES_Proyecto.Forms
 
         public Usuario actualUser { get; set; }
 
-        public frmPrestamo(Usuario usuarioMAIN)
+        public frmPrestamo()
         {
             InitializeComponent();
-
-            actualUser = usuarioMAIN;
         }
 
         private void frmPrestamo_Load(object sender, System.EventArgs e)
@@ -136,7 +134,7 @@ namespace BINAES_Proyecto.Forms
                         }
                         else if (Buscado.ID == 0)
                         {
-                            MessageBox.Show("Existe más de un título con su palabra parcial." + Environment.NewLine + "Sea un poco más específico o intente con título completo.",
+                            MessageBox.Show("Existe mï¿½s de un tï¿½tulo con su palabra parcial." + Environment.NewLine + "Sea un poco mï¿½s especï¿½fico o intente con tï¿½tulo completo.",
                                             "Coincidencia de resultados.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
 
                         }
@@ -159,7 +157,7 @@ namespace BINAES_Proyecto.Forms
             {
                 MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.", "Disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                using (frmRegistroPrestamo nuevaVentana = new frmRegistroPrestamo(actualUser, Buscado))
+                using (frmRegistroPrestamo nuevaVentana = new frmRegistroPrestamo(Buscado))
                 {
                     nuevaVentana.ShowDialog();
                 }
