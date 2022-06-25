@@ -300,5 +300,10 @@ namespace BINAES_Proyecto
                 MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.");
             }
         }
+
+        public static void NewPrestamo(string usuario, Ejemplar eje, DateTime entrega, DateTime devolucion)
+        {
+
+        }
     }
 }

@@ -38,9 +38,6 @@ namespace BINAES_Proyecto
             //cadena de conexion 
             List<Usuario> ListaUsuarios = new List<Usuario>();
             string cadena = Resources.Cadena_Conexion;
-            MessageBox.Show("Cadena: " + cadena);
-
-
 
             //conectar a la BD 
             using (SqlConnection connection = new SqlConnection(cadena))
@@ -48,7 +45,6 @@ namespace BINAES_Proyecto
             {
                 string query = "SELECT id, nombre, ocupacion, direccion, correo, telefono, institucion FROM USUARIO";
                 SqlCommand command = new SqlCommand(query, connection);
-                MessageBox.Show("Queary configurada");
 
                 //abrir la conexion, ejecutar la query 
                 connection.Open();
@@ -68,8 +64,6 @@ namespace BINAES_Proyecto
                         user.UserInstitucion = reader["institucion"].ToString();
 
                         ListaUsuarios.Add(user);
-
-
                     }
                 }
                 connection.Close();
@@ -77,6 +71,36 @@ namespace BINAES_Proyecto
 
 
             return ListaUsuarios;
+        }
+
+        public static List<Usuario> MostrarUsuariosCMB()
+        {
+            List<Usuario> lista = new List<Usuario>();
+
+            string cadena = Resources.Cadena_Conexion;
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT id, nombre FROM USUARIO;";
+                
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Usuario user = new Usuario();
+
+                            user.UsuarioID = Convert.ToInt32(reader[0].ToString());
+                            user.UsuarioNombre = reader[1].ToString();
+                            lista.Add(user);
+                        }
+                    }
+                connection.Close();
+            }
+            return lista;
         }
 
         public static bool EliminarUsuario(int id)

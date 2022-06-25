@@ -16,6 +16,8 @@ namespace BINAES_Proyecto
 
         public Ejemplar eje { get; set; }
 
+        public List<Usuario> usuarios { get; set; }
+
         public frmRegistroPrestamo(Usuario usuario_PrestamoGral, Ejemplar actualEjemplar)
         {
             InitializeComponent();
@@ -49,11 +51,35 @@ namespace BINAES_Proyecto
 
             MessageBox.Show("BINAES le otorgará el material por un periodo de 14 días en los que, al terminar, usted deber regresar lo prestado.");
 
+            List<Usuario> poblado = new List<Usuario>();
+
+            poblado = UsuarioDAO.MostrarUsuariosCMB();
+
+            cmbUsuarioPresta.DataSource = null;
+
+            cmbUsuarioPresta.DisplayMember = "UsuarioNombre";
+
+            cmbUsuarioPresta.ValueMember = "UsuarioID";
+
+            cmbUsuarioPresta.DataSource = poblado;
+
             /*dtpEntrega.Format = DateTimePickerFormat.Custom;
             dtpEntrega.CustomFormat = "MM/dd/yyyy hh:mm:ss";
 
             dtpDevolucion.Format = DateTimePickerFormat.Custom;
             dtpDevolucion.CustomFormat = "MM/dd/yyyy hh:mm:ss";*/
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+
+            this.Close();
+        }
+
+        private void btnPrestar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
