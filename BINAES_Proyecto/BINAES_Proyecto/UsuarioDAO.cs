@@ -165,29 +165,46 @@ namespace BINAES_Proyecto
         public static Usuario AdminLoginInfo2(string nombre, string contra)
         {
             string cadena = Resources.Cadena_Conexion;
-            Usuario Listausu = new Usuario();
+            
+            Usuario UsuarioBuscado = new Usuario();
 
             using (SqlConnection connection = new SqlConnection(cadena))
             {
-                string query = "SELECT USUARIO.nombre AS 'usuario', USUARIO.contra AS 'contra'" +
-                               "FROM USUARIO WHERE USUARIO.nombre like @nombre AND USUARIO.contra like @contra";
+                string query = "SELECT nombre, contra, ocupacion FROM USUARIO " +
+                                "WHERE nombre = @nombre AND contra = @contra;";
+
                 SqlCommand command = new SqlCommand(query, connection);
+                
                 command.Parameters.AddWithValue("@nombre", nombre);
                 command.Parameters.AddWithValue("@contra", contra);
 
                 connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        Listausu.UsuarioNombre = reader["usuario"].ToString();
-                        Listausu.Contra = reader["contra"].ToString();
-                        //Listausu.rol = reader["rol"].ToString();
+                        while (reader.Read())
+                        {
+                            UsuarioBuscado.UsuarioNombre = reader["nombre"].ToString();
+
+                            UsuarioBuscado.Contra = reader["contra"].ToString();
+                            
+                            UsuarioBuscado.UserOcupacion = reader["ocupacion"].ToString();
+                        }
                     }
-                }
+
                 connection.Close();
             }
-            return Listausu;
+
+            if(UsuarioBuscado.UsuarioNombre == nombre)
+            {
+                return UsuarioBuscado;
+            }
+            else
+            {
+                UsuarioBuscado = null;
+
+                return UsuarioBuscado;
+            }
         }
     }
 }

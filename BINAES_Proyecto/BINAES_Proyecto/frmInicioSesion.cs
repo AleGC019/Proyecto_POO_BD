@@ -30,24 +30,32 @@ namespace BINAES_Proyecto
             
             */
 
-            string nombre = txtusuario.Text.ToString().Trim();
-            string contra = txtContra.Text.ToString().Trim();
-
-            Usuario usu = UsuarioDAO.AdminLoginInfo2(nombre, contra);
-            
-            if (usu.UsuarioNombre.Length > 0)
+            if(txtusuario.TextLength == 0 || txtContra.TextLength == 0)
             {
-                this.Hide();
-                
-                frmBinaesMain frmAux = new frmBinaesMain(usu);
-                frmAux.Show();
+                MessageBox.Show("Campos de inicio de sesión no completos.", "Complete el formulario.", MessageBoxButtons.OK, MessageBoxIcon.Hand);
             }
-
             else
             {
-                MessageBox.Show("Credenciales erróneas!", "Blockbuster",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                string nombre = txtusuario.Text.ToString().Trim();
+
+                string contra = txtContra.Text.ToString().Trim();
+
+                Usuario usu = UsuarioDAO.AdminLoginInfo2(nombre, contra);
+
+                if (usu != null)
+                {
+                    MessageBox.Show("Inicio de sesion correcto.", "Inicio de sesion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+
+                    frmBinaesMain frmAux = new frmBinaesMain(usu);
+                    frmAux.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales erróneas!", "Blockbuster", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
+            
 
             /*
             if (txtusuario.Text == "admin" && txtContra.Text == "1234")
