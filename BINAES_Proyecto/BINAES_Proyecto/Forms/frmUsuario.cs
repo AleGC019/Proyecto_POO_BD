@@ -1,8 +1,10 @@
 using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using BINAES_Proyecto.Properties;
 using Gma.QrCodeNet.Encoding;
 using Gma.QrCodeNet.Encoding.Windows.Render;
 
@@ -116,9 +118,45 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
-        
+
+        private void btnConfirmarIDusuario_Click(object sender, EventArgs e)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+
+                SqlCommand command =
+                    new SqlCommand(
+                        "SELECT nombre, ocupacion, direccion, correo, fotografia, telefono, institucion  FROM USUARIO WHERE id = @id", connection);
+                command.Parameters.AddWithValue("@id", txtIDatualizar.Text);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    txtActualizarNombre.Text = reader["nombre"].ToString();
+                    txtActualizarOcupacion.Text = reader["ocupacion"].ToString();
+                    txtActualizarCorreo.Text = reader["correo"].ToString();
+                    txtActualizarDireccion.Text = reader["direccion"].ToString();
+                    imagen = reader["fotografia"].ToString();
+                    txtActualizarTelefono.Text = reader["telefono"].ToString();
+                    txtActualizarInstitucion.Text = reader["institucion"].ToString();
+
+
+
+                
+                connection.Close();
+
+
+            }
+            }
+        }
+
+       
     }
 }
+        
+
 
 
     
