@@ -64,6 +64,7 @@ namespace BINAES_Proyecto.Forms
 
         private void btnCrearEjemplar_Click(object sender, EventArgs e)
         {
+            if(txtNombreEjemplar.TextLength > 0 && txtFechaPublicacion.TextLength >0 && cmbColeccionEjemplar.Text.Length > 0 && cmbEditorial.Text.Length >0 && cmbFomato.Text.Length >0 && cmbIdioma.Text.Length > 0 && imagen.Length > 0 && (txtIsbn.TextLength>0 || txtissn.TextLength > 0 || txtDoi.TextLength >0 )){
             Ejemplar ejem = new Ejemplar();
             ejem.Nombre_Ejemplar = txtNombreEjemplar.Text;
             ejem.Fecha_de_publicacion = Convert.ToDateTime(txtFechaPublicacion.Text);
@@ -80,6 +81,13 @@ namespace BINAES_Proyecto.Forms
 
             EjemplarDAO.IngresarEjemplar(ejem);
             MessageBox.Show("Ingresado con éxito el numero de id de este ejemplar es " + EjemplarDAO.nuevoidEejmplar());
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese todos los campos requeridos", "Informacion invalida.", MessageBoxButtons.OK, MessageBoxIcon.Error  );
+
+            }
+            
         }
 
 

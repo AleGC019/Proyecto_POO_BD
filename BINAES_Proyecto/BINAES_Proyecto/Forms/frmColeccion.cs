@@ -68,15 +68,21 @@ namespace BINAES_Proyecto.Forms
 
         private void btnCrearColeccion_Click(object sender, EventArgs e)
         {
+            if(txtNombreColeccion.TextLength >0 && cmbGenero.Text.Length >0 && cmbTipoColeccion.Text.Length >0 && cmbAreaColeccion.Text.Length >0 ){
+                Coleccion col = new Coleccion();
+                col.Coleccion_Nombre = txtNombreColeccion.Text;
+                col.generoID = Convert.ToInt32(cmbGenero.SelectedValue.ToString());
+                col.tipoID = Convert.ToInt32(cmbTipoColeccion.SelectedValue.ToString());
+                col.areaID = Convert.ToInt32(cmbAreaColeccion.SelectedValue.ToString());
 
-            Coleccion col = new Coleccion();
-            col.Coleccion_Nombre = txtNombreColeccion.Text;
-            col.generoID = Convert.ToInt32(cmbGenero.SelectedValue.ToString());
-            col.tipoID = Convert.ToInt32(cmbTipoColeccion.SelectedValue.ToString());
-            col.areaID = Convert.ToInt32(cmbAreaColeccion.SelectedValue.ToString());
+                GeneroDAO.IngresarColeccion(col);
+                MessageBox.Show("Ingresado con éxito");
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese todos los campos requeridos", "Informacion invalida.", MessageBoxButtons.OK, MessageBoxIcon.Error  );
 
-            GeneroDAO.IngresarColeccion(col);
-            MessageBox.Show("Ingresado con éxito");
+            }
         }
 
 
@@ -90,15 +96,25 @@ namespace BINAES_Proyecto.Forms
 
         private void btnActualizarColeccion_Click(object sender, EventArgs e)
         {
-            Coleccion col = new Coleccion();
-            col.Coleccion_ID = Convert.ToInt32(txtIDActualizarColeccion.Text);
-            col.Coleccion_Nombre = txtActualizarColeccion.Text;
-            col.generoID = Convert.ToInt32(cmbActualizarGenero.SelectedValue);
-            col.tipoID = Convert.ToInt32(cmbActualizarTipo.SelectedValue);
-            col.areaID = Convert.ToInt32(cmbActualizarArea.SelectedValue);
+            if (txtActualizarColeccion.TextLength > 0 && cmbActualizarGenero.Text.Length > 0 && cmbActualizarTipo.Text.Length > 0 &&
+                cmbActualizarArea.Text.Length > 0)
+            {
 
-            GeneroDAO.ActualizarColeccion(col);
-            MessageBox.Show("datos actualizados");
+                Coleccion col = new Coleccion();
+                col.Coleccion_ID = Convert.ToInt32(txtIDActualizarColeccion.Text);
+                col.Coleccion_Nombre = txtActualizarColeccion.Text;
+                col.generoID = Convert.ToInt32(cmbActualizarGenero.SelectedValue);
+                col.tipoID = Convert.ToInt32(cmbActualizarTipo.SelectedValue);
+                col.areaID = Convert.ToInt32(cmbActualizarArea.SelectedValue);
+
+                GeneroDAO.ActualizarColeccion(col);
+                MessageBox.Show("datos actualizados");
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese todos los campos requeridos", "Informacion invalida.", MessageBoxButtons.OK, MessageBoxIcon.Error  );
+
+            }
         }
 
 
