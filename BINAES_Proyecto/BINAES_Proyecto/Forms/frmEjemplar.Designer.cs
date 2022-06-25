@@ -38,7 +38,6 @@ namespace BINAES_Proyecto.Forms
             this.lblNombreEjemplar = new System.Windows.Forms.Label();
             this.txtNombreEjemplar = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblColeccionEjemplar = new System.Windows.Forms.Label();
             this.lblEditorial = new System.Windows.Forms.Label();
             this.cmbColeccionEjemplar = new System.Windows.Forms.ComboBox();
             this.lblInfoEjemplar = new System.Windows.Forms.Label();
@@ -60,9 +59,11 @@ namespace BINAES_Proyecto.Forms
             this.cmbFomato = new System.Windows.Forms.ComboBox();
             this.lblFormato = new System.Windows.Forms.Label();
             this.btnCrearEditorial = new System.Windows.Forms.Button();
+            this.lblColeccionEjemplar = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.bntConfirmarID = new System.Windows.Forms.Button();
             this.btnActualizarImagen = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtActualizarISB = new System.Windows.Forms.TextBox();
@@ -103,14 +104,14 @@ namespace BINAES_Proyecto.Forms
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tlpEjemplar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagenEjemplar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picImagenEjemplar)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tlpBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultadosBusqueda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvResultadosBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -140,9 +141,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // tlpEjemplar
             // 
-            this.tlpEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.ColumnCount = 11;
             this.tlpEjemplar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.158185F));
             this.tlpEjemplar.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.158187F));
@@ -203,11 +202,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblNombreEjemplar
             // 
-            this.lblNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.lblNombreEjemplar, 4);
-            this.lblNombreEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblNombreEjemplar.Location = new System.Drawing.Point(89, 37);
             this.lblNombreEjemplar.Name = "lblNombreEjemplar";
             this.lblNombreEjemplar.Size = new System.Drawing.Size(338, 33);
@@ -217,9 +214,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtNombreEjemplar
             // 
-            this.txtNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.txtNombreEjemplar, 5);
             this.txtNombreEjemplar.Location = new System.Drawing.Point(89, 73);
             this.txtNombreEjemplar.Name = "txtNombreEjemplar";
@@ -228,11 +223,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.label5, 4);
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label5.Location = new System.Drawing.Point(89, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(338, 37);
@@ -240,27 +233,11 @@ namespace BINAES_Proyecto.Forms
             this.label5.Text = "Fecha de publicación";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // lblColeccionEjemplar
-            // 
-            this.lblColeccionEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tlpEjemplar.SetColumnSpan(this.lblColeccionEjemplar, 2);
-            this.lblColeccionEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblColeccionEjemplar.Location = new System.Drawing.Point(89, 185);
-            this.lblColeccionEjemplar.Name = "lblColeccionEjemplar";
-            this.lblColeccionEjemplar.Size = new System.Drawing.Size(166, 37);
-            this.lblColeccionEjemplar.TabIndex = 3;
-            this.lblColeccionEjemplar.Text = "Colección";
-            this.lblColeccionEjemplar.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
             // lblEditorial
             // 
-            this.lblEditorial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEditorial.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.lblEditorial, 4);
-            this.lblEditorial.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditorial.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblEditorial.Location = new System.Drawing.Point(89, 259);
             this.lblEditorial.Name = "lblEditorial";
             this.lblEditorial.Size = new System.Drawing.Size(338, 37);
@@ -280,11 +257,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblInfoEjemplar
             // 
-            this.lblInfoEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInfoEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.lblInfoEjemplar, 5);
-            this.lblInfoEjemplar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoEjemplar.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblInfoEjemplar.Location = new System.Drawing.Point(89, 0);
             this.lblInfoEjemplar.Name = "lblInfoEjemplar";
             this.lblInfoEjemplar.Size = new System.Drawing.Size(424, 37);
@@ -312,12 +287,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnCrearEjemplar
             // 
-            this.btnCrearEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrearEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCrearEjemplar.BackColor = System.Drawing.Color.Green;
             this.tlpEjemplar.SetColumnSpan(this.btnCrearEjemplar, 2);
-            this.btnCrearEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCrearEjemplar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCrearEjemplar.Location = new System.Drawing.Point(89, 538);
             this.btnCrearEjemplar.Name = "btnCrearEjemplar";
@@ -329,12 +302,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnCrearAutor
             // 
-            this.btnCrearAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrearAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
+            this.btnCrearAutor.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrearAutor.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
             this.tlpEjemplar.SetColumnSpan(this.btnCrearAutor, 2);
-            this.btnCrearAutor.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearAutor.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCrearAutor.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCrearAutor.Location = new System.Drawing.Point(347, 538);
             this.btnCrearAutor.Name = "btnCrearAutor";
@@ -346,12 +317,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnCrearPalabrasClave
             // 
-            this.btnCrearPalabrasClave.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCrearPalabrasClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
+            this.btnCrearPalabrasClave.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCrearPalabrasClave.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
             this.tlpEjemplar.SetColumnSpan(this.btnCrearPalabrasClave, 2);
-            this.btnCrearPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCrearPalabrasClave.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCrearPalabrasClave.Location = new System.Drawing.Point(605, 538);
             this.btnCrearPalabrasClave.Name = "btnCrearPalabrasClave";
@@ -373,12 +342,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnAgregarImagenEjemplar
             // 
-            this.btnAgregarImagenEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarImagenEjemplar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
+            this.btnAgregarImagenEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarImagenEjemplar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
             this.tlpEjemplar.SetColumnSpan(this.btnAgregarImagenEjemplar, 2);
-            this.btnAgregarImagenEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarImagenEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnAgregarImagenEjemplar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAgregarImagenEjemplar.Location = new System.Drawing.Point(89, 471);
             this.btnAgregarImagenEjemplar.Name = "btnAgregarImagenEjemplar";
@@ -391,10 +358,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblDoi
             // 
-            this.lblDoi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoi.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoi.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDoi.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblDoi.Location = new System.Drawing.Point(433, 468);
             this.lblDoi.Name = "lblDoi";
             this.lblDoi.Size = new System.Drawing.Size(80, 49);
@@ -404,10 +369,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblissn
             // 
-            this.lblissn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblissn.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblissn.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblissn.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblissn.Location = new System.Drawing.Point(433, 424);
             this.lblissn.Name = "lblissn";
             this.lblissn.Size = new System.Drawing.Size(80, 44);
@@ -417,10 +380,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblISBN
             // 
-            this.lblISBN.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblISBN.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblISBN.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblISBN.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblISBN.Location = new System.Drawing.Point(433, 370);
             this.lblISBN.Name = "lblISBN";
             this.lblISBN.Size = new System.Drawing.Size(80, 54);
@@ -430,9 +391,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtIsbn
             // 
-            this.txtIsbn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtIsbn.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.txtIsbn, 3);
             this.txtIsbn.Location = new System.Drawing.Point(519, 373);
             this.txtIsbn.Name = "txtIsbn";
@@ -441,9 +400,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtissn
             // 
-            this.txtissn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtissn.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.txtissn, 3);
             this.txtissn.Location = new System.Drawing.Point(519, 427);
             this.txtissn.Name = "txtissn";
@@ -452,9 +409,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtDoi
             // 
-            this.txtDoi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDoi.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.txtDoi, 3);
             this.txtDoi.Location = new System.Drawing.Point(519, 471);
             this.txtDoi.Name = "txtDoi";
@@ -473,11 +428,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblidioma
             // 
-            this.lblidioma.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblidioma.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.lblidioma, 4);
-            this.lblidioma.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblidioma.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblidioma.Location = new System.Drawing.Point(519, 259);
             this.lblidioma.Name = "lblidioma";
             this.lblidioma.Size = new System.Drawing.Size(338, 37);
@@ -497,11 +450,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // lblFormato
             // 
-            this.lblFormato.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFormato.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpEjemplar.SetColumnSpan(this.lblFormato, 4);
-            this.lblFormato.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormato.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblFormato.Location = new System.Drawing.Point(519, 185);
             this.lblFormato.Name = "lblFormato";
             this.lblFormato.Size = new System.Drawing.Size(338, 37);
@@ -511,10 +462,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnCrearEditorial
             // 
-            this.btnCrearEditorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
+            this.btnCrearEditorial.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
             this.tlpEjemplar.SetColumnSpan(this.btnCrearEditorial, 2);
             this.btnCrearEditorial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCrearEditorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearEditorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCrearEditorial.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCrearEditorial.Location = new System.Drawing.Point(89, 373);
             this.btnCrearEditorial.Name = "btnCrearEditorial";
@@ -524,6 +475,18 @@ namespace BINAES_Proyecto.Forms
             this.btnCrearEditorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCrearEditorial.UseVisualStyleBackColor = false;
             this.btnCrearEditorial.Click += new System.EventHandler(this.btnCrearEditorial_Click);
+            // 
+            // lblColeccionEjemplar
+            // 
+            this.lblColeccionEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpEjemplar.SetColumnSpan(this.lblColeccionEjemplar, 2);
+            this.lblColeccionEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblColeccionEjemplar.Location = new System.Drawing.Point(89, 185);
+            this.lblColeccionEjemplar.Name = "lblColeccionEjemplar";
+            this.lblColeccionEjemplar.Size = new System.Drawing.Size(166, 37);
+            this.lblColeccionEjemplar.TabIndex = 3;
+            this.lblColeccionEjemplar.Text = "Colección";
+            this.lblColeccionEjemplar.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // tabPage4
             // 
@@ -537,9 +500,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 14;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.158185F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.158187F));
@@ -579,12 +540,11 @@ namespace BINAES_Proyecto.Forms
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel4.SetColumnSpan(this.panel4, 13);
+            this.panel4.Controls.Add(this.bntConfirmarID);
             this.panel4.Controls.Add(this.btnActualizarImagen);
             this.panel4.Controls.Add(this.label8);
             this.panel4.Controls.Add(this.txtActualizarISB);
@@ -617,10 +577,23 @@ namespace BINAES_Proyecto.Forms
             this.panel4.Size = new System.Drawing.Size(814, 434);
             this.panel4.TabIndex = 23;
             // 
+            // bntConfirmarID
+            // 
+            this.bntConfirmarID.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (61)))), ((int) (((byte) (143)))), ((int) (((byte) (61)))));
+            this.bntConfirmarID.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.bntConfirmarID.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.bntConfirmarID.Location = new System.Drawing.Point(648, 59);
+            this.bntConfirmarID.Name = "bntConfirmarID";
+            this.bntConfirmarID.Size = new System.Drawing.Size(118, 33);
+            this.bntConfirmarID.TabIndex = 54;
+            this.bntConfirmarID.Text = "btnConfirmarID";
+            this.bntConfirmarID.UseVisualStyleBackColor = false;
+            this.bntConfirmarID.Click += new System.EventHandler(this.bntConfirmarID_Click);
+            // 
             // btnActualizarImagen
             // 
-            this.btnActualizarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
-            this.btnActualizarImagen.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarImagen.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnActualizarImagen.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarImagen.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActualizarImagen.Location = new System.Drawing.Point(12, 323);
             this.btnActualizarImagen.Name = "btnActualizarImagen";
@@ -632,7 +605,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label8.Location = new System.Drawing.Point(504, 101);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 26);
@@ -649,7 +622,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label9.Location = new System.Drawing.Point(504, 147);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 26);
@@ -666,7 +639,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label10.Location = new System.Drawing.Point(504, 188);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 24);
@@ -683,8 +656,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnActualizarAutor
             // 
-            this.btnActualizarAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
-            this.btnActualizarAutor.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarAutor.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnActualizarAutor.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarAutor.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActualizarAutor.Location = new System.Drawing.Point(416, 322);
             this.btnActualizarAutor.Name = "btnActualizarAutor";
@@ -695,8 +668,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnActualizarPalabrasClave
             // 
-            this.btnActualizarPalabrasClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
-            this.btnActualizarPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarPalabrasClave.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnActualizarPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarPalabrasClave.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActualizarPalabrasClave.Location = new System.Drawing.Point(242, 322);
             this.btnActualizarPalabrasClave.Name = "btnActualizarPalabrasClave";
@@ -716,7 +689,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label7.Location = new System.Drawing.Point(476, 228);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 28);
@@ -735,7 +708,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label6.Location = new System.Drawing.Point(16, 254);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(157, 22);
@@ -754,7 +727,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label4.Location = new System.Drawing.Point(206, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 22);
@@ -773,7 +746,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label3.Location = new System.Drawing.Point(20, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 22);
@@ -783,9 +756,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarFechaEjemplar
             // 
-            this.txtActualizarFechaEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarFechaEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtActualizarFechaEjemplar.Location = new System.Drawing.Point(20, 149);
             this.txtActualizarFechaEjemplar.Name = "txtActualizarFechaEjemplar";
             this.txtActualizarFechaEjemplar.Size = new System.Drawing.Size(326, 26);
@@ -793,7 +764,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.Location = new System.Drawing.Point(20, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 21);
@@ -803,7 +774,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label17
             // 
-            this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label17.Location = new System.Drawing.Point(368, 18);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(428, 43);
@@ -813,7 +784,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label12
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label12.Location = new System.Drawing.Point(65, 18);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(157, 25);
@@ -823,7 +794,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.Location = new System.Drawing.Point(20, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 23);
@@ -833,9 +804,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarNombreEjemplar
             // 
-            this.txtActualizarNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtActualizarNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtActualizarNombreEjemplar.Location = new System.Drawing.Point(22, 82);
             this.txtActualizarNombreEjemplar.Name = "txtActualizarNombreEjemplar";
             this.txtActualizarNombreEjemplar.Size = new System.Drawing.Size(326, 26);
@@ -843,7 +812,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // label22
             // 
-            this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label22.Location = new System.Drawing.Point(504, 70);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(42, 22);
@@ -860,8 +829,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnActualizarEejmplar
             // 
-            this.btnActualizarEejmplar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(143)))), ((int)(((byte)(61)))));
-            this.btnActualizarEejmplar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarEejmplar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (61)))), ((int) (((byte) (143)))), ((int) (((byte) (61)))));
+            this.btnActualizarEejmplar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarEejmplar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnActualizarEejmplar.Location = new System.Drawing.Point(607, 323);
             this.btnActualizarEejmplar.Name = "btnActualizarEejmplar";
@@ -888,10 +857,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // label21
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label21.Location = new System.Drawing.Point(91, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(364, 42);
@@ -901,10 +868,8 @@ namespace BINAES_Proyecto.Forms
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label20.Location = new System.Drawing.Point(237, 10);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(340, 0);
@@ -913,11 +878,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnEliminarEjemplar
             // 
-            this.btnEliminarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEliminarEjemplar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
-            this.btnEliminarEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEliminarEjemplar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnEliminarEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnEliminarEjemplar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEliminarEjemplar.Location = new System.Drawing.Point(489, 0);
             this.btnEliminarEjemplar.Name = "btnEliminarEjemplar";
@@ -947,9 +910,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // tlpBusqueda
             // 
-            this.tlpBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlpBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.tlpBusqueda.ColumnCount = 3;
             this.tlpBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tlpBusqueda.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -970,11 +931,9 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBuscar.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Location = new System.Drawing.Point(762, 5);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -987,19 +946,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // cmbOpcionesBuscar
             // 
-            this.cmbOpcionesBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbOpcionesBuscar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbOpcionesBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbOpcionesBuscar.FormattingEnabled = true;
-            this.cmbOpcionesBuscar.Items.AddRange(new object[] {
-            "Titulo completo",
-            "Titulo parcial ",
-            "Autor",
-            "Por palabra clave",
-            "Digital",
-            "Fisico",
-            "Mostrar todos"});
+            this.cmbOpcionesBuscar.Items.AddRange(new object[] {"Titulo completo", "Titulo parcial ", "Autor", "Por palabra clave", "Digital", "Fisico", "Mostrar todos"});
             this.cmbOpcionesBuscar.Location = new System.Drawing.Point(4, 5);
             this.cmbOpcionesBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbOpcionesBuscar.Name = "cmbOpcionesBuscar";
@@ -1008,9 +958,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // dgvResultadosBusqueda
             // 
-            this.dgvResultadosBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvResultadosBusqueda.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvResultadosBusqueda.BackgroundColor = System.Drawing.Color.White;
             this.dgvResultadosBusqueda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlpBusqueda.SetColumnSpan(this.dgvResultadosBusqueda, 3);
@@ -1023,9 +971,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtBuscarEjemplar
             // 
-            this.txtBuscarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBuscarEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtBuscarEjemplar.Location = new System.Drawing.Point(288, 5);
             this.txtBuscarEjemplar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBuscarEjemplar.Name = "txtBuscarEjemplar";
@@ -1038,7 +984,7 @@ namespace BINAES_Proyecto.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 634);
             this.Controls.Add(this.tabControl1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmEjemplar";
             this.Text = "frmEjemplar";
             this.Load += new System.EventHandler(this.frmEjemplar_Load);
@@ -1046,7 +992,7 @@ namespace BINAES_Proyecto.Forms
             this.tabPage3.ResumeLayout(false);
             this.tlpEjemplar.ResumeLayout(false);
             this.tlpEjemplar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagenEjemplar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.picImagenEjemplar)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -1056,10 +1002,11 @@ namespace BINAES_Proyecto.Forms
             this.tabPage1.ResumeLayout(false);
             this.tlpBusqueda.ResumeLayout(false);
             this.tlpBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultadosBusqueda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvResultadosBusqueda)).EndInit();
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.Button bntConfirmarID;
 
         private System.Windows.Forms.PictureBox picImagenEjemplar;
 

@@ -27,16 +27,16 @@ namespace BINAES_Proyecto
                 command.Parameters.AddWithValue("@nuevoissn", ejem.ISSN);
                 command.Parameters.AddWithValue("@nuevodoi", ejem.DOI);
                 command.Parameters.AddWithValue("@nuevoid_coleccion", ejem.Coleccion);
-                
-                
-              
-                    
+
+
+
+
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
             }
             //Palabras_Clave PalabrasClave= new Palabras_Clave(ejem.Palabras_clave,EjemplarDAO.nuevoidEejmplar());
-           //InsertarNuevaPalabraClave(PalabrasClave);
+            //InsertarNuevaPalabraClave(PalabrasClave);
 
         }
 
@@ -59,21 +59,21 @@ namespace BINAES_Proyecto
                         ejem.ID = Convert.ToInt32(reader["id"].ToString());
 
                         nuevoidEjemplar = ejem.ID;
-                        
-                        
+
+
                     }
                 }
 
                 connection.Close();
-                
+
             }
 
             return nuevoidEjemplar;
         }
-        
-        
-        
-        
+
+
+
+
         //Crear nueva palabra clave 
         public static void InsertarNuevaPalabraClave(Palabras_Clave pc)
         {
@@ -87,21 +87,21 @@ namespace BINAES_Proyecto
                 SqlCommand command = new SqlCommand(nonquery, connection);
                 command.Parameters.AddWithValue("@palabra", pc.palabra);
                 command.Parameters.AddWithValue("@ejemplarID_Palabra", pc.ejemplarID_Palabra);
-                
-                
-                
-              
-                    
+
+
+
+
+
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
             }
-            
-            
+
+
         }
-        
+
         // crear nuevo autor 
-        
+
         public static void InsertarNuevoAutor(Autor autor)
         {
             string cadena = Resources.Cadena_Conexion;
@@ -114,17 +114,17 @@ namespace BINAES_Proyecto
                 SqlCommand command = new SqlCommand(nonquery, connection);
                 command.Parameters.AddWithValue("@autor", autor.nombreAutor);
                 command.Parameters.AddWithValue("@id_ejemplar", autor.ejemplarID);
-                
-                
-                
-              
-                    
+
+
+
+
+
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
             }
-            
-            
+
+
         }
 
 //Llenando los combo box 
@@ -157,7 +157,7 @@ namespace BINAES_Proyecto
 
             return lista;
         }
-        
+
         //llenando el combo de editorial 
         public static List<Editorial> CargarDatosEditorial()
         {
@@ -187,7 +187,7 @@ namespace BINAES_Proyecto
 
             return lista;
         }
-        
+
         //llenando el combo de formato 
         public static List<Formato> CargarDatosFormato()
         {
@@ -205,8 +205,8 @@ namespace BINAES_Proyecto
                     while (reader.Read())
                     {
                         Formato formato = new Formato();
-                         formato.formatoID= Convert.ToInt32(reader["id"].ToString());
-                        formato.nombreFormato= reader["formato"].ToString();
+                        formato.formatoID = Convert.ToInt32(reader["id"].ToString());
+                        formato.nombreFormato = reader["formato"].ToString();
 
                         lista.Add(formato);
                     }
@@ -249,9 +249,9 @@ namespace BINAES_Proyecto
 
             return lista;
         }
-        
-        
-        public static void ActualizarEjemplar(Ejemplar ejem )
+
+
+        public static void ActualizarEjemplar(Ejemplar ejem)
         {
             string cadena = Resources.Cadena_Conexion;
             using (SqlConnection connection = new SqlConnection(cadena))
@@ -272,7 +272,7 @@ namespace BINAES_Proyecto
                 command.Parameters.AddWithValue("@nuevodoi", ejem.DOI);
                 command.Parameters.AddWithValue("@nueoid_coleccion", ejem.Coleccion);
                 command.Parameters.AddWithValue("@id", ejem.ID);
-                
+
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -280,8 +280,35 @@ namespace BINAES_Proyecto
 
             }
         }
-        
 
+        /*public static void RetornarDatosEjemplar()
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
 
+                SqlCommand command = new SqlCommand("SELECT nombre,fecha_publicada,magen_portada, id_idioma, id_editorial,id_formato,isbn,issn,doi, id_coleccion  FROM EJEMPLAR WHERE id = @id");
+                command.Parameters.AddWithValue("@nuevonombre", ejem.Nombre_Ejemplar);
+                command.Parameters.AddWithValue("@nuevafecha_publicada", ejem.Fecha_de_publicacion);
+                command.Parameters.AddWithValue("@nuevaimagen_portada", ejem.Portada);
+                command.Parameters.AddWithValue("@nuevoid_idioma", ejem.Idioma);
+                command.Parameters.AddWithValue("@nuevoid_editorial", ejem.Editorial);
+                command.Parameters.AddWithValue("@nuevoid_formato", ejem.Formato);
+                command.Parameters.AddWithValue("@nuevaisbn", ejem.ISBN);
+                command.Parameters.AddWithValue("@nuevoissn", ejem.ISSN);
+                command.Parameters.AddWithValue("@nuevodoi", ejem.DOI);
+                command.Parameters.AddWithValue("@nueoid_coleccion", ejem.Coleccion);
+                command.Parameters.AddWithValue("@id", txt);
+                
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }*/
     }
+
+
+
 }
+
