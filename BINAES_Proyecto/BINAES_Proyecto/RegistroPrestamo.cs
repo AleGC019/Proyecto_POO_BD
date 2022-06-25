@@ -49,8 +49,6 @@ namespace BINAES_Proyecto
 
             txtEjemplar.Text = eje.Nombre_Ejemplar;
 
-            MessageBox.Show("BINAES le otorgará el material por un periodo de 14 días en los que, al terminar, usted deber regresar lo prestado.");
-
             List<Usuario> poblado = new List<Usuario>();
 
             poblado = UsuarioDAO.MostrarUsuariosCMB();
@@ -62,6 +60,8 @@ namespace BINAES_Proyecto
             cmbUsuarioPresta.ValueMember = "UsuarioID";
 
             cmbUsuarioPresta.DataSource = poblado;
+
+            MessageBox.Show("BINAES le otorgará el material por un periodo de 14 días en los que, al terminar, usted deber regresar lo prestado.");
 
             /*dtpEntrega.Format = DateTimePickerFormat.Custom;
             dtpEntrega.CustomFormat = "MM/dd/yyyy hh:mm:ss";
@@ -79,7 +79,26 @@ namespace BINAES_Proyecto
 
         private void btnPrestar_Click(object sender, EventArgs e)
         {
-            
+            DateTime R_entrega = dtpEntregaFecha.Value.Date + dtpEntregaHora.Value.TimeOfDay;
+
+            DateTime R_devolucion = dtpDevolucionFecha.Value.Date + dtpDevolucionHora.Value.TimeOfDay;
+
+            if (PrestamoDAO.NewPrestamo(Convert.ToInt32(cmbUsuarioPresta.SelectedValue), eje.ID, R_entrega, R_devolucion))
+            {
+                MessageBox.Show("Ingreso exitoso!");
+
+                this.DialogResult = DialogResult.OK;
+
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Ingreso fallido!");
+
+                this.DialogResult = DialogResult.Abort;
+
+                this.Close();
+            }
         }
     }
 }

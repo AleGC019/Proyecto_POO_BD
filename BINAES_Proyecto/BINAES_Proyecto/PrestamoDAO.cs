@@ -234,9 +234,9 @@ namespace BINAES_Proyecto
             }
         }
 
-        public static void VerifyPrestamo (Ejemplar v_eje)
+        public static bool VerifyPrestamo (Ejemplar v_eje)
         {
-            bool prestado;
+            bool prestado = true;
 
             PrestamoEjemplar comparacion_base = new PrestamoEjemplar();
 
@@ -279,31 +279,76 @@ namespace BINAES_Proyecto
             catch (Exception E)
             {
                 MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+
+                prestado = false;
             }
 
             if(comparacion_base.id_prestamo != 0)
             {
                 if (DateTime.Now > comparacion_base.devolucion)
                 {
-                    MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.");
+                    prestado = true;
                 }
                 if (DateTime.Now < comparacion_base.devolucion)
                 {
                     if (DateTime.Now > comparacion_base.entrega)
                     {
-                        MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado.");
+                        prestado = false;
                     }
                 }
             }
             else
             {
-                MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.");
+                prestado = true;
             }
+
+            return prestado;
         }
 
-        public static void NewPrestamo(string usuario, Ejemplar eje, DateTime entrega, DateTime devolucion)
+        public static bool NewPrestamo(int usuID, int ejeID, DateTime entrega, DateTime devolucion)
         {
+            bool prestado;
 
+            string cadena_conexion = Resources.Cadena_Conexion;
+
+            try
+            {
+                using (SqlConnection conexion_actual = new SqlConnection(cadena_conexion))
+                {
+                    string consulta;
+
+                    consulta = "INSERT INTO PRESTAMO (prestamo_entrega_hora_fecha, prestamo_devolucion_hora_fecha, id_usuario, id_ejemplar) " +
+                                "VALUES(@entrega, @devolucion, @idusu, @ideje);";
+
+                    SqlCommand comando = new SqlCommand(consulta, conexion_actual);
+
+                    comando.Parameters.AddWithValue("@entrega", entrega);
+
+                    comando.Parameters.AddWithValue("@devolucion", devolucion);
+
+                    comando.Parameters.AddWithValue("@idusu", usuID);
+
+                    comando.Parameters.AddWithValue("@ideje", ejeID);
+
+                    conexion_actual.Open();
+
+                    comando.ExecuteNonQuery();
+
+                    conexion_actual.Close();
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Error en ingreso.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+
+                prestado = false;
+
+                return prestado;
+            }
+
+            prestado = true;
+
+            return prestado;
         }
     }
 }

@@ -155,11 +155,18 @@ namespace BINAES_Proyecto.Forms
 
         private void picFoundItem_Prestamo_Click(object sender, EventArgs e)
         {
-            PrestamoDAO.VerifyPrestamo(Buscado);
-
-            using(frmRegistroPrestamo nuevaVentana = new frmRegistroPrestamo(actualUser, Buscado))
+            if(PrestamoDAO.VerifyPrestamo(Buscado))
             {
-                nuevaVentana.ShowDialog();
+                MessageBox.Show("Actualmente, el libro esta disponible. Puede prestarlo.", "Disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                using (frmRegistroPrestamo nuevaVentana = new frmRegistroPrestamo(actualUser, Buscado))
+                {
+                    nuevaVentana.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado.", "No disponible", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
             }
         }
     }
