@@ -55,7 +55,7 @@ namespace BINAES_Proyecto
                     MessageBox.Show("Inicio de sesion correcto.", "Inicio de sesion.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
 
-                    frmBinaesMain frmAux = new frmBinaesMain(usu);
+                    frmBinaesUsuario frmAux = new frmBinaesUsuario(usu);
                     frmAux.Show();
                 }
                 else

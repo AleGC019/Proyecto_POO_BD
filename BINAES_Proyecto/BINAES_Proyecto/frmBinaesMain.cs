@@ -27,6 +27,7 @@ namespace BINAES_Proyecto
 
             actualUser = usuario_inicioSesion;
         }
+        //
 
         private void ActivateButton(Object btnSender)
         {
