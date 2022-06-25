@@ -52,10 +52,10 @@ namespace BINAES_Proyecto.Forms
             cmbActualizarFormato.DisplayMember = "nombreFormato";
             cmbActualizarFormato.DataSource = EjemplarDAO.CargarDatosFormato();
             
-            c.DataSource = null;
-            c.ValueMember = "idIdioma";
-            c.DisplayMember = "nombreIdioma";
-            c.DataSource = EjemplarDAO.CargarDatosIdiomas();
+            cmbActualizarIdioma.DataSource = null;
+            cmbActualizarIdioma.ValueMember = "idIdioma";
+            cmbActualizarIdioma.DisplayMember = "nombreIdioma";
+            cmbActualizarIdioma.DataSource = EjemplarDAO.CargarDatosIdiomas();
         }
 
         private void btnCrearEjemplar_Click(object sender, EventArgs e)
@@ -404,6 +404,8 @@ namespace BINAES_Proyecto.Forms
             ejem.ID = Convert.ToInt32(txtIDActualizarEjemplar.Text);
             ejem.Nombre_Ejemplar = txtActualizarNombreEjemplar.Text;
             ejem.Fecha_de_publicacion = Convert.ToDateTime(txtActualizarFechaEjemplar.Text);
+            ejem.Idioma = cmbActualizarIdioma.SelectedValue.ToString();
+            ejem.Editorial = cmbActualizarEditorial.SelectedValue.ToString();
             ejem.Coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
             ejem.Formato = cmbActualizarFormato.SelectedValue.ToString();
             ejem.ISBN = txtissn.Text;
@@ -415,6 +417,22 @@ namespace BINAES_Proyecto.Forms
             EjemplarDAO.ActualizarEjemplar(ejem);
             MessageBox.Show("datos actualizados");
             
+        }
+
+        private void btnActualizarImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog obtener = new OpenFileDialog();
+            obtener.InitialDirectory = "C:\\";
+            obtener.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp, *.png)| *.jpg; *.jpeg; *.gif; *.bmp, *.png";
+            
+            if(obtener.ShowDialog() == DialogResult.OK)
+            {
+                imagen = obtener.FileName;
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado una foto");
+            }
         }
     } 
 }

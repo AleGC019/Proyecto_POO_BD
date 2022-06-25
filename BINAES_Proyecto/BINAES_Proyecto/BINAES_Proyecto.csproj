@@ -58,6 +58,7 @@
     <Compile Include="Area.cs" />
     <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
+    <Compile Include="ColeccionDAO.cs" />
     <Compile Include="frmBinaesUsuario.cs">
       <SubType>Form</SubType>
     </Compile>

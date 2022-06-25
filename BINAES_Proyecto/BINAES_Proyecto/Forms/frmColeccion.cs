@@ -1,6 +1,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using BINAES_Proyecto.BINAES_Proyecto;
 using BINAES_Proyecto.Properties;
 
 namespace BINAES_Proyecto.Forms
@@ -51,8 +52,12 @@ namespace BINAES_Proyecto.Forms
 
         private void btnMostrarColeccion_Click(object sender, EventArgs e)
         {
-            dgvMostrarUser.DataSource = null;
-            dgvMostrarUser.DataSource = GeneroDAO.CargarDatos();
+
+      
+                    dgvMostrarUser.DataSource = null;
+                    dgvMostrarUser.DataSource = ColeccionDAO.MostrarColeccion();
+               
+             
         }
 
 
@@ -60,7 +65,7 @@ namespace BINAES_Proyecto.Forms
         {
 
             Coleccion col = new Coleccion();
-            col.coleccionNombre = txtNombreColeccion.Text;
+            col.Coleccion_Nombre = txtNombreColeccion.Text;
             col.generoID = Convert.ToInt32(cmbGenero.SelectedValue.ToString());
             col.tipoID = Convert.ToInt32(cmbTipoColeccion.SelectedValue.ToString());
             col.areaID = Convert.ToInt32(cmbAreaColeccion.SelectedValue.ToString());
@@ -81,8 +86,8 @@ namespace BINAES_Proyecto.Forms
         private void btnActualizarColeccion_Click(object sender, EventArgs e)
         {
             Coleccion col = new Coleccion();
-            col.coleccionID = Convert.ToInt32(txtIDActualizarColeccion.Text);
-            col.coleccionNombre = txtActualizarColeccion.Text;
+            col.Coleccion_ID = Convert.ToInt32(txtIDActualizarColeccion.Text);
+            col.Coleccion_Nombre = txtActualizarColeccion.Text;
             col.generoID = Convert.ToInt32(cmbActualizarGenero.SelectedValue);
             col.tipoID = Convert.ToInt32(cmbActualizarTipo.SelectedValue);
             col.areaID = Convert.ToInt32(cmbActualizarArea.SelectedValue);
@@ -91,9 +96,6 @@ namespace BINAES_Proyecto.Forms
             MessageBox.Show("datos actualizados");
         }
 
-        private void txtActualizarColeccion_TextChanged(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
-        }
+        
     }
 }

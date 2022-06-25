@@ -145,8 +145,8 @@ namespace BINAES_Proyecto
                     while (reader.Read())
                     {
                         Coleccion col = new Coleccion();
-                        col.coleccionID = Convert.ToInt32(reader["id"].ToString());
-                        col.coleccionNombre = reader["nombre"].ToString();
+                        col.Coleccion_ID = Convert.ToInt32(reader["id"].ToString());
+                        col.Coleccion_Nombre = reader["nombre"].ToString();
 
                         lista.Add(col);
                     }
@@ -257,12 +257,12 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string noquery =
-                    "UPDATE EJEMPLAR SET nombre = @nuevonombre, fecha_publicacion = @nuevafecha_publicacion, imagen_portada = @nuevaimagen_portada, id_idioma = @nuevoid_idioma, id_editorial = @nuevoid_editorial, id_formato = @nuevoid_formato, isbn =  @nuevaisbn, issn = @nuevoissn, doi = @nuevodoi, id_coleccion = @nueoid_coleccion " +
+                    "UPDATE EJEMPLAR SET nombre = @nuevonombre, fecha_publicada = @nuevafecha_publicada, imagen_portada = @nuevaimagen_portada, id_idioma = @nuevoid_idioma, id_editorial = @nuevoid_editorial, id_formato = @nuevoid_formato, isbn =  @nuevaisbn, issn = @nuevoissn, doi = @nuevodoi, id_coleccion = @nueoid_coleccion " +
                     "WHERE id = @id";
 
                 SqlCommand command = new SqlCommand(noquery, connection);
                 command.Parameters.AddWithValue("@nuevonombre", ejem.Nombre_Ejemplar);
-                command.Parameters.AddWithValue("@nuevafecha_publicacion", ejem.Fecha_de_publicacion);
+                command.Parameters.AddWithValue("@nuevafecha_publicada", ejem.Fecha_de_publicacion);
                 command.Parameters.AddWithValue("@nuevaimagen_portada", ejem.Portada);
                 command.Parameters.AddWithValue("@nuevoid_idioma", ejem.Idioma);
                 command.Parameters.AddWithValue("@nuevoid_editorial", ejem.Editorial);

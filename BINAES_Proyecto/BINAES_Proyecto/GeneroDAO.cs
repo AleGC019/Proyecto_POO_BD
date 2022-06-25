@@ -109,7 +109,7 @@ namespace BINAES_Proyecto
                     "VALUES (@nuevonombre, @id_genero, @id_tipo, @id_area)";
 
                 SqlCommand command = new SqlCommand(nonquery, connection);
-                command.Parameters.AddWithValue("@nuevonombre", col.coleccionNombre);
+                command.Parameters.AddWithValue("@nuevonombre", col.Coleccion_Nombre);
                 command.Parameters.AddWithValue("@id_genero", col.generoID);
                 command.Parameters.AddWithValue("@id_tipo", col.tipoID);
                 command.Parameters.AddWithValue("@id_area", col.areaID);
@@ -159,11 +159,11 @@ namespace BINAES_Proyecto
                     "WHERE id = @id";
 
                 SqlCommand command = new SqlCommand(noquery, connection);
-                command.Parameters.AddWithValue("@nuevonombre", col.coleccionNombre);
+                command.Parameters.AddWithValue("@nuevonombre", col.Coleccion_Nombre);
                 command.Parameters.AddWithValue("@nuevoid_genero", col.generoID);
                 command.Parameters.AddWithValue("@nuevoid_tipo", col.tipoID);
                 command.Parameters.AddWithValue("@nuevoid_area", col.areaID);
-                command.Parameters.AddWithValue("@id", col.coleccionID);
+                command.Parameters.AddWithValue("@id", col.Coleccion_ID);
                 
                 connection.Open();
                 command.ExecuteNonQuery();
