@@ -331,3 +331,6 @@ C:\Users\alegc\Documents\VIERNESiniciosesion\Proyecto_POO_BD\BINAES_Proyecto\BIN
 C:\Users\alegc\Documents\VIERNESiniciosesion\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
 C:\Users\alegc\Documents\VIERNESiniciosesion\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
 C:\Users\User\Desktop\repo2206\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesUsuario.resources
+C:\Users\User\Desktop\repoLogin\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmReserva.resources
+C:\Users\User\Desktop\repoLogin\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesUsuario.resources
+C:\Users\User\Desktop\repoLogin\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmRegistroPrestamo.resources

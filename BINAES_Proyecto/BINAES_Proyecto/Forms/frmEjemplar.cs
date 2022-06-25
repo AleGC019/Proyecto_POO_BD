@@ -17,8 +17,8 @@ namespace BINAES_Proyecto.Forms
         private void frmEjemplar_Load(object sender, EventArgs e)
         {
             cmbColeccionEjemplar.DataSource = null;
-            cmbColeccionEjemplar.ValueMember = "coleccionID";
-            cmbColeccionEjemplar.DisplayMember = "coleccionNombre";
+            cmbColeccionEjemplar.ValueMember = "Coleccion_ID";
+            cmbColeccionEjemplar.DisplayMember = "Coleccion_Nombre";
             cmbColeccionEjemplar.DataSource = EjemplarDAO.CargarDatosColeccion();
 
             cmbEditorial.DataSource = null;
@@ -38,8 +38,8 @@ namespace BINAES_Proyecto.Forms
             
             //cargar combos para la tab de editar 
             cmbColeccionActualizar.DataSource = null;
-            cmbColeccionActualizar.ValueMember = "coleccionID";
-            cmbColeccionActualizar.DisplayMember = "coleccionNombre";
+            cmbColeccionActualizar.ValueMember = "Coleccion_ID";
+            cmbColeccionActualizar.DisplayMember = "Coleccion_Nombre";
             cmbColeccionActualizar.DataSource = EjemplarDAO.CargarDatosColeccion();
 
             cmbActualizarEditorial.DataSource = null;
