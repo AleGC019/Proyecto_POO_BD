@@ -115,6 +115,8 @@ namespace BINAES_Proyecto.Forms
                 MessageBox.Show("No se ha seleccionado una foto");
             }
         }
+
+        
     }
 }
 
