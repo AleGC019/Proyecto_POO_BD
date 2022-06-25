@@ -19,13 +19,13 @@ namespace BINAES_Proyecto
         private int tempIndex;
         private Form ActiveForm;
 
-        Usuario Usuario_Actual;
+        public Usuario actualUser { get; set; }
 
-        public frmBinaesMain(Usuario Actual_user)
+        public frmBinaesMain(Usuario usuario_inicioSesion)
         {
             InitializeComponent();
 
-            Usuario_Actual = Actual_user;
+            actualUser = usuario_inicioSesion;
         }
 
         private void ActivateButton(Object btnSender)
@@ -111,7 +111,7 @@ namespace BINAES_Proyecto
         private void btnPrestamos_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            OpenChildForm(new Forms.frmPrestamo(Usuario_Actual),sender);
+            OpenChildForm(new Forms.frmPrestamo(actualUser),sender);
         }
 
         private void btnReservas_Click_1(object sender, EventArgs e)

@@ -14,13 +14,13 @@ namespace BINAES_Proyecto.Forms
     {
         public Ejemplar Buscado { get; set; }
 
-        public Usuario usu { get; set; }
+        public Usuario actualUser { get; set; }
 
-        public frmPrestamo(Usuario Actual_User)
+        public frmPrestamo(Usuario usuarioMAIN)
         {
             InitializeComponent();
 
-            usu = Actual_User;
+            actualUser = usuarioMAIN;
         }
 
         private void frmPrestamo_Load(object sender, System.EventArgs e)
@@ -157,7 +157,10 @@ namespace BINAES_Proyecto.Forms
         {
             PrestamoDAO.VerifyPrestamo(Buscado);
 
-            //using(frmRe)
+            using(frmRegistroPrestamo nuevaVentana = new frmRegistroPrestamo(actualUser, Buscado))
+            {
+                nuevaVentana.ShowDialog();
+            }
         }
     }
 }

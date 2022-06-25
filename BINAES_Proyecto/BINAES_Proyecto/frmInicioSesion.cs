@@ -35,8 +35,6 @@ namespace BINAES_Proyecto
 
             Usuario usu = UsuarioDAO.AdminLoginInfo2(nombre, contra);
             
-            
-             
             if (usu.UsuarioNombre.Length > 0)
             {
                 this.Hide();
