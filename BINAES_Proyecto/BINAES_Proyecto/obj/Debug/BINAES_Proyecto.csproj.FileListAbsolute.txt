@@ -368,3 +368,5 @@ C:\Users\alegc\Documents\SabadoBusqueda\Proyecto_POO_BD\BINAES_Proyecto\BINAES_P
 C:\Users\alegc\Documents\SabadoBusqueda\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.csproj.CopyComplete
 C:\Users\alegc\Documents\SabadoBusqueda\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.exe
 C:\Users\alegc\Documents\SabadoBusqueda\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesUsuario.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmRegistroReserva.resources

@@ -29,7 +29,6 @@ namespace BINAES_Proyecto
         {
             DateTime hoy = DateTime.Now;
             DateTime Limite = hoy.AddDays(14);
-            TimeSpan timeSpan = new TimeSpan(14, 00, 00);
 
             dtpEntregaFecha.Value = hoy;
             dtpEntregaFecha.Enabled = false;
@@ -61,11 +60,6 @@ namespace BINAES_Proyecto
 
             MessageBox.Show("BINAES le otorgará el material por un periodo de 14 días en los que, al terminar, usted deber regresar lo prestado.");
 
-            /*dtpEntrega.Format = DateTimePickerFormat.Custom;
-            dtpEntrega.CustomFormat = "MM/dd/yyyy hh:mm:ss";
-
-            dtpDevolucion.Format = DateTimePickerFormat.Custom;
-            dtpDevolucion.CustomFormat = "MM/dd/yyyy hh:mm:ss";*/
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

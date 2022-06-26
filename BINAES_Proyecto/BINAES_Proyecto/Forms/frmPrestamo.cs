@@ -134,7 +134,7 @@ namespace BINAES_Proyecto.Forms
                         }
                         else if (Buscado.ID == 0)
                         {
-                            MessageBox.Show("Existe m�s de un t�tulo con su palabra parcial." + Environment.NewLine + "Sea un poco m�s espec�fico o intente con t�tulo completo.",
+                            MessageBox.Show("Existe mas de un titulo con su palabra parcial." + Environment.NewLine + "Sea un poco m�s espec�fico o intente con t�tulo completo.",
                                             "Coincidencia de resultados.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
 
                         }
@@ -164,7 +164,13 @@ namespace BINAES_Proyecto.Forms
             }
             else
             {
-                MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado.", "No disponible", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado, pero puede reservarlo", "No disponible", 
+                    MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
+
+                using (frmRegistroReserva nuevaVentana = new frmRegistroReserva(Buscado))
+                {
+                    nuevaVentana.ShowDialog();
+                }
             }
         }
     }

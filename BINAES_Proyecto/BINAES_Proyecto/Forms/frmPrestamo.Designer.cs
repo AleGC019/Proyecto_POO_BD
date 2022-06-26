@@ -72,11 +72,9 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpVerificarExistencia_Prestamo.Controls.Add(this.tableLayoutPanel1);
             this.grpVerificarExistencia_Prestamo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.grpVerificarExistencia_Prestamo.Location = new System.Drawing.Point(16, 31);
-            this.grpVerificarExistencia_Prestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.grpVerificarExistencia_Prestamo.Location = new System.Drawing.Point(11, 20);
             this.grpVerificarExistencia_Prestamo.Name = "grpVerificarExistencia_Prestamo";
-            this.grpVerificarExistencia_Prestamo.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.grpVerificarExistencia_Prestamo.Size = new System.Drawing.Size(804, 180);
+            this.grpVerificarExistencia_Prestamo.Size = new System.Drawing.Size(536, 117);
             this.grpVerificarExistencia_Prestamo.TabIndex = 0;
             this.grpVerificarExistencia_Prestamo.TabStop = false;
             this.grpVerificarExistencia_Prestamo.Text = "Búsqueda de material";
@@ -97,8 +95,7 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel1.Controls.Add(this.txtBusqueda_Prestamo, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.cmbTipoBusqueda_Prestamo, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblTipoBusqueda_Prestamo, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 29);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
@@ -106,7 +103,7 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.5F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(786, 142);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(524, 92);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btnBuscar_Prestamo
@@ -114,11 +111,10 @@ namespace BINAES_Proyecto.Forms
             this.btnBuscar_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar_Prestamo.Location = new System.Drawing.Point(553, 12);
-            this.btnBuscar_Prestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscar_Prestamo.Location = new System.Drawing.Point(369, 7);
             this.btnBuscar_Prestamo.Name = "btnBuscar_Prestamo";
             this.tableLayoutPanel1.SetRowSpan(this.btnBuscar_Prestamo, 3);
-            this.btnBuscar_Prestamo.Size = new System.Drawing.Size(188, 117);
+            this.btnBuscar_Prestamo.Size = new System.Drawing.Size(125, 76);
             this.btnBuscar_Prestamo.TabIndex = 3;
             this.btnBuscar_Prestamo.Text = "Buscar";
             this.btnBuscar_Prestamo.UseVisualStyleBackColor = true;
@@ -130,10 +126,9 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.txtBusqueda_Prestamo, 2);
-            this.txtBusqueda_Prestamo.Location = new System.Drawing.Point(43, 79);
-            this.txtBusqueda_Prestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBusqueda_Prestamo.Location = new System.Drawing.Point(29, 50);
             this.txtBusqueda_Prestamo.Name = "txtBusqueda_Prestamo";
-            this.txtBusqueda_Prestamo.Size = new System.Drawing.Size(463, 26);
+            this.txtBusqueda_Prestamo.Size = new System.Drawing.Size(308, 20);
             this.txtBusqueda_Prestamo.TabIndex = 2;
             // 
             // cmbTipoBusqueda_Prestamo
@@ -146,10 +141,9 @@ namespace BINAES_Proyecto.Forms
             this.cmbTipoBusqueda_Prestamo.Items.AddRange(new object[] {
             "Titulo completo",
             "Titulo parcial"});
-            this.cmbTipoBusqueda_Prestamo.Location = new System.Drawing.Point(239, 12);
-            this.cmbTipoBusqueda_Prestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbTipoBusqueda_Prestamo.Location = new System.Drawing.Point(160, 7);
             this.cmbTipoBusqueda_Prestamo.Name = "cmbTipoBusqueda_Prestamo";
-            this.cmbTipoBusqueda_Prestamo.Size = new System.Drawing.Size(264, 28);
+            this.cmbTipoBusqueda_Prestamo.Size = new System.Drawing.Size(177, 21);
             this.cmbTipoBusqueda_Prestamo.TabIndex = 1;
             // 
             // lblTipoBusqueda_Prestamo
@@ -157,10 +151,9 @@ namespace BINAES_Proyecto.Forms
             this.lblTipoBusqueda_Prestamo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTipoBusqueda_Prestamo.AutoSize = true;
-            this.lblTipoBusqueda_Prestamo.Location = new System.Drawing.Point(43, 7);
-            this.lblTipoBusqueda_Prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipoBusqueda_Prestamo.Location = new System.Drawing.Point(29, 4);
             this.lblTipoBusqueda_Prestamo.Name = "lblTipoBusqueda_Prestamo";
-            this.lblTipoBusqueda_Prestamo.Size = new System.Drawing.Size(188, 20);
+            this.lblTipoBusqueda_Prestamo.Size = new System.Drawing.Size(125, 13);
             this.lblTipoBusqueda_Prestamo.TabIndex = 0;
             this.lblTipoBusqueda_Prestamo.Text = "Tipo de busqueda";
             this.lblTipoBusqueda_Prestamo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,10 +164,9 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFoundItem_Prestamo.Controls.Add(this.tlpFoundItem_Prestamo);
-            this.pnlFoundItem_Prestamo.Location = new System.Drawing.Point(16, 220);
-            this.pnlFoundItem_Prestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlFoundItem_Prestamo.Location = new System.Drawing.Point(11, 143);
             this.pnlFoundItem_Prestamo.Name = "pnlFoundItem_Prestamo";
-            this.pnlFoundItem_Prestamo.Size = new System.Drawing.Size(804, 455);
+            this.pnlFoundItem_Prestamo.Size = new System.Drawing.Size(536, 296);
             this.pnlFoundItem_Prestamo.TabIndex = 1;
             // 
             // tlpFoundItem_Prestamo
@@ -199,8 +191,7 @@ namespace BINAES_Proyecto.Forms
             this.tlpFoundItem_Prestamo.Controls.Add(this.lblIdioma_Prestamo, 1, 12);
             this.tlpFoundItem_Prestamo.Controls.Add(this.lbl_PC_prestamo, 1, 13);
             this.tlpFoundItem_Prestamo.Controls.Add(this.lblFecha_Prestamo, 1, 9);
-            this.tlpFoundItem_Prestamo.Location = new System.Drawing.Point(22, 18);
-            this.tlpFoundItem_Prestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tlpFoundItem_Prestamo.Location = new System.Drawing.Point(15, 12);
             this.tlpFoundItem_Prestamo.Name = "tlpFoundItem_Prestamo";
             this.tlpFoundItem_Prestamo.RowCount = 15;
             this.tlpFoundItem_Prestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.249999F));
@@ -218,7 +209,7 @@ namespace BINAES_Proyecto.Forms
             this.tlpFoundItem_Prestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.249999F));
             this.tlpFoundItem_Prestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.249999F));
             this.tlpFoundItem_Prestamo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.249999F));
-            this.tlpFoundItem_Prestamo.Size = new System.Drawing.Size(759, 414);
+            this.tlpFoundItem_Prestamo.Size = new System.Drawing.Size(506, 269);
             this.tlpFoundItem_Prestamo.TabIndex = 0;
             // 
             // picFoundItem_Prestamo
@@ -227,11 +218,10 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picFoundItem_Prestamo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picFoundItem_Prestamo.Location = new System.Drawing.Point(4, 59);
-            this.picFoundItem_Prestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picFoundItem_Prestamo.Location = new System.Drawing.Point(3, 37);
             this.picFoundItem_Prestamo.Name = "picFoundItem_Prestamo";
             this.tlpFoundItem_Prestamo.SetRowSpan(this.picFoundItem_Prestamo, 12);
-            this.picFoundItem_Prestamo.Size = new System.Drawing.Size(257, 314);
+            this.picFoundItem_Prestamo.Size = new System.Drawing.Size(171, 198);
             this.picFoundItem_Prestamo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFoundItem_Prestamo.TabIndex = 0;
             this.picFoundItem_Prestamo.TabStop = false;
@@ -245,10 +235,9 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEncontrado.AutoSize = true;
             this.tlpFoundItem_Prestamo.SetColumnSpan(this.lblEncontrado, 2);
-            this.lblEncontrado.Location = new System.Drawing.Point(4, 0);
-            this.lblEncontrado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEncontrado.Location = new System.Drawing.Point(3, 0);
             this.lblEncontrado.Name = "lblEncontrado";
-            this.lblEncontrado.Size = new System.Drawing.Size(751, 27);
+            this.lblEncontrado.Size = new System.Drawing.Size(500, 17);
             this.lblEncontrado.TabIndex = 1;
             this.lblEncontrado.Text = "¡Ejemplar encontrado!";
             this.lblEncontrado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,120 +245,108 @@ namespace BINAES_Proyecto.Forms
             // lblNombre_prestamo
             // 
             this.lblNombre_prestamo.AutoSize = true;
-            this.lblNombre_prestamo.Location = new System.Drawing.Point(269, 54);
-            this.lblNombre_prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre_prestamo.Location = new System.Drawing.Point(180, 34);
             this.lblNombre_prestamo.Name = "lblNombre_prestamo";
-            this.lblNombre_prestamo.Size = new System.Drawing.Size(51, 20);
+            this.lblNombre_prestamo.Size = new System.Drawing.Size(35, 13);
             this.lblNombre_prestamo.TabIndex = 2;
             this.lblNombre_prestamo.Text = "label1";
             // 
             // lblID_prestamo
             // 
             this.lblID_prestamo.AutoSize = true;
-            this.lblID_prestamo.Location = new System.Drawing.Point(269, 81);
-            this.lblID_prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID_prestamo.Location = new System.Drawing.Point(180, 51);
             this.lblID_prestamo.Name = "lblID_prestamo";
-            this.lblID_prestamo.Size = new System.Drawing.Size(51, 20);
+            this.lblID_prestamo.Size = new System.Drawing.Size(35, 13);
             this.lblID_prestamo.TabIndex = 3;
             this.lblID_prestamo.Text = "label2";
             // 
             // lblColeccion_prestamo
             // 
             this.lblColeccion_prestamo.AutoSize = true;
-            this.lblColeccion_prestamo.Location = new System.Drawing.Point(269, 108);
-            this.lblColeccion_prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblColeccion_prestamo.Location = new System.Drawing.Point(180, 68);
             this.lblColeccion_prestamo.Name = "lblColeccion_prestamo";
-            this.lblColeccion_prestamo.Size = new System.Drawing.Size(51, 20);
+            this.lblColeccion_prestamo.Size = new System.Drawing.Size(35, 13);
             this.lblColeccion_prestamo.TabIndex = 4;
             this.lblColeccion_prestamo.Text = "label3";
             // 
             // lblAutor_Prestamo
             // 
             this.lblAutor_Prestamo.AutoSize = true;
-            this.lblAutor_Prestamo.Location = new System.Drawing.Point(269, 135);
-            this.lblAutor_Prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAutor_Prestamo.Location = new System.Drawing.Point(180, 85);
             this.lblAutor_Prestamo.Name = "lblAutor_Prestamo";
-            this.lblAutor_Prestamo.Size = new System.Drawing.Size(51, 20);
+            this.lblAutor_Prestamo.Size = new System.Drawing.Size(35, 13);
             this.lblAutor_Prestamo.TabIndex = 5;
             this.lblAutor_Prestamo.Text = "label4";
             // 
             // lblISBN_PRESTAMO
             // 
             this.lblISBN_PRESTAMO.AutoSize = true;
-            this.lblISBN_PRESTAMO.Location = new System.Drawing.Point(269, 162);
-            this.lblISBN_PRESTAMO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblISBN_PRESTAMO.Location = new System.Drawing.Point(180, 102);
             this.lblISBN_PRESTAMO.Name = "lblISBN_PRESTAMO";
-            this.lblISBN_PRESTAMO.Size = new System.Drawing.Size(51, 20);
+            this.lblISBN_PRESTAMO.Size = new System.Drawing.Size(35, 13);
             this.lblISBN_PRESTAMO.TabIndex = 6;
             this.lblISBN_PRESTAMO.Text = "label5";
             // 
             // lblISSN_PRESTAMO
             // 
             this.lblISSN_PRESTAMO.AutoSize = true;
-            this.lblISSN_PRESTAMO.Location = new System.Drawing.Point(269, 189);
-            this.lblISSN_PRESTAMO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblISSN_PRESTAMO.Location = new System.Drawing.Point(180, 119);
             this.lblISSN_PRESTAMO.Name = "lblISSN_PRESTAMO";
-            this.lblISSN_PRESTAMO.Size = new System.Drawing.Size(51, 20);
+            this.lblISSN_PRESTAMO.Size = new System.Drawing.Size(35, 13);
             this.lblISSN_PRESTAMO.TabIndex = 7;
             this.lblISSN_PRESTAMO.Text = "label6";
             // 
             // lblDOI_PRESTAMO
             // 
             this.lblDOI_PRESTAMO.AutoSize = true;
-            this.lblDOI_PRESTAMO.Location = new System.Drawing.Point(269, 216);
-            this.lblDOI_PRESTAMO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDOI_PRESTAMO.Location = new System.Drawing.Point(180, 136);
             this.lblDOI_PRESTAMO.Name = "lblDOI_PRESTAMO";
-            this.lblDOI_PRESTAMO.Size = new System.Drawing.Size(51, 20);
+            this.lblDOI_PRESTAMO.Size = new System.Drawing.Size(35, 13);
             this.lblDOI_PRESTAMO.TabIndex = 8;
             this.lblDOI_PRESTAMO.Text = "label7";
             // 
             // lblEditorial_Prestamo
             // 
             this.lblEditorial_Prestamo.AutoSize = true;
-            this.lblEditorial_Prestamo.Location = new System.Drawing.Point(269, 270);
-            this.lblEditorial_Prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEditorial_Prestamo.Location = new System.Drawing.Point(180, 170);
             this.lblEditorial_Prestamo.Name = "lblEditorial_Prestamo";
-            this.lblEditorial_Prestamo.Size = new System.Drawing.Size(51, 20);
+            this.lblEditorial_Prestamo.Size = new System.Drawing.Size(35, 13);
             this.lblEditorial_Prestamo.TabIndex = 10;
             this.lblEditorial_Prestamo.Text = "label9";
             // 
             // lblFormato_Prestamo
             // 
             this.lblFormato_Prestamo.AutoSize = true;
-            this.lblFormato_Prestamo.Location = new System.Drawing.Point(269, 297);
-            this.lblFormato_Prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFormato_Prestamo.Location = new System.Drawing.Point(180, 187);
             this.lblFormato_Prestamo.Name = "lblFormato_Prestamo";
-            this.lblFormato_Prestamo.Size = new System.Drawing.Size(60, 20);
+            this.lblFormato_Prestamo.Size = new System.Drawing.Size(41, 13);
             this.lblFormato_Prestamo.TabIndex = 11;
             this.lblFormato_Prestamo.Text = "label10";
             // 
             // lblIdioma_Prestamo
             // 
             this.lblIdioma_Prestamo.AutoSize = true;
-            this.lblIdioma_Prestamo.Location = new System.Drawing.Point(269, 324);
-            this.lblIdioma_Prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIdioma_Prestamo.Location = new System.Drawing.Point(180, 204);
             this.lblIdioma_Prestamo.Name = "lblIdioma_Prestamo";
-            this.lblIdioma_Prestamo.Size = new System.Drawing.Size(60, 20);
+            this.lblIdioma_Prestamo.Size = new System.Drawing.Size(41, 13);
             this.lblIdioma_Prestamo.TabIndex = 12;
             this.lblIdioma_Prestamo.Text = "label11";
             // 
             // lbl_PC_prestamo
             // 
             this.lbl_PC_prestamo.AutoSize = true;
-            this.lbl_PC_prestamo.Location = new System.Drawing.Point(269, 351);
-            this.lbl_PC_prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_PC_prestamo.Location = new System.Drawing.Point(180, 221);
             this.lbl_PC_prestamo.Name = "lbl_PC_prestamo";
-            this.lbl_PC_prestamo.Size = new System.Drawing.Size(60, 20);
+            this.lbl_PC_prestamo.Size = new System.Drawing.Size(41, 13);
             this.lbl_PC_prestamo.TabIndex = 13;
             this.lbl_PC_prestamo.Text = "label12";
             // 
             // lblFecha_Prestamo
             // 
             this.lblFecha_Prestamo.AutoSize = true;
-            this.lblFecha_Prestamo.Location = new System.Drawing.Point(269, 243);
-            this.lblFecha_Prestamo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha_Prestamo.Location = new System.Drawing.Point(180, 153);
             this.lblFecha_Prestamo.Name = "lblFecha_Prestamo";
-            this.lblFecha_Prestamo.Size = new System.Drawing.Size(51, 20);
+            this.lblFecha_Prestamo.Size = new System.Drawing.Size(35, 13);
             this.lblFecha_Prestamo.TabIndex = 14;
             this.lblFecha_Prestamo.Text = "label7";
             // 
@@ -380,10 +357,9 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlPrestamoContainer.Controls.Add(this.grpVerificarExistencia_Prestamo);
             this.pnlPrestamoContainer.Controls.Add(this.pnlFoundItem_Prestamo);
-            this.pnlPrestamoContainer.Location = new System.Drawing.Point(18, 18);
-            this.pnlPrestamoContainer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlPrestamoContainer.Location = new System.Drawing.Point(12, 12);
             this.pnlPrestamoContainer.Name = "pnlPrestamoContainer";
-            this.pnlPrestamoContainer.Size = new System.Drawing.Size(840, 703);
+            this.pnlPrestamoContainer.Size = new System.Drawing.Size(560, 457);
             this.pnlPrestamoContainer.TabIndex = 2;
             // 
             // tltVerificarDisponibilidad
@@ -394,12 +370,11 @@ namespace BINAES_Proyecto.Forms
             // 
             // frmPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 740);
+            this.ClientSize = new System.Drawing.Size(584, 481);
             this.Controls.Add(this.pnlPrestamoContainer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmPrestamo";
             this.Text = "frmPrestamo";
             this.Load += new System.EventHandler(this.frmPrestamo_Load);
