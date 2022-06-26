@@ -380,5 +380,57 @@ namespace BINAES_Proyecto
                 
                 return lista;
         }
+        
+        public static void ActualizarEvento(Evento even)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string noquery =
+                    "UPDATE EVENTO SET titulo = @nuevotitulo, imagen = @nuevaimagen, asistentes_cantidad = @nuevaasistentes_cantidad, incio_evento_hora_fecha = @nuevoincio_evento_hora_fecha, finalizacion_evento_hora_fecha = @nuevafinalizacion_evento_hora_fecha, id_area = @nuevoid_area FROM EVENTO WHERE id = @id";
+
+                SqlCommand command = new SqlCommand(noquery, connection);
+                command.Parameters.AddWithValue("@nuevotitulo", even.Titulo_Evento);
+                command.Parameters.AddWithValue("@nuevaimagen", even.Imagen_evento);
+                command.Parameters.AddWithValue("@nuevaasistentes_cantidad", even.Cantidad_de_asistentes);
+                command.Parameters.AddWithValue("@nuevoincio_evento_hora_fecha", even.Inicio_del_vento);
+                command.Parameters.AddWithValue("@nuevafinalizacion_evento_hora_fecha", even.Finalizacion_del_evento);
+                command.Parameters.AddWithValue("@nuevoid_area", even.id_area);
+                command.Parameters.AddWithValue("@id", even.ID);
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+            }
+        }
+        
+        public static bool EliminarEvento(int id)
+        {
+            bool exito = true;
+
+            try
+            {
+                string cadena = Resources.Cadena_Conexion;
+                using (SqlConnection connection = new SqlConnection(cadena))
+                {
+                    string query = "DELETE FROM EVENTO WHERE id = @id";
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@id", id);
+
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+            }
+            catch (Exception)
+            {
+                exito = false;
+            }
+
+            return exito;
+        }
     }
 }

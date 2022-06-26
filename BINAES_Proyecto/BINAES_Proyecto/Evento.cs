@@ -20,6 +20,8 @@ namespace BINAES_Proyecto
         
         public Bitmap Imagen_del_evento { get; set; }
         
+        public string Imagen_evento { get; set; }
+        
         public int Cantidad_de_asistentes { get; set; }
         
         public DateTime Inicio_del_vento { get; set; }

@@ -141,8 +141,6 @@ namespace BINAES_Proyecto.Forms
                     
 
 
-
-
                     connection.Close();
 
 

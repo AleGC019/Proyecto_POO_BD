@@ -549,5 +549,16 @@ namespace BINAES_Proyecto.Forms
         {
             throw new System.NotImplementedException();
         }
+
+        private void btnActualizarPalabrasClave_Click(object sender, EventArgs e)
+        {
+            new frmActualizarPalabraClave().Show();
+        }
+
+
+        private void btnActualizarAutor_Click(object sender, EventArgs e)
+        {
+            new frmActualizarAutor().Show();
+        }
     }
 }

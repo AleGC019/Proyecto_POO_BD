@@ -59,6 +59,18 @@
     <Compile Include="Autor.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
     <Compile Include="ColeccionDAO.cs" />
+    <Compile Include="frmActualizarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActualizarAutor.Designer.cs">
+      <DependentUpon>frmActualizarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActualizarPalabraClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActualizarPalabraClave.Designer.cs">
+      <DependentUpon>frmActualizarPalabraClave.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBinaesUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActualizarPalabraClave.resx">
+      <DependentUpon>frmActualizarPalabraClave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBinaesMain.resx">
       <DependentUpon>frmBinaesMain.cs</DependentUpon>
