@@ -337,5 +337,83 @@ namespace BINAES_Proyecto
 
             return prestado;
         }
+        
+        
+        public static List<PrestamoEjemplar> MostrarTodo()
+        {
+            string cadena = Resources.Cadena_Conexion;
+            List<PrestamoEjemplar> lista = new List<PrestamoEjemplar>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query =
+                    "SELECT PRESTAMO.id, EJEMPLAR.nombre AS 'ejemplar', USUARIO.nombre AS 'usuario', PRESTAMO.prestamo_entrega_hora_fecha, PRESTAMO.prestamo_devolucion_hora_fecha FROM PRESTAMO INNER JOIN EJEMPLAR ON EJEMPLAR.id = PRESTAMO.id_ejemplar INNER JOIN IDIOMA  ON IDIOMA.id = EJEMPLAR.id_idioma " +
+                    "INNER JOIN USUARIO ON USUARIO.id = PRESTAMO.id_usuario";
+
+                    SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        PrestamoEjemplar eje = new PrestamoEjemplar();
+                        
+                        eje.id_prestamo = Convert.ToInt32(reader["id"].ToString());
+                        
+                        eje.Ejemplar = reader["ejemplar"].ToString();
+                        
+                        eje.Nombre =  reader["usuario"].ToString();
+                        
+                        eje.Entrega = Convert.ToDateTime(reader["prestamo_entrega_hora_fecha"].ToString());
+                        
+                        eje.Devolucion = Convert.ToDateTime(reader["prestamo_devolucion_hora_fecha"].ToString());
+                        
+                        lista.Add(eje);
+                    }
+                }
+                connection.Close();
+            }
+            return lista;
+        }
+        
+        public static List<PrestamoEjemplar> MostrarTodoReservaciones()
+        {
+            string cadena = Resources.Cadena_Conexion;
+            List<PrestamoEjemplar> lista = new List<PrestamoEjemplar>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query =
+                    "SELECT RESERVACION.id, EJEMPLAR.nombre AS 'ejemplar', USUARIO.nombre AS 'usuario', RESERVACION.reservacion_hora_fecha,RESERVACION.prestamo_hora_fecha, RESERVACION.devolucion_hora_fecha FROM RESERVACION INNER JOIN EJEMPLAR ON EJEMPLAR.id = RESERVACION.id_ejemplar INNER JOIN USUARIO ON USUARIO.id = RESERVACION.id_usuario";
+
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        PrestamoEjemplar eje = new PrestamoEjemplar();
+                        
+                        eje.id_prestamo = Convert.ToInt32(reader["id"].ToString());
+                        
+                        eje.Ejemplar = reader["ejemplar"].ToString();
+                        
+                        eje.Nombre =  reader["usuario"].ToString();
+                        
+                        eje.Entrega = Convert.ToDateTime(reader["prestamo_hora_fecha"].ToString());
+                        
+                        eje.Devolucion = Convert.ToDateTime(reader["devolucion_hora_fecha"].ToString());
+                        
+                        eje.FechaReserva = Convert.ToDateTime(reader["reservacion_hora_fecha"].ToString());
+                        
+                        lista.Add(eje);
+                    }
+                }
+                connection.Close();
+            }
+            return lista;
+        }
     }
 }
