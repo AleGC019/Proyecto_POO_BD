@@ -55,9 +55,9 @@ namespace BINAES_Proyecto.Forms
             this.lblFinal = new System.Windows.Forms.Label();
             this.lblInicio = new System.Windows.Forms.Label();
             this.dtpFinalizacion = new System.Windows.Forms.DateTimePicker();
-            this.txtobjetivo = new System.Windows.Forms.TextBox();
             this.lblObjetivo = new System.Windows.Forms.Label();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.btnObjetivosEvento = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -66,6 +66,7 @@ namespace BINAES_Proyecto.Forms
             this.btnEliminarEvento = new System.Windows.Forms.Button();
             this.txtidEliminarEvento = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnActualizarObjetivos = new System.Windows.Forms.Button();
             this.btnBuscarIDEvento = new System.Windows.Forms.Button();
             this.dtpActualizarFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtpActualizarFechaInicio = new System.Windows.Forms.DateTimePicker();
@@ -73,7 +74,6 @@ namespace BINAES_Proyecto.Forms
             this.btnActualizarEvento = new System.Windows.Forms.Button();
             this.nudActualizarAsistentes = new System.Windows.Forms.NumericUpDown();
             this.btnActualizarImagenEvento = new System.Windows.Forms.Button();
-            this.txtActualaizarObjetivosEvento = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbActualizarEventoArea = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -240,9 +240,9 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel3.Controls.Add(this.lblFinal, 1, 8);
             this.tableLayoutPanel3.Controls.Add(this.lblInicio, 1, 6);
             this.tableLayoutPanel3.Controls.Add(this.dtpFinalizacion, 1, 9);
-            this.tableLayoutPanel3.Controls.Add(this.txtobjetivo, 1, 13);
             this.tableLayoutPanel3.Controls.Add(this.lblObjetivo, 1, 12);
             this.tableLayoutPanel3.Controls.Add(this.nudCantidad, 9, 11);
+            this.tableLayoutPanel3.Controls.Add(this.btnObjetivosEvento, 1, 13);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -279,7 +279,7 @@ namespace BINAES_Proyecto.Forms
             // btnAgregarE
             // 
             this.btnAgregarE.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarE.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnAgregarE.BackColor = System.Drawing.Color.Green;
             this.tableLayoutPanel3.SetColumnSpan(this.btnAgregarE, 4);
             this.btnAgregarE.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnAgregarE.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -432,15 +432,6 @@ namespace BINAES_Proyecto.Forms
             this.dtpFinalizacion.Size = new System.Drawing.Size(363, 28);
             this.dtpFinalizacion.TabIndex = 20;
             // 
-            // txtobjetivo
-            // 
-            this.txtobjetivo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.SetColumnSpan(this.txtobjetivo, 5);
-            this.txtobjetivo.Location = new System.Drawing.Point(64, 483);
-            this.txtobjetivo.Name = "txtobjetivo";
-            this.txtobjetivo.Size = new System.Drawing.Size(296, 28);
-            this.txtobjetivo.TabIndex = 25;
-            // 
             // lblObjetivo
             // 
             this.lblObjetivo.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
@@ -466,6 +457,21 @@ namespace BINAES_Proyecto.Forms
             this.nudCantidad.TabIndex = 21;
             this.nudCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudCantidad.Value = new decimal(new int[] {1, 0, 0, 0});
+            // 
+            // btnObjetivosEvento
+            // 
+            this.btnObjetivosEvento.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnObjetivosEvento.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.tableLayoutPanel3.SetColumnSpan(this.btnObjetivosEvento, 4);
+            this.btnObjetivosEvento.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnObjetivosEvento.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnObjetivosEvento.Location = new System.Drawing.Point(64, 483);
+            this.btnObjetivosEvento.Name = "btnObjetivosEvento";
+            this.btnObjetivosEvento.Size = new System.Drawing.Size(235, 39);
+            this.btnObjetivosEvento.TabIndex = 26;
+            this.btnObjetivosEvento.Text = "Objetivos";
+            this.btnObjetivosEvento.UseVisualStyleBackColor = false;
+            this.btnObjetivosEvento.Click += new System.EventHandler(this.btnObjetivosEvento_Click);
             // 
             // tabPage3
             // 
@@ -581,6 +587,7 @@ namespace BINAES_Proyecto.Forms
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel4.SetColumnSpan(this.panel4, 13);
+            this.panel4.Controls.Add(this.btnActualizarObjetivos);
             this.panel4.Controls.Add(this.btnBuscarIDEvento);
             this.panel4.Controls.Add(this.dtpActualizarFechaFin);
             this.panel4.Controls.Add(this.dtpActualizarFechaInicio);
@@ -588,7 +595,6 @@ namespace BINAES_Proyecto.Forms
             this.panel4.Controls.Add(this.btnActualizarEvento);
             this.panel4.Controls.Add(this.nudActualizarAsistentes);
             this.panel4.Controls.Add(this.btnActualizarImagenEvento);
-            this.panel4.Controls.Add(this.txtActualaizarObjetivosEvento);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.cmbActualizarEventoArea);
             this.panel4.Controls.Add(this.label7);
@@ -606,11 +612,24 @@ namespace BINAES_Proyecto.Forms
             this.panel4.Size = new System.Drawing.Size(799, 377);
             this.panel4.TabIndex = 23;
             // 
+            // btnActualizarObjetivos
+            // 
+            this.btnActualizarObjetivos.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnActualizarObjetivos.ForeColor = System.Drawing.Color.White;
+            this.btnActualizarObjetivos.Location = new System.Drawing.Point(459, 239);
+            this.btnActualizarObjetivos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizarObjetivos.Name = "btnActualizarObjetivos";
+            this.btnActualizarObjetivos.Size = new System.Drawing.Size(243, 38);
+            this.btnActualizarObjetivos.TabIndex = 38;
+            this.btnActualizarObjetivos.Text = "Actualizar Objetivos";
+            this.btnActualizarObjetivos.UseVisualStyleBackColor = false;
+            this.btnActualizarObjetivos.Click += new System.EventHandler(this.btnActualizarObjetivos_Click);
+            // 
             // btnBuscarIDEvento
             // 
-            this.btnBuscarIDEvento.Location = new System.Drawing.Point(668, 77);
+            this.btnBuscarIDEvento.Location = new System.Drawing.Point(251, 109);
             this.btnBuscarIDEvento.Name = "btnBuscarIDEvento";
-            this.btnBuscarIDEvento.Size = new System.Drawing.Size(91, 28);
+            this.btnBuscarIDEvento.Size = new System.Drawing.Size(91, 45);
             this.btnBuscarIDEvento.TabIndex = 37;
             this.btnBuscarIDEvento.Text = "Buscar";
             this.btnBuscarIDEvento.UseVisualStyleBackColor = true;
@@ -618,7 +637,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // dtpActualizarFechaFin
             // 
-            this.dtpActualizarFechaFin.Location = new System.Drawing.Point(44, 295);
+            this.dtpActualizarFechaFin.Location = new System.Drawing.Point(458, 157);
             this.dtpActualizarFechaFin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpActualizarFechaFin.Name = "dtpActualizarFechaFin";
             this.dtpActualizarFechaFin.Size = new System.Drawing.Size(363, 28);
@@ -626,7 +645,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // dtpActualizarFechaInicio
             // 
-            this.dtpActualizarFechaInicio.Location = new System.Drawing.Point(44, 216);
+            this.dtpActualizarFechaInicio.Location = new System.Drawing.Point(459, 84);
             this.dtpActualizarFechaInicio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dtpActualizarFechaInicio.Name = "dtpActualizarFechaInicio";
             this.dtpActualizarFechaInicio.Size = new System.Drawing.Size(363, 28);
@@ -635,7 +654,7 @@ namespace BINAES_Proyecto.Forms
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(454, 240);
+            this.label2.Location = new System.Drawing.Point(458, 292);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(244, 28);
             this.label2.TabIndex = 34;
@@ -644,10 +663,10 @@ namespace BINAES_Proyecto.Forms
             // 
             // btnActualizarEvento
             // 
-            this.btnActualizarEvento.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.btnActualizarEvento.BackColor = System.Drawing.Color.Green;
             this.btnActualizarEvento.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarEvento.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnActualizarEvento.Location = new System.Drawing.Point(755, 264);
+            this.btnActualizarEvento.Location = new System.Drawing.Point(755, 294);
             this.btnActualizarEvento.Name = "btnActualizarEvento";
             this.btnActualizarEvento.Size = new System.Drawing.Size(166, 40);
             this.btnActualizarEvento.TabIndex = 17;
@@ -657,7 +676,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // nudActualizarAsistentes
             // 
-            this.nudActualizarAsistentes.Location = new System.Drawing.Point(459, 272);
+            this.nudActualizarAsistentes.Location = new System.Drawing.Point(459, 325);
             this.nudActualizarAsistentes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nudActualizarAsistentes.Maximum = new decimal(new int[] {400, 0, 0, 0});
             this.nudActualizarAsistentes.Minimum = new decimal(new int[] {1, 0, 0, 0});
@@ -671,7 +690,7 @@ namespace BINAES_Proyecto.Forms
             // 
             this.btnActualizarImagenEvento.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnActualizarImagenEvento.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarImagenEvento.Location = new System.Drawing.Point(459, 197);
+            this.btnActualizarImagenEvento.Location = new System.Drawing.Point(36, 315);
             this.btnActualizarImagenEvento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnActualizarImagenEvento.Name = "btnActualizarImagenEvento";
             this.btnActualizarImagenEvento.Size = new System.Drawing.Size(243, 38);
@@ -680,17 +699,10 @@ namespace BINAES_Proyecto.Forms
             this.btnActualizarImagenEvento.UseVisualStyleBackColor = false;
             this.btnActualizarImagenEvento.Click += new System.EventHandler(this.btnActualizarImagenEvento_Click);
             // 
-            // txtActualaizarObjetivosEvento
-            // 
-            this.txtActualaizarObjetivosEvento.Location = new System.Drawing.Point(459, 152);
-            this.txtActualaizarObjetivosEvento.Name = "txtActualaizarObjetivosEvento";
-            this.txtActualaizarObjetivosEvento.Size = new System.Drawing.Size(248, 28);
-            this.txtActualaizarObjetivosEvento.TabIndex = 31;
-            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(454, 123);
+            this.label1.Location = new System.Drawing.Point(454, 206);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(304, 28);
             this.label1.TabIndex = 30;
@@ -701,7 +713,7 @@ namespace BINAES_Proyecto.Forms
             // 
             this.cmbActualizarEventoArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbActualizarEventoArea.FormattingEnabled = true;
-            this.cmbActualizarEventoArea.Location = new System.Drawing.Point(44, 140);
+            this.cmbActualizarEventoArea.Location = new System.Drawing.Point(36, 262);
             this.cmbActualizarEventoArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbActualizarEventoArea.Name = "cmbActualizarEventoArea";
             this.cmbActualizarEventoArea.Size = new System.Drawing.Size(270, 30);
@@ -710,7 +722,7 @@ namespace BINAES_Proyecto.Forms
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.Location = new System.Drawing.Point(44, 249);
+            this.label7.Location = new System.Drawing.Point(454, 117);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(246, 28);
             this.label7.TabIndex = 27;
@@ -720,7 +732,7 @@ namespace BINAES_Proyecto.Forms
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label6.Location = new System.Drawing.Point(44, 178);
+            this.label6.Location = new System.Drawing.Point(459, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(218, 28);
             this.label6.TabIndex = 25;
@@ -730,7 +742,7 @@ namespace BINAES_Proyecto.Forms
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label5.Location = new System.Drawing.Point(44, 108);
+            this.label5.Location = new System.Drawing.Point(36, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 28);
             this.label5.TabIndex = 23;
@@ -739,7 +751,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarTituloEvento
             // 
-            this.txtActualizarTituloEvento.Location = new System.Drawing.Point(42, 66);
+            this.txtActualizarTituloEvento.Location = new System.Drawing.Point(34, 188);
             this.txtActualizarTituloEvento.Name = "txtActualizarTituloEvento";
             this.txtActualizarTituloEvento.Size = new System.Drawing.Size(271, 28);
             this.txtActualizarTituloEvento.TabIndex = 22;
@@ -747,7 +759,7 @@ namespace BINAES_Proyecto.Forms
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label4.Location = new System.Drawing.Point(42, 40);
+            this.label4.Location = new System.Drawing.Point(36, 157);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(218, 28);
             this.label4.TabIndex = 21;
@@ -757,7 +769,7 @@ namespace BINAES_Proyecto.Forms
             // label22
             // 
             this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label22.Location = new System.Drawing.Point(454, 78);
+            this.label22.Location = new System.Drawing.Point(38, 117);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(52, 28);
             this.label22.TabIndex = 20;
@@ -767,16 +779,16 @@ namespace BINAES_Proyecto.Forms
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label17.Location = new System.Drawing.Point(452, 0);
+            this.label17.Location = new System.Drawing.Point(36, 39);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(308, 58);
             this.label17.TabIndex = 19;
-            this.label17.Text = "Ingrese el número de ID de la colección que desea actualizar ";
+            this.label17.Text = "Ingrese el número de ID del evento que desea actualizar";
             this.label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtIDActualizarEvento
             // 
-            this.txtIDActualizarEvento.Location = new System.Drawing.Point(549, 78);
+            this.txtIDActualizarEvento.Location = new System.Drawing.Point(133, 117);
             this.txtIDActualizarEvento.Name = "txtIDActualizarEvento";
             this.txtIDActualizarEvento.Size = new System.Drawing.Size(79, 28);
             this.txtIDActualizarEvento.TabIndex = 18;
@@ -823,12 +835,15 @@ namespace BINAES_Proyecto.Forms
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.Button btnActualizarObjetivos;
+
+        private System.Windows.Forms.Button btnObjetivosEvento;
+
         private System.Windows.Forms.Button btnBuscarIDEvento;
 
         private System.Windows.Forms.DateTimePicker dtpActualizarFechaInicio;
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtActualaizarObjetivosEvento;
         private System.Windows.Forms.Button btnActualizarImagenEvento;
         private System.Windows.Forms.NumericUpDown nudActualizarAsistentes;
         private System.Windows.Forms.Label label2;
@@ -889,7 +904,6 @@ namespace BINAES_Proyecto.Forms
         private System.Windows.Forms.Label lblFinal;
         private System.Windows.Forms.Label lblInicio;
         private System.Windows.Forms.DateTimePicker dtpFinalizacion;
-        private System.Windows.Forms.TextBox txtobjetivo;
         private System.Windows.Forms.Label lblObjetivo;
     }
 }

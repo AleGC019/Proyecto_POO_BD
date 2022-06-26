@@ -281,31 +281,7 @@ namespace BINAES_Proyecto
             }
         }
 
-        /*public static void RetornarDatosEjemplar()
-        {
-            string cadena = Resources.Cadena_Conexion;
-            using (SqlConnection connection = new SqlConnection(cadena))
-            {
 
-                SqlCommand command = new SqlCommand("SELECT nombre,fecha_publicada,magen_portada, id_idioma, id_editorial,id_formato,isbn,issn,doi, id_coleccion  FROM EJEMPLAR WHERE id = @id");
-                command.Parameters.AddWithValue("@nuevonombre", ejem.Nombre_Ejemplar);
-                command.Parameters.AddWithValue("@nuevafecha_publicada", ejem.Fecha_de_publicacion);
-                command.Parameters.AddWithValue("@nuevaimagen_portada", ejem.Portada);
-                command.Parameters.AddWithValue("@nuevoid_idioma", ejem.Idioma);
-                command.Parameters.AddWithValue("@nuevoid_editorial", ejem.Editorial);
-                command.Parameters.AddWithValue("@nuevoid_formato", ejem.Formato);
-                command.Parameters.AddWithValue("@nuevaisbn", ejem.ISBN);
-                command.Parameters.AddWithValue("@nuevoissn", ejem.ISSN);
-                command.Parameters.AddWithValue("@nuevodoi", ejem.DOI);
-                command.Parameters.AddWithValue("@nueoid_coleccion", ejem.Coleccion);
-                command.Parameters.AddWithValue("@id", txt);
-                
-
-                connection.Open();
-                command.ExecuteNonQuery();
-                connection.Close();
-
-            }*/
     }
 
 

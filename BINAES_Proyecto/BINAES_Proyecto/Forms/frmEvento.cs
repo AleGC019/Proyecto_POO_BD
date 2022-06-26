@@ -144,7 +144,7 @@ namespace BINAES_Proyecto.Forms
             eve.Inicio_del_vento = Convert.ToDateTime(dtpIniico.Value);
             eve.Finalizacion_del_evento = Convert.ToDateTime(dtpFinalizacion.Value);
             eve.Portada = imagen;
-            eve.Objetivos = txtobjetivo.Text;
+            
 
             if (EventoDAO.VerificarDisponibilidadFechas(eve) == true)
             {
@@ -169,7 +169,7 @@ namespace BINAES_Proyecto.Forms
             eve.Inicio_del_vento = Convert.ToDateTime(dtpActualizarFechaInicio.Value);
             eve.Finalizacion_del_evento = Convert.ToDateTime(dtpActualizarFechaFin.Value);
             eve.Imagen_evento = imagen;
-            eve.Objetivos = txtobjetivo.Text;
+           
 
             if (EventoDAO.VerificarDisponibilidadFechas(eve) == true)
             {
@@ -239,6 +239,16 @@ namespace BINAES_Proyecto.Forms
 
                 }
             }
+        }
+
+        private void btnObjetivosEvento_Click(object sender, EventArgs e)
+        {
+            new frmObjetivos().Show();
+        }
+
+        private void btnActualizarObjetivos_Click(object sender, EventArgs e)
+        {
+            new frmActualizarObjetivos().Show();
         }
     }
 }

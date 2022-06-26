@@ -115,8 +115,8 @@ namespace BINAES_Proyecto
                 connection.Close();
             }
             
-            Objetivos Objetivos = new Objetivos(EventoDAO.nuevoidEvento(), eve.Objetivos);
-            InsertarNuevoObjetivo(Objetivos);
+            //Objetivos Objetivos = new Objetivos(EventoDAO.nuevoidEvento(), eve.Objetivos);
+            //InsertarNuevoObjetivo(Objetivos);
 
         }
         
@@ -431,6 +431,30 @@ namespace BINAES_Proyecto
             }
 
             return exito;
+        }
+        
+
+        public static void ingresarNuevoObjetivo(Objetivos obj)
+        {
+            string cadena = Resources.Cadena_Conexion;
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string nonquery =
+                    "INSERT INTO OBJETIVOS (objetivos, id_evento" +
+                    "VALUES (@objetivos, @id_evento)";
+
+                SqlCommand command = new SqlCommand(nonquery, connection);
+                command.Parameters.AddWithValue("@objetivos", obj.objetivo);
+                command.Parameters.AddWithValue("@id_evento", obj.id_evento_objetivos);
+
+
+
+
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
         }
     }
 }

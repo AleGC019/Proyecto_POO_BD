@@ -57,6 +57,7 @@
   <ItemGroup>
     <Compile Include="Area.cs" />
     <Compile Include="Autor.cs" />
+    <Compile Include="AutorDAO.cs" />
     <Compile Include="BuscarEjemplarDAO.cs" />
     <Compile Include="ColeccionDAO.cs" />
     <Compile Include="frmActualizarAutor.cs">
@@ -64,6 +65,12 @@
     </Compile>
     <Compile Include="frmActualizarAutor.Designer.cs">
       <DependentUpon>frmActualizarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmActualizarObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActualizarObjetivos.Designer.cs">
+      <DependentUpon>frmActualizarObjetivos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmActualizarPalabraClave.cs">
       <SubType>Form</SubType>
@@ -163,6 +170,12 @@
     <Compile Include="frmInicioSesion.Designer.cs">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmObjetivos.Designer.cs">
+      <DependentUpon>frmObjetivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistroReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +187,8 @@
     <Compile Include="Idioma.cs" />
     <Compile Include="imgDAO.cs" />
     <Compile Include="Objetivos.cs" />
+    <Compile Include="ObjetivosDAO.cs" />
+    <Compile Include="PalabrasClaveDAO.cs" />
     <Compile Include="Palabras_Clave.cs" />
     <Compile Include="PrestamoDAO.cs" />
     <Compile Include="PrestamoEjemplar.cs" />
@@ -214,6 +229,12 @@
     <EmbeddedResource Include="Forms\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmActualizarAutor.resx">
+      <DependentUpon>frmActualizarAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmActualizarObjetivos.resx">
+      <DependentUpon>frmActualizarObjetivos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmActualizarPalabraClave.resx">
       <DependentUpon>frmActualizarPalabraClave.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +255,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmInicioSesion.resx">
       <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmObjetivos.resx">
+      <DependentUpon>frmObjetivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistroReserva.resx">
       <DependentUpon>frmRegistroReserva.cs</DependentUpon>

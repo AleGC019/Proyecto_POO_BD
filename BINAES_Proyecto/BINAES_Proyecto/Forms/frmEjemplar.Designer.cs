@@ -41,7 +41,6 @@ namespace BINAES_Proyecto.Forms
             this.lblEditorial = new System.Windows.Forms.Label();
             this.cmbColeccionEjemplar = new System.Windows.Forms.ComboBox();
             this.lblInfoEjemplar = new System.Windows.Forms.Label();
-            this.txtFechaPublicacion = new System.Windows.Forms.TextBox();
             this.picImagenEjemplar = new System.Windows.Forms.PictureBox();
             this.btnCrearEjemplar = new System.Windows.Forms.Button();
             this.btnCrearAutor = new System.Windows.Forms.Button();
@@ -60,6 +59,7 @@ namespace BINAES_Proyecto.Forms
             this.lblFormato = new System.Windows.Forms.Label();
             this.btnCrearEditorial = new System.Windows.Forms.Button();
             this.lblColeccionEjemplar = new System.Windows.Forms.Label();
+            this.txtFechaPublicacion = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -160,7 +160,6 @@ namespace BINAES_Proyecto.Forms
             this.tlpEjemplar.Controls.Add(this.lblEditorial, 1, 7);
             this.tlpEjemplar.Controls.Add(this.cmbColeccionEjemplar, 1, 6);
             this.tlpEjemplar.Controls.Add(this.lblInfoEjemplar, 1, 0);
-            this.tlpEjemplar.Controls.Add(this.txtFechaPublicacion, 1, 4);
             this.tlpEjemplar.Controls.Add(this.picImagenEjemplar, 7, 1);
             this.tlpEjemplar.Controls.Add(this.btnCrearEjemplar, 1, 14);
             this.tlpEjemplar.Controls.Add(this.btnCrearAutor, 4, 14);
@@ -179,6 +178,7 @@ namespace BINAES_Proyecto.Forms
             this.tlpEjemplar.Controls.Add(this.lblFormato, 6, 5);
             this.tlpEjemplar.Controls.Add(this.btnCrearEditorial, 1, 10);
             this.tlpEjemplar.Controls.Add(this.lblColeccionEjemplar, 1, 5);
+            this.tlpEjemplar.Controls.Add(this.txtFechaPublicacion, 1, 4);
             this.tlpEjemplar.Location = new System.Drawing.Point(0, 6);
             this.tlpEjemplar.Name = "tlpEjemplar";
             this.tlpEjemplar.RowCount = 15;
@@ -266,14 +266,6 @@ namespace BINAES_Proyecto.Forms
             this.lblInfoEjemplar.TabIndex = 0;
             this.lblInfoEjemplar.Text = "Información del ejemplar";
             // 
-            // txtFechaPublicacion
-            // 
-            this.tlpEjemplar.SetColumnSpan(this.txtFechaPublicacion, 3);
-            this.txtFechaPublicacion.Location = new System.Drawing.Point(89, 159);
-            this.txtFechaPublicacion.Name = "txtFechaPublicacion";
-            this.txtFechaPublicacion.Size = new System.Drawing.Size(162, 26);
-            this.txtFechaPublicacion.TabIndex = 41;
-            // 
             // picImagenEjemplar
             // 
             this.picImagenEjemplar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -311,7 +303,7 @@ namespace BINAES_Proyecto.Forms
             this.btnCrearAutor.Name = "btnCrearAutor";
             this.btnCrearAutor.Size = new System.Drawing.Size(166, 56);
             this.btnCrearAutor.TabIndex = 33;
-            this.btnCrearAutor.Text = "Autor";
+            this.btnCrearAutor.Text = "Agregar autor";
             this.btnCrearAutor.UseVisualStyleBackColor = false;
             this.btnCrearAutor.Click += new System.EventHandler(this.btnCrearAutor_Click);
             // 
@@ -320,13 +312,13 @@ namespace BINAES_Proyecto.Forms
             this.btnCrearPalabrasClave.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCrearPalabrasClave.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
             this.tlpEjemplar.SetColumnSpan(this.btnCrearPalabrasClave, 2);
-            this.btnCrearPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnCrearPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnCrearPalabrasClave.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCrearPalabrasClave.Location = new System.Drawing.Point(605, 567);
             this.btnCrearPalabrasClave.Name = "btnCrearPalabrasClave";
             this.btnCrearPalabrasClave.Size = new System.Drawing.Size(166, 56);
             this.btnCrearPalabrasClave.TabIndex = 43;
-            this.btnCrearPalabrasClave.Text = "Palabras Clave";
+            this.btnCrearPalabrasClave.Text = "Agregar Palabras Clave";
             this.btnCrearPalabrasClave.UseVisualStyleBackColor = false;
             this.btnCrearPalabrasClave.Click += new System.EventHandler(this.btnCrearPalabrasClave_Click);
             // 
@@ -488,6 +480,14 @@ namespace BINAES_Proyecto.Forms
             this.lblColeccionEjemplar.Text = "Colección";
             this.lblColeccionEjemplar.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
+            // txtFechaPublicacion
+            // 
+            this.tlpEjemplar.SetColumnSpan(this.txtFechaPublicacion, 3);
+            this.txtFechaPublicacion.Location = new System.Drawing.Point(89, 159);
+            this.txtFechaPublicacion.Name = "txtFechaPublicacion";
+            this.txtFechaPublicacion.Size = new System.Drawing.Size(162, 26);
+            this.txtFechaPublicacion.TabIndex = 41;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tableLayoutPanel4);
@@ -579,14 +579,14 @@ namespace BINAES_Proyecto.Forms
             // 
             // bntConfirmarID
             // 
-            this.bntConfirmarID.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (61)))), ((int) (((byte) (143)))), ((int) (((byte) (61)))));
+            this.bntConfirmarID.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.bntConfirmarID.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.bntConfirmarID.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.bntConfirmarID.Location = new System.Drawing.Point(648, 58);
+            this.bntConfirmarID.Location = new System.Drawing.Point(129, 104);
             this.bntConfirmarID.Name = "bntConfirmarID";
             this.bntConfirmarID.Size = new System.Drawing.Size(160, 38);
             this.bntConfirmarID.TabIndex = 54;
-            this.bntConfirmarID.Text = "Confirmar";
+            this.bntConfirmarID.Text = "Buscar";
             this.bntConfirmarID.UseVisualStyleBackColor = false;
             this.bntConfirmarID.Click += new System.EventHandler(this.bntConfirmarID_Click);
             // 
@@ -606,7 +606,7 @@ namespace BINAES_Proyecto.Forms
             // label8
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label8.Location = new System.Drawing.Point(504, 102);
+            this.label8.Location = new System.Drawing.Point(763, 172);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 26);
             this.label8.TabIndex = 45;
@@ -615,7 +615,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarISB
             // 
-            this.txtActualizarISB.Location = new System.Drawing.Point(584, 103);
+            this.txtActualizarISB.Location = new System.Drawing.Point(811, 174);
             this.txtActualizarISB.Name = "txtActualizarISB";
             this.txtActualizarISB.Size = new System.Drawing.Size(157, 26);
             this.txtActualizarISB.TabIndex = 46;
@@ -623,7 +623,7 @@ namespace BINAES_Proyecto.Forms
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label9.Location = new System.Drawing.Point(504, 148);
+            this.label9.Location = new System.Drawing.Point(763, 218);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(42, 26);
             this.label9.TabIndex = 44;
@@ -632,7 +632,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarISSN
             // 
-            this.txtActualizarISSN.Location = new System.Drawing.Point(584, 149);
+            this.txtActualizarISSN.Location = new System.Drawing.Point(811, 220);
             this.txtActualizarISSN.Name = "txtActualizarISSN";
             this.txtActualizarISSN.Size = new System.Drawing.Size(157, 26);
             this.txtActualizarISSN.TabIndex = 49;
@@ -640,7 +640,7 @@ namespace BINAES_Proyecto.Forms
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label10.Location = new System.Drawing.Point(504, 188);
+            this.label10.Location = new System.Drawing.Point(763, 259);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 25);
             this.label10.TabIndex = 48;
@@ -649,7 +649,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarDOI
             // 
-            this.txtActualizarDOI.Location = new System.Drawing.Point(584, 188);
+            this.txtActualizarDOI.Location = new System.Drawing.Point(811, 259);
             this.txtActualizarDOI.Name = "txtActualizarDOI";
             this.txtActualizarDOI.Size = new System.Drawing.Size(157, 26);
             this.txtActualizarDOI.TabIndex = 50;
@@ -659,9 +659,9 @@ namespace BINAES_Proyecto.Forms
             this.btnActualizarAutor.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
             this.btnActualizarAutor.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarAutor.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnActualizarAutor.Location = new System.Drawing.Point(416, 322);
+            this.btnActualizarAutor.Location = new System.Drawing.Point(739, 328);
             this.btnActualizarAutor.Name = "btnActualizarAutor";
-            this.btnActualizarAutor.Size = new System.Drawing.Size(160, 52);
+            this.btnActualizarAutor.Size = new System.Drawing.Size(157, 44);
             this.btnActualizarAutor.TabIndex = 51;
             this.btnActualizarAutor.Text = "Autor";
             this.btnActualizarAutor.UseVisualStyleBackColor = false;
@@ -670,11 +670,11 @@ namespace BINAES_Proyecto.Forms
             // btnActualizarPalabrasClave
             // 
             this.btnActualizarPalabrasClave.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
-            this.btnActualizarPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnActualizarPalabrasClave.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarPalabrasClave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnActualizarPalabrasClave.Location = new System.Drawing.Point(242, 322);
+            this.btnActualizarPalabrasClave.Location = new System.Drawing.Point(568, 331);
             this.btnActualizarPalabrasClave.Name = "btnActualizarPalabrasClave";
-            this.btnActualizarPalabrasClave.Size = new System.Drawing.Size(132, 72);
+            this.btnActualizarPalabrasClave.Size = new System.Drawing.Size(143, 44);
             this.btnActualizarPalabrasClave.TabIndex = 52;
             this.btnActualizarPalabrasClave.Text = "Palabras Clave";
             this.btnActualizarPalabrasClave.UseVisualStyleBackColor = false;
@@ -684,7 +684,7 @@ namespace BINAES_Proyecto.Forms
             // 
             this.cmbActualizarIdioma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbActualizarIdioma.FormattingEnabled = true;
-            this.cmbActualizarIdioma.Location = new System.Drawing.Point(584, 232);
+            this.cmbActualizarIdioma.Location = new System.Drawing.Point(811, 127);
             this.cmbActualizarIdioma.Name = "cmbActualizarIdioma";
             this.cmbActualizarIdioma.Size = new System.Drawing.Size(157, 28);
             this.cmbActualizarIdioma.TabIndex = 41;
@@ -692,18 +692,18 @@ namespace BINAES_Proyecto.Forms
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label7.Location = new System.Drawing.Point(476, 228);
+            this.label7.Location = new System.Drawing.Point(811, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 28);
+            this.label7.Size = new System.Drawing.Size(85, 28);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Idioma";
+            this.label7.Text = "Idioma*";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // cmbActualizarFormato
             // 
             this.cmbActualizarFormato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbActualizarFormato.FormattingEnabled = true;
-            this.cmbActualizarFormato.Location = new System.Drawing.Point(16, 289);
+            this.cmbActualizarFormato.Location = new System.Drawing.Point(532, 254);
             this.cmbActualizarFormato.Name = "cmbActualizarFormato";
             this.cmbActualizarFormato.Size = new System.Drawing.Size(162, 28);
             this.cmbActualizarFormato.TabIndex = 39;
@@ -711,7 +711,7 @@ namespace BINAES_Proyecto.Forms
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label6.Location = new System.Drawing.Point(16, 258);
+            this.label6.Location = new System.Drawing.Point(532, 223);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(158, 22);
             this.label6.TabIndex = 38;
@@ -722,7 +722,7 @@ namespace BINAES_Proyecto.Forms
             // 
             this.cmbActualizarEditorial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbActualizarEditorial.FormattingEnabled = true;
-            this.cmbActualizarEditorial.Location = new System.Drawing.Point(206, 223);
+            this.cmbActualizarEditorial.Location = new System.Drawing.Point(811, 59);
             this.cmbActualizarEditorial.Name = "cmbActualizarEditorial";
             this.cmbActualizarEditorial.Size = new System.Drawing.Size(157, 28);
             this.cmbActualizarEditorial.TabIndex = 37;
@@ -730,7 +730,7 @@ namespace BINAES_Proyecto.Forms
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label4.Location = new System.Drawing.Point(206, 198);
+            this.label4.Location = new System.Drawing.Point(811, 34);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 22);
             this.label4.TabIndex = 36;
@@ -741,7 +741,7 @@ namespace BINAES_Proyecto.Forms
             // 
             this.cmbColeccionActualizar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbColeccionActualizar.FormattingEnabled = true;
-            this.cmbColeccionActualizar.Location = new System.Drawing.Point(20, 223);
+            this.cmbColeccionActualizar.Location = new System.Drawing.Point(536, 188);
             this.cmbColeccionActualizar.Name = "cmbColeccionActualizar";
             this.cmbColeccionActualizar.Size = new System.Drawing.Size(157, 28);
             this.cmbColeccionActualizar.TabIndex = 35;
@@ -749,7 +749,7 @@ namespace BINAES_Proyecto.Forms
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label3.Location = new System.Drawing.Point(20, 198);
+            this.label3.Location = new System.Drawing.Point(536, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(158, 22);
             this.label3.TabIndex = 29;
@@ -758,8 +758,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarFechaEjemplar
             // 
-            this.txtActualizarFechaEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtActualizarFechaEjemplar.Location = new System.Drawing.Point(20, 149);
+            this.txtActualizarFechaEjemplar.Location = new System.Drawing.Point(12, 256);
             this.txtActualizarFechaEjemplar.Name = "txtActualizarFechaEjemplar";
             this.txtActualizarFechaEjemplar.Size = new System.Drawing.Size(267, 26);
             this.txtActualizarFechaEjemplar.TabIndex = 28;
@@ -767,7 +766,7 @@ namespace BINAES_Proyecto.Forms
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label2.Location = new System.Drawing.Point(20, 125);
+            this.label2.Location = new System.Drawing.Point(12, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 22);
             this.label2.TabIndex = 27;
@@ -777,11 +776,11 @@ namespace BINAES_Proyecto.Forms
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label17.Location = new System.Drawing.Point(392, 12);
+            this.label17.Location = new System.Drawing.Point(14, 43);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(424, 43);
+            this.label17.Size = new System.Drawing.Size(417, 43);
             this.label17.TabIndex = 24;
-            this.label17.Text = "Número de ID de la colección que desea actualizar ";
+            this.label17.Text = "Número de ID del ejemplar que desea actualizar ";
             this.label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label12
@@ -797,7 +796,7 @@ namespace BINAES_Proyecto.Forms
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(20, 55);
+            this.label1.Location = new System.Drawing.Point(12, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 23);
             this.label1.TabIndex = 21;
@@ -806,8 +805,7 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtActualizarNombreEjemplar
             // 
-            this.txtActualizarNombreEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtActualizarNombreEjemplar.Location = new System.Drawing.Point(22, 82);
+            this.txtActualizarNombreEjemplar.Location = new System.Drawing.Point(14, 189);
             this.txtActualizarNombreEjemplar.Name = "txtActualizarNombreEjemplar";
             this.txtActualizarNombreEjemplar.Size = new System.Drawing.Size(265, 26);
             this.txtActualizarNombreEjemplar.TabIndex = 22;
@@ -815,16 +813,16 @@ namespace BINAES_Proyecto.Forms
             // label22
             // 
             this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label22.Location = new System.Drawing.Point(504, 69);
+            this.label22.Location = new System.Drawing.Point(14, 112);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(42, 22);
             this.label22.TabIndex = 20;
-            this.label22.Text = "ID";
+            this.label22.Text = "ID*";
             this.label22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtIDActualizarEjemplar
             // 
-            this.txtIDActualizarEjemplar.Location = new System.Drawing.Point(584, 65);
+            this.txtIDActualizarEjemplar.Location = new System.Drawing.Point(64, 112);
             this.txtIDActualizarEjemplar.Name = "txtIDActualizarEjemplar";
             this.txtIDActualizarEjemplar.Size = new System.Drawing.Size(36, 26);
             this.txtIDActualizarEjemplar.TabIndex = 18;
@@ -834,7 +832,7 @@ namespace BINAES_Proyecto.Forms
             this.btnActualizarEejmplar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (61)))), ((int) (((byte) (143)))), ((int) (((byte) (61)))));
             this.btnActualizarEejmplar.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnActualizarEejmplar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnActualizarEejmplar.Location = new System.Drawing.Point(608, 323);
+            this.btnActualizarEejmplar.Location = new System.Drawing.Point(256, 326);
             this.btnActualizarEejmplar.Name = "btnActualizarEejmplar";
             this.btnActualizarEejmplar.Size = new System.Drawing.Size(159, 51);
             this.btnActualizarEejmplar.TabIndex = 17;

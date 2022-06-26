@@ -560,5 +560,7 @@ namespace BINAES_Proyecto.Forms
         {
             new frmActualizarAutor().Show();
         }
+
+        
     }
 }

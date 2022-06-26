@@ -2,6 +2,7 @@ namespace BINAES_Proyecto
 {
     public class Objetivos
     {
+        public int ID { get; set; }
         public int id_evento_objetivos { get; set; }
 
         public string objetivo { get; set; }
