@@ -90,12 +90,6 @@
     <Compile Include="frmCrearAutor.Designer.cs">
       <DependentUpon>frmCrearAutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCrearEditorial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCrearEditorial.Designer.cs">
-      <DependentUpon>frmCrearEditorial.cs</DependentUpon>
-    </Compile>
     <Compile Include="EventoDAO.cs" />
     <Compile Include="Coleccion.cs" />
     <Compile Include="Editorial.cs" />
@@ -246,9 +240,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCrearAutor.resx">
       <DependentUpon>frmCrearAutor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCrearEditorial.resx">
-      <DependentUpon>frmCrearEditorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCrearPalabrasClave.resx">
       <DependentUpon>frmCrearPalabrasClave.cs</DependentUpon>

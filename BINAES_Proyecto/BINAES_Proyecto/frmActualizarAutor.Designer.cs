@@ -31,13 +31,14 @@ namespace BINAES_Proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarAutor));
             this.txtIDAutor = new System.Windows.Forms.TextBox();
             this.txtIdEjemplar = new System.Windows.Forms.TextBox();
             this.lblId_ejemplar = new System.Windows.Forms.Label();
             this.lblNombreAutor = new System.Windows.Forms.Label();
             this.dgvListaAutores = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblInfoParaPalabras = new System.Windows.Forms.Label();
+            this.lblActualizarAutor = new System.Windows.Forms.Label();
             this.lblidEjemplarNuevo = new System.Windows.Forms.Label();
             this.btnActualizarAutor = new System.Windows.Forms.Button();
             this.txtActualizarNombreAutor = new System.Windows.Forms.TextBox();
@@ -91,23 +92,23 @@ namespace BINAES_Proyecto
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (36)))), ((int) (((byte) (29)))), ((int) (((byte) (122)))));
-            this.panel1.Controls.Add(this.lblInfoParaPalabras);
+            this.panel1.Controls.Add(this.lblActualizarAutor);
             this.panel1.Controls.Add(this.lblidEjemplarNuevo);
             this.panel1.Location = new System.Drawing.Point(22, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(446, 56);
             this.panel1.TabIndex = 15;
             // 
-            // lblInfoParaPalabras
+            // lblActualizarAutor
             // 
-            this.lblInfoParaPalabras.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.lblInfoParaPalabras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblInfoParaPalabras.Location = new System.Drawing.Point(45, 14);
-            this.lblInfoParaPalabras.Name = "lblInfoParaPalabras";
-            this.lblInfoParaPalabras.Size = new System.Drawing.Size(307, 47);
-            this.lblInfoParaPalabras.TabIndex = 3;
-            this.lblInfoParaPalabras.Text = "Por favor ingrese las palabras claves para este ejemplar";
-            this.lblInfoParaPalabras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblActualizarAutor.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblActualizarAutor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblActualizarAutor.Location = new System.Drawing.Point(63, 9);
+            this.lblActualizarAutor.Name = "lblActualizarAutor";
+            this.lblActualizarAutor.Size = new System.Drawing.Size(307, 47);
+            this.lblActualizarAutor.TabIndex = 3;
+            this.lblActualizarAutor.Text = "Actualizar Autor";
+            this.lblActualizarAutor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblidEjemplarNuevo
             // 
@@ -147,8 +148,10 @@ namespace BINAES_Proyecto
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnActualizarAutor);
             this.Controls.Add(this.txtActualizarNombreAutor);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmActualizarAutor";
-            this.Text = "frmActualizarAutor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Actualizar Autor";
             this.Load += new System.EventHandler(this.frmActualizarAutor_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dgvListaAutores)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -162,7 +165,7 @@ namespace BINAES_Proyecto
         private System.Windows.Forms.Label lblNombreAutor;
         private System.Windows.Forms.DataGridView dgvListaAutores;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblInfoParaPalabras;
+        private System.Windows.Forms.Label lblActualizarAutor;
         private System.Windows.Forms.Label lblidEjemplarNuevo;
         private System.Windows.Forms.Button btnActualizarAutor;
         private System.Windows.Forms.TextBox txtActualizarNombreAutor;

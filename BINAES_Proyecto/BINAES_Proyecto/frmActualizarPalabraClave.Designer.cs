@@ -31,6 +31,7 @@ namespace BINAES_Proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarPalabraClave));
             this.lblInfoParaPalabras = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblidEjemplarNuevo = new System.Windows.Forms.Label();
@@ -49,11 +50,11 @@ namespace BINAES_Proyecto
             // 
             this.lblInfoParaPalabras.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblInfoParaPalabras.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblInfoParaPalabras.Location = new System.Drawing.Point(45, 14);
+            this.lblInfoParaPalabras.Location = new System.Drawing.Point(69, 9);
             this.lblInfoParaPalabras.Name = "lblInfoParaPalabras";
             this.lblInfoParaPalabras.Size = new System.Drawing.Size(307, 47);
             this.lblInfoParaPalabras.TabIndex = 3;
-            this.lblInfoParaPalabras.Text = "Por favor ingrese las palabras claves para este ejemplar";
+            this.lblInfoParaPalabras.Text = "Actualizar Palabras Clave";
             this.lblInfoParaPalabras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
@@ -147,8 +148,10 @@ namespace BINAES_Proyecto
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnActualizarAgregarPalabra);
             this.Controls.Add(this.txtActualizarPalabra);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmActualizarPalabraClave";
-            this.Text = "frmActualizarPalabraClave";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Actualizar palabras clave";
             this.Load += new System.EventHandler(this.frmActualizarPalabraClave_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize) (this.dgvListaPalabras)).EndInit();

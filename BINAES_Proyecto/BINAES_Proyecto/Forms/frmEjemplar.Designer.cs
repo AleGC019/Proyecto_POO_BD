@@ -46,7 +46,6 @@ namespace BINAES_Proyecto.Forms
             this.btnCrearAutor = new System.Windows.Forms.Button();
             this.btnCrearPalabrasClave = new System.Windows.Forms.Button();
             this.cmbEditorial = new System.Windows.Forms.ComboBox();
-            this.btnAgregarImagenEjemplar = new System.Windows.Forms.Button();
             this.lblDoi = new System.Windows.Forms.Label();
             this.lblissn = new System.Windows.Forms.Label();
             this.lblISBN = new System.Windows.Forms.Label();
@@ -57,9 +56,9 @@ namespace BINAES_Proyecto.Forms
             this.lblidioma = new System.Windows.Forms.Label();
             this.cmbFomato = new System.Windows.Forms.ComboBox();
             this.lblFormato = new System.Windows.Forms.Label();
-            this.btnCrearEditorial = new System.Windows.Forms.Button();
             this.lblColeccionEjemplar = new System.Windows.Forms.Label();
-            this.txtFechaPublicacion = new System.Windows.Forms.TextBox();
+            this.btnAgregarImagenEjemplar = new System.Windows.Forms.Button();
+            this.dtpFechaEjemplar = new System.Windows.Forms.DateTimePicker();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -81,7 +80,6 @@ namespace BINAES_Proyecto.Forms
             this.label4 = new System.Windows.Forms.Label();
             this.cmbColeccionActualizar = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtActualizarFechaEjemplar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -101,6 +99,7 @@ namespace BINAES_Proyecto.Forms
             this.cmbOpcionesBuscar = new System.Windows.Forms.ComboBox();
             this.dgvResultadosBusqueda = new System.Windows.Forms.DataGridView();
             this.txtBuscarEjemplar = new System.Windows.Forms.TextBox();
+            this.dtpActualizarFechaEjemplar = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tlpEjemplar.SuspendLayout();
@@ -165,7 +164,6 @@ namespace BINAES_Proyecto.Forms
             this.tlpEjemplar.Controls.Add(this.btnCrearAutor, 4, 14);
             this.tlpEjemplar.Controls.Add(this.btnCrearPalabrasClave, 7, 14);
             this.tlpEjemplar.Controls.Add(this.cmbEditorial, 1, 8);
-            this.tlpEjemplar.Controls.Add(this.btnAgregarImagenEjemplar, 1, 12);
             this.tlpEjemplar.Controls.Add(this.lblDoi, 5, 12);
             this.tlpEjemplar.Controls.Add(this.lblissn, 5, 11);
             this.tlpEjemplar.Controls.Add(this.lblISBN, 5, 10);
@@ -176,9 +174,9 @@ namespace BINAES_Proyecto.Forms
             this.tlpEjemplar.Controls.Add(this.lblidioma, 6, 7);
             this.tlpEjemplar.Controls.Add(this.cmbFomato, 6, 6);
             this.tlpEjemplar.Controls.Add(this.lblFormato, 6, 5);
-            this.tlpEjemplar.Controls.Add(this.btnCrearEditorial, 1, 10);
             this.tlpEjemplar.Controls.Add(this.lblColeccionEjemplar, 1, 5);
-            this.tlpEjemplar.Controls.Add(this.txtFechaPublicacion, 1, 4);
+            this.tlpEjemplar.Controls.Add(this.btnAgregarImagenEjemplar, 1, 10);
+            this.tlpEjemplar.Controls.Add(this.dtpFechaEjemplar, 1, 4);
             this.tlpEjemplar.Location = new System.Drawing.Point(0, 6);
             this.tlpEjemplar.Name = "tlpEjemplar";
             this.tlpEjemplar.RowCount = 15;
@@ -274,6 +272,7 @@ namespace BINAES_Proyecto.Forms
             this.picImagenEjemplar.Name = "picImagenEjemplar";
             this.tlpEjemplar.SetRowSpan(this.picImagenEjemplar, 4);
             this.picImagenEjemplar.Size = new System.Drawing.Size(198, 137);
+            this.picImagenEjemplar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagenEjemplar.TabIndex = 55;
             this.picImagenEjemplar.TabStop = false;
             // 
@@ -331,22 +330,6 @@ namespace BINAES_Proyecto.Forms
             this.cmbEditorial.Name = "cmbEditorial";
             this.cmbEditorial.Size = new System.Drawing.Size(204, 28);
             this.cmbEditorial.TabIndex = 31;
-            // 
-            // btnAgregarImagenEjemplar
-            // 
-            this.btnAgregarImagenEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarImagenEjemplar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
-            this.tlpEjemplar.SetColumnSpan(this.btnAgregarImagenEjemplar, 2);
-            this.btnAgregarImagenEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnAgregarImagenEjemplar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAgregarImagenEjemplar.Location = new System.Drawing.Point(89, 496);
-            this.btnAgregarImagenEjemplar.Name = "btnAgregarImagenEjemplar";
-            this.btnAgregarImagenEjemplar.Size = new System.Drawing.Size(166, 46);
-            this.btnAgregarImagenEjemplar.TabIndex = 54;
-            this.btnAgregarImagenEjemplar.Text = "Agregar Imagen";
-            this.btnAgregarImagenEjemplar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnAgregarImagenEjemplar.UseVisualStyleBackColor = false;
-            this.btnAgregarImagenEjemplar.Click += new System.EventHandler(this.btnAgregarImagenEjemplar_Click);
             // 
             // lblDoi
             // 
@@ -452,22 +435,6 @@ namespace BINAES_Proyecto.Forms
             this.lblFormato.Text = "Formato";
             this.lblFormato.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // btnCrearEditorial
-            // 
-            this.btnCrearEditorial.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
-            this.tlpEjemplar.SetColumnSpan(this.btnCrearEditorial, 2);
-            this.btnCrearEditorial.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCrearEditorial.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnCrearEditorial.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCrearEditorial.Location = new System.Drawing.Point(89, 393);
-            this.btnCrearEditorial.Name = "btnCrearEditorial";
-            this.btnCrearEditorial.Size = new System.Drawing.Size(166, 51);
-            this.btnCrearEditorial.TabIndex = 42;
-            this.btnCrearEditorial.Text = "Crear Editorial";
-            this.btnCrearEditorial.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCrearEditorial.UseVisualStyleBackColor = false;
-            this.btnCrearEditorial.Click += new System.EventHandler(this.btnCrearEditorial_Click);
-            // 
             // lblColeccionEjemplar
             // 
             this.lblColeccionEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
@@ -480,13 +447,29 @@ namespace BINAES_Proyecto.Forms
             this.lblColeccionEjemplar.Text = "Colección";
             this.lblColeccionEjemplar.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // txtFechaPublicacion
+            // btnAgregarImagenEjemplar
             // 
-            this.tlpEjemplar.SetColumnSpan(this.txtFechaPublicacion, 3);
-            this.txtFechaPublicacion.Location = new System.Drawing.Point(89, 159);
-            this.txtFechaPublicacion.Name = "txtFechaPublicacion";
-            this.txtFechaPublicacion.Size = new System.Drawing.Size(162, 26);
-            this.txtFechaPublicacion.TabIndex = 41;
+            this.btnAgregarImagenEjemplar.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarImagenEjemplar.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (54)))), ((int) (((byte) (129)))), ((int) (((byte) (239)))));
+            this.tlpEjemplar.SetColumnSpan(this.btnAgregarImagenEjemplar, 2);
+            this.btnAgregarImagenEjemplar.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnAgregarImagenEjemplar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAgregarImagenEjemplar.Location = new System.Drawing.Point(89, 393);
+            this.btnAgregarImagenEjemplar.Name = "btnAgregarImagenEjemplar";
+            this.btnAgregarImagenEjemplar.Size = new System.Drawing.Size(166, 51);
+            this.btnAgregarImagenEjemplar.TabIndex = 54;
+            this.btnAgregarImagenEjemplar.Text = "Agregar Imagen";
+            this.btnAgregarImagenEjemplar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregarImagenEjemplar.UseVisualStyleBackColor = false;
+            this.btnAgregarImagenEjemplar.Click += new System.EventHandler(this.btnAgregarImagenEjemplar_Click);
+            // 
+            // dtpFechaEjemplar
+            // 
+            this.tlpEjemplar.SetColumnSpan(this.dtpFechaEjemplar, 4);
+            this.dtpFechaEjemplar.Location = new System.Drawing.Point(89, 159);
+            this.dtpFechaEjemplar.Name = "dtpFechaEjemplar";
+            this.dtpFechaEjemplar.Size = new System.Drawing.Size(309, 26);
+            this.dtpFechaEjemplar.TabIndex = 56;
             // 
             // tabPage4
             // 
@@ -544,6 +527,7 @@ namespace BINAES_Proyecto.Forms
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel4.SetColumnSpan(this.panel4, 13);
+            this.panel4.Controls.Add(this.dtpActualizarFechaEjemplar);
             this.panel4.Controls.Add(this.bntConfirmarID);
             this.panel4.Controls.Add(this.btnActualizarImagen);
             this.panel4.Controls.Add(this.label8);
@@ -562,7 +546,6 @@ namespace BINAES_Proyecto.Forms
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.cmbColeccionActualizar);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.txtActualizarFechaEjemplar);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.label17);
             this.panel4.Controls.Add(this.label12);
@@ -755,13 +738,6 @@ namespace BINAES_Proyecto.Forms
             this.label3.TabIndex = 29;
             this.label3.Text = "Colección*";
             this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // txtActualizarFechaEjemplar
-            // 
-            this.txtActualizarFechaEjemplar.Location = new System.Drawing.Point(12, 256);
-            this.txtActualizarFechaEjemplar.Name = "txtActualizarFechaEjemplar";
-            this.txtActualizarFechaEjemplar.Size = new System.Drawing.Size(267, 26);
-            this.txtActualizarFechaEjemplar.TabIndex = 28;
             // 
             // label2
             // 
@@ -980,6 +956,13 @@ namespace BINAES_Proyecto.Forms
             this.txtBuscarEjemplar.Size = new System.Drawing.Size(466, 26);
             this.txtBuscarEjemplar.TabIndex = 3;
             // 
+            // dtpActualizarFechaEjemplar
+            // 
+            this.dtpActualizarFechaEjemplar.Location = new System.Drawing.Point(14, 280);
+            this.dtpActualizarFechaEjemplar.Name = "dtpActualizarFechaEjemplar";
+            this.dtpActualizarFechaEjemplar.Size = new System.Drawing.Size(309, 26);
+            this.dtpActualizarFechaEjemplar.TabIndex = 57;
+            // 
             // frmEjemplar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1008,6 +991,10 @@ namespace BINAES_Proyecto.Forms
             this.ResumeLayout(false);
         }
 
+        private System.Windows.Forms.DateTimePicker dtpActualizarFechaEjemplar;
+
+        private System.Windows.Forms.DateTimePicker dtpFechaEjemplar;
+
         private System.Windows.Forms.Button bntConfirmarID;
 
         private System.Windows.Forms.PictureBox picImagenEjemplar;
@@ -1035,7 +1022,6 @@ namespace BINAES_Proyecto.Forms
         private System.Windows.Forms.Label label7;
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtActualizarFechaEjemplar;
 
         private System.Windows.Forms.Label label17;
 
@@ -1068,10 +1054,6 @@ namespace BINAES_Proyecto.Forms
         private System.Windows.Forms.TableLayoutPanel tlpBusqueda;
 
         private System.Windows.Forms.TabPage tabPage1;
-
-        private System.Windows.Forms.Button btnCrearEditorial;
-
-        private System.Windows.Forms.TextBox txtFechaPublicacion;
 
         private System.Windows.Forms.ComboBox cmbColeccionEjemplar;
 

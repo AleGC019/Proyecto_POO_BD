@@ -812,7 +812,7 @@ namespace BINAES_Proyecto.Forms
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmEvento";
-            this.Text = "frmEvento";
+            this.Text = "Eventos";
             this.Load += new System.EventHandler(this.frmEvento_Load);
             this.tbcEventos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

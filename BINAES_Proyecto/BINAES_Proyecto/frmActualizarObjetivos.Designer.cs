@@ -31,6 +31,7 @@ namespace BINAES_Proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmActualizarObjetivos));
             this.txtIDObjetivo = new System.Windows.Forms.TextBox();
             this.txtIDEvento = new System.Windows.Forms.TextBox();
             this.lblId_ejemplar = new System.Windows.Forms.Label();
@@ -147,8 +148,10 @@ namespace BINAES_Proyecto
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnActualizarObjetivo);
             this.Controls.Add(this.txtActualizarObjetivo);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "frmActualizarObjetivos";
-            this.Text = "frmActualizarObjetivos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Actualizar objetivos";
             this.Load += new System.EventHandler(this.frmActualizarObjetivos_Load);
             ((System.ComponentModel.ISupportInitialize) (this.dgvListaObjetivos)).EndInit();
             this.panel1.ResumeLayout(false);

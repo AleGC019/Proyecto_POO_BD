@@ -10,15 +10,26 @@ namespace BINAES_Proyecto
             InitializeComponent();
         }
 
+        //Click para botón agregar un nuevo autor en el ejemplar
         private void lblAgregarAutor_Click(object sender, EventArgs e)
         {
-            Autor autor = new Autor();
-            autor.nombreAutor = txtAgregarAutor.Text;
-            autor.ejemplarID = Convert.ToInt32(EjemplarDAO.nuevoidEejmplar());
+            if (txtAgregarAutor.TextLength >0 )
+            {
+                Autor autor = new Autor();
+                autor.nombreAutor = txtAgregarAutor.Text;
+                autor.ejemplarID = Convert.ToInt32(EjemplarDAO.nuevoidEejmplar());
             
-            EjemplarDAO.InsertarNuevoAutor(autor);
+                EjemplarDAO.InsertarNuevoAutor(autor);
             
-            MessageBox.Show("Ingresado con éxito");
+                MessageBox.Show("Ingresado con éxito");
+            }
+            
+            else
+            {
+                MessageBox.Show("Campo vacío. Por favor ingrese el nombre del autor", "Informacion invalida.", MessageBoxButtons.OK, MessageBoxIcon.Error  );
+
+            }
+            
         }
     }
 }

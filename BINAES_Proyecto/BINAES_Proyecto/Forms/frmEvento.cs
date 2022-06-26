@@ -15,10 +15,10 @@ namespace BINAES_Proyecto.Forms
         }
 
 
-
+        //Click del botón buscar, nos permite buscar eventos
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cmbEvento.Text == "Nombre del evento") // Aqui pones el nombre que le hayas puesto a la combobox
+            if (cmbEvento.Text == "Nombre del evento") 
             {
                 List<Evento> resultado = EventoDAO.NombreEvento(txtBuscarEvento.Text.Trim());
                 txtBuscarEvento.Clear();
@@ -86,9 +86,11 @@ namespace BINAES_Proyecto.Forms
         }
 
 
-
+        
         public string imagen { get; set; }
-
+        
+        
+        //Click del botón agregar imagen 
         private void btnAgregar_click(object sender, EventArgs e)
         {
             OpenFileDialog obtener = new OpenFileDialog();
@@ -106,7 +108,7 @@ namespace BINAES_Proyecto.Forms
 
         }
 
-
+        //En el evento load cargamos todos los comboBox que estaremos utilizando en el forumulario de eventos
         private void frmEvento_Load(object sender, EventArgs e)
         {
             cmbEArea.DataSource = null;
@@ -132,7 +134,8 @@ namespace BINAES_Proyecto.Forms
             dtpActualizarFechaFin.Format = DateTimePickerFormat.Time;
 
         }
-
+        
+        //Click del botón agregar, con el cual podemos agregar mas eventos a la base de datos 
         private void btnAgregarE_Click(object sender, EventArgs e)
         {
 
@@ -158,7 +161,9 @@ namespace BINAES_Proyecto.Forms
 
 
         }
-
+            
+        //Click del botón actualizar evento, nos permite actualizar la información de un evento 
+        //que ya se encuentra en la base de datos 
         private void btnActualizarEvento_Click(object sender, EventArgs e)
         {
             Evento eve = new Evento();
@@ -181,6 +186,8 @@ namespace BINAES_Proyecto.Forms
                 MessageBox.Show("Este evento no puede ser ingresado, ya que el área será utilizada en ese horario");
             }
         }
+        
+        //Click del botón Actualizar imagen, nos permite actualizar la imagen de un evento 
 
         private void btnActualizarImagenEvento_Click(object sender, EventArgs e)
         {
@@ -197,7 +204,9 @@ namespace BINAES_Proyecto.Forms
                 MessageBox.Show("No se ha seleccionado una foto");
             }
         }
-
+        
+        //Click del botón EliminarEvento, elimina un evento que se encuentra en la base de datos 
+        // por medio del id que es ingresado por el usaurio 
         private void btnEliminarEvento_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtidEliminarEvento.Text);
@@ -206,7 +215,7 @@ namespace BINAES_Proyecto.Forms
             MessageBox.Show("Evento con id: " + id + " eliminado con éxito");
         }
 
-
+        //Click del botón Buscar ID, con este bóton regresamos la informacion asociada a un id especifico 
         private void btnBuscarIDEvento_Click(object sender, EventArgs e)
         {
             string cadena = Resources.Cadena_Conexion;
@@ -240,12 +249,14 @@ namespace BINAES_Proyecto.Forms
                 }
             }
         }
-
+        
+        //Click del botón Objetivos de evento, este botón nos despliega el formulario frmObjetivos
         private void btnObjetivosEvento_Click(object sender, EventArgs e)
         {
             new frmObjetivos().Show();
         }
 
+        //Click del botón Actualizar Objetivos, este botón nos despliega el formulario frmActualizarObjetivos
         private void btnActualizarObjetivos_Click(object sender, EventArgs e)
         {
             new frmActualizarObjetivos().Show();

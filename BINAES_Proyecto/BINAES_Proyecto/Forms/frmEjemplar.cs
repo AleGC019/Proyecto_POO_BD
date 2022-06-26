@@ -64,10 +64,10 @@ namespace BINAES_Proyecto.Forms
 
         private void btnCrearEjemplar_Click(object sender, EventArgs e)
         {
-            if(txtNombreEjemplar.TextLength > 0 && txtFechaPublicacion.TextLength >0 && cmbColeccionEjemplar.Text.Length > 0 && cmbEditorial.Text.Length >0 && cmbFomato.Text.Length >0 && cmbIdioma.Text.Length > 0 && imagen.Length > 0 && (txtIsbn.TextLength>0 || txtissn.TextLength > 0 || txtDoi.TextLength >0 )){
+            if(txtNombreEjemplar.TextLength > 0 && dtpFechaEjemplar.Text.Length >0 && cmbColeccionEjemplar.Text.Length > 0 && cmbEditorial.Text.Length >0 && cmbFomato.Text.Length >0 && cmbIdioma.Text.Length > 0 && imagen.Length > 0 && (txtIsbn.TextLength>0 || txtissn.TextLength > 0 || txtDoi.TextLength >0 )){
             Ejemplar ejem = new Ejemplar();
             ejem.Nombre_Ejemplar = txtNombreEjemplar.Text;
-            ejem.Fecha_de_publicacion = Convert.ToDateTime(txtFechaPublicacion.Text);
+            ejem.Fecha_de_publicacion = Convert.ToDateTime(dtpFechaEjemplar.Value);
             ejem.Coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
             ejem.Editorial = cmbEditorial.SelectedValue.ToString();
             ejem.Formato = cmbFomato.SelectedValue.ToString();
@@ -89,14 +89,7 @@ namespace BINAES_Proyecto.Forms
             }
             
         }
-
-
-        private void btnCrearEditorial_Click(object sender, EventArgs e)
-        {
-            new frmCrearEditorial().Show();
-
-        }
-
+        
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -468,22 +461,34 @@ namespace BINAES_Proyecto.Forms
 
         private void btnActualizarEejmplar_Click(object sender, EventArgs e)
         {
-            Ejemplar ejem = new Ejemplar();
-            ejem.ID = Convert.ToInt32(txtIDActualizarEjemplar.Text);
-            ejem.Nombre_Ejemplar = txtActualizarNombreEjemplar.Text;
-            ejem.Fecha_de_publicacion = Convert.ToDateTime(txtActualizarFechaEjemplar.Text);
-            ejem.Idioma = cmbActualizarIdioma.SelectedValue.ToString();
-            ejem.Editorial = cmbActualizarEditorial.SelectedValue.ToString();
-            ejem.Coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
-            ejem.Formato = cmbActualizarFormato.SelectedValue.ToString();
-            ejem.ISBN = txtissn.Text;
-            ejem.ISSN = txtissn.Text;
-            ejem.DOI = txtDoi.Text;
-            ejem.Portada = imagen;
+            if (txtActualizarNombreEjemplar.TextLength > 0 && dtpActualizarFechaEjemplar.Text.Length > 0 &&
+                cmbColeccionActualizar.Text.Length > 0 && cmbActualizarEditorial.Text.Length > 0 && cmbActualizarFormato.Text.Length > 0 &&
+                cmbActualizarIdioma.Text.Length > 0 && imagen.Length > 0 &&
+                (txtActualizarISB.TextLength > 0 || txtActualizarISSN.TextLength > 0 || txtActualizarDOI.TextLength > 0))
+            {
 
+                Ejemplar ejem = new Ejemplar();
+                ejem.ID = Convert.ToInt32(txtIDActualizarEjemplar.Text);
+                ejem.Nombre_Ejemplar = txtActualizarNombreEjemplar.Text;
+                ejem.Fecha_de_publicacion = Convert.ToDateTime(dtpActualizarFechaEjemplar.Value);
+                ejem.Idioma = cmbActualizarIdioma.SelectedValue.ToString();
+                ejem.Editorial = cmbActualizarEditorial.SelectedValue.ToString();
+                ejem.Coleccion = cmbColeccionEjemplar.SelectedValue.ToString();
+                ejem.Formato = cmbActualizarFormato.SelectedValue.ToString();
+                ejem.ISBN = txtActualizarISB.Text;
+                ejem.ISSN = txtActualizarISSN.Text;
+                ejem.DOI = txtActualizarDOI.Text;
+                ejem.Portada = imagen;
+                
+                EjemplarDAO.ActualizarEjemplar(ejem);
+                MessageBox.Show("Datos actualizados");
+            }
+            else
+            {
+                MessageBox.Show("Por favor ingrese todos los campos requeridos", "Informacion invalida.", MessageBoxButtons.OK, MessageBoxIcon.Error  );
 
-            EjemplarDAO.ActualizarEjemplar(ejem);
-            MessageBox.Show("datos actualizados");
+            }
+            
 
         }
 
@@ -519,7 +524,7 @@ namespace BINAES_Proyecto.Forms
                 if (reader.Read())
                 {
                     txtActualizarNombreEjemplar.Text = reader["nombre"].ToString();
-                    txtActualizarFechaEjemplar.Text = reader["fecha_publicada"].ToString();
+                    dtpActualizarFechaEjemplar.Text = reader["fecha_publicada"].ToString();
                     cmbColeccionActualizar.SelectedValue = Convert.ToInt32(reader["id_coleccion"]);
                     cmbActualizarEditorial.SelectedValue = Convert.ToInt32(reader["id_editorial"]);
                     cmbActualizarFormato.SelectedValue = Convert.ToInt32(reader["id_formato"]);
