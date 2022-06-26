@@ -234,7 +234,7 @@ namespace BINAES_Proyecto
             }
         }
 
-        public static bool VerifyPrestamo (Ejemplar v_eje)
+        public static bool VerifyPrestamo (Ejemplar v_eje, DateTime hoy)
         {
             bool prestado = true;
 
@@ -250,13 +250,15 @@ namespace BINAES_Proyecto
                 {
                     string consulta;
 
-                    consulta =  "SELECT PRESTAMO.id, PRESTAMO.prestamo_entrega_hora_fecha, PRESTAMO.prestamo_devolucion_hora_fecha" +
-                                " FROM EJEMPLAR INNER JOIN PRESTAMO ON PRESTAMO.id_ejemplar = EJEMPLAR.id " +
-                                "WHERE EJEMPLAR.nombre = @titulo;";
+                    consulta = "SELECT id, prestamo_entrega_hora_fecha, prestamo_devolucion_hora_fecha " +
+                        "FROM PRESTAMO WHERE CAST(PRESTAMO.prestamo_entrega_hora_fecha AS DATE) <= @hoy " +
+                        "AND CAST(PRESTAMO.prestamo_devolucion_hora_fecha AS DATE) >= @hoy " +
+                        "AND PRESTAMO.id_ejemplar = @ideje;";
 
                     SqlCommand comando = new SqlCommand(consulta, conexion_actual);
 
-                    comando.Parameters.AddWithValue("@titulo", v_eje.Nombre_Ejemplar);
+                    comando.Parameters.AddWithValue("@hoy", hoy);
+                    comando.Parameters.AddWithValue("@ideje", v_eje.ID.ToString());
 
                     conexion_actual.Open();
 
@@ -264,12 +266,7 @@ namespace BINAES_Proyecto
                         {
                             while (lector.Read())
                             {
-                                comparacion_base.id_prestamo = (Int32)lector["id"];
-
-                                comparacion_base.entrega = (DateTime)lector["prestamo_entrega_hora_fecha"];
-
-                                comparacion_base.devolucion = (DateTime)lector["prestamo_devolucion_hora_fecha"];
-                      
+                                comparacion_base.id_prestamo = (Int32)lector[0];
                             }
                         }
 
@@ -285,21 +282,11 @@ namespace BINAES_Proyecto
 
             if(comparacion_base.id_prestamo != 0)
             {
-                if (DateTime.Now > comparacion_base.devolucion)
-                {
-                    prestado = true;
-                }
-                if (DateTime.Now < comparacion_base.devolucion)
-                {
-                    if (DateTime.Now > comparacion_base.entrega)
-                    {
-                        prestado = false;
-                    }
-                }
+                prestado = true;
             }
             else
             {
-                prestado = true;
+                prestado = false;
             }
 
             return prestado;

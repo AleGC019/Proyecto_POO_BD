@@ -411,3 +411,7 @@ C:\Users\User\Desktop\ProyectoPoo\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyect
 C:\Users\User\Desktop\ProyectoPoo\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmActualizarAutor.resources
 C:\Users\User\Desktop\ProyectoPoo\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmObjetivos.resources
 C:\Users\User\Desktop\ProyectoPoo\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmActualizarObjetivos.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmActualizarAutor.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmActualizarObjetivos.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmActualizarPalabraClave.resources
+C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmObjetivos.resources

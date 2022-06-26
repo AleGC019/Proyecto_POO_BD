@@ -11,11 +11,12 @@ namespace BINAES_Proyecto
 {
     internal static class ReservaDAO
     {
-        public static Nullable<DateTime> DisponibleAPartir(Ejemplar eje)
+        public static DateTime DisponibleAPartir(Ejemplar eje, DateTime hoy)
         {
             string cadena_conexion = Resources.Cadena_Conexion;
 
-            Nullable<DateTime> finaliza = null;
+            DateTime finaliza = Convert.ToDateTime("2022-01-01");
+            int ID = 0;
 
             try
             {
@@ -23,11 +24,15 @@ namespace BINAES_Proyecto
                 {
                     string consulta;
 
-                    consulta = "SELECT prestamo_devolucion_hora_fecha FROM [PRESTAMO] WHERE id_ejemplar = @ideje;";
+                    consulta = "SELECT id, prestamo_entrega_hora_fecha, prestamo_devolucion_hora_fecha " +
+                        "FROM PRESTAMO WHERE CAST(PRESTAMO.prestamo_entrega_hora_fecha AS DATE) <= @hoy " +
+                        "AND CAST(PRESTAMO.prestamo_devolucion_hora_fecha AS DATE) >= @hoy " +
+                        "AND PRESTAMO.id_ejemplar = @ideje;";
 
                     SqlCommand comando = new SqlCommand(consulta, conexion_actual);
 
-                        comando.Parameters.AddWithValue("@ideje", eje.ID);
+                        comando.Parameters.AddWithValue("@ideje", eje.ID.ToString());
+                        comando.Parameters.AddWithValue("@hoy", hoy.Date);
 
                     conexion_actual.Open();
 
@@ -35,7 +40,8 @@ namespace BINAES_Proyecto
                         {
                             while (lector.Read())
                             {
-                                finaliza = (DateTime)lector[0];
+                                //ID = Convert.ToInt32(lector[0]);
+                                finaliza = (DateTime)lector["prestamo_devolucion_hora_fecha"];
                             }
                         }
 
@@ -47,9 +53,76 @@ namespace BINAES_Proyecto
                 MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
             }
 
+            
+
+            if (VerifyReservaExistente(finaliza, eje))
+            {
+                
+
+                do
+                {
+                    finaliza = finaliza.AddDays(14);
+
+                } while (VerifyReservaExistente(finaliza, eje));
+            }
+
             return finaliza;
         }
+        
+        public static bool VerifyReservaExistente(DateTime inicio, Ejemplar eje)
+        {
+            string cadena_conexion = Resources.Cadena_Conexion;
 
+            DateTime comienzo = Convert.ToDateTime("2022-01-01");
+            int id = 0;
+
+            try
+            {
+                using (SqlConnection conexion_actual = new SqlConnection(cadena_conexion))
+                {
+                    string consulta;
+
+                    consulta = "SELECT [RESERVACION].id, [EJEMPLAR].nombre, [RESERVACION].prestamo_hora_fecha, " +
+                        "[RESERVACION].devolucion_hora_fecha FROM [RESERVACION] INNER JOIN [EJEMPLAR] ON [EJEMPLAR].id = [RESERVACION].id_ejemplar " +
+                        "WHERE CAST(RESERVACION.prestamo_hora_fecha AS DATE) = @fechareserva AND [EJEMPLAR].nombre = @nombreReserva;";
+
+                    SqlCommand comando = new SqlCommand(consulta, conexion_actual);
+
+                    comando.Parameters.AddWithValue("@fechareserva", inicio.Date);
+                    comando.Parameters.AddWithValue("@nombreReserva", eje.Nombre_Ejemplar);
+
+                    conexion_actual.Open();
+
+                        using (SqlDataReader lector = comando.ExecuteReader())
+                        {
+                            while (lector.Read())
+                            {
+                                id = Convert.ToInt32(lector[0]);
+                                comienzo = (DateTime)lector[2];
+                            }
+                        }
+                    conexion_actual.Close();
+                }
+            }
+            catch (Exception E)
+            {
+                MessageBox.Show("Error en busqueda.", "Conflicto en conexion con la base de datos.", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+            }
+
+            bool reservado = true;
+
+            if(id != 0)
+            {
+                reservado = true;
+            }
+            else if (id == 0)
+            {
+                reservado = false;
+            }
+
+            return reservado;
+        }
+        
         public static bool NewReserva(int usuID, int ejeID, DateTime reserva, DateTime entrega, DateTime devolucion)
         {
             bool prestado;
@@ -113,14 +186,18 @@ namespace BINAES_Proyecto
                 {
                     string consulta;
 
-                    consulta = "SELECT RESERVACION.[prestamo_hora_fecha], " +
-                                "RESERVACION.[devolucion_hora_fecha] FROM [RESERVACION] INNER JOIN EJEMPLAR ON EJEMPLAR.id = RESERVACION.id_ejemplar WHERE EJEMPLAR.nombre = @titulo AND " +
-                                "RESERVACION.[prestamo_hora_fecha] = @entrega;";
+                    consulta = "SELECT [RESERVACION].id, [EJEMPLAR].nombre, [RESERVACION].prestamo_hora_fecha, " +
+                                "[RESERVACION].devolucion_hora_fecha FROM [RESERVACION] INNER JOIN [EJEMPLAR] ON [EJEMPLAR].id = [RESERVACION].id_ejemplar " +
+                                "WHERE DAY(RESERVACION.prestamo_hora_fecha) = @dia " +
+                                "AND MONTH(RESERVACION.prestamo_hora_fecha) = @mes " +
+                                "AND YEAR(RESERVACION.prestamo_hora_fecha) = @anio " +
+                                "AND [EJEMPLAR].nombre = @ejemplar;";
 
                     SqlCommand comando = new SqlCommand(consulta, conexion_actual);
 
+                    comando.Parameters.AddWithValue("@dia", ejenombre);
                     comando.Parameters.AddWithValue("@titulo", ejenombre);
-                    comando.Parameters.AddWithValue("@entrega", entrega.Date);
+                        comando.Parameters.AddWithValue("@entrega", entrega.Date);
 
                     conexion_actual.Open();
 

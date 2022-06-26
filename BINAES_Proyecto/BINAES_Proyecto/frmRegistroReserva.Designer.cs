@@ -48,12 +48,14 @@
             this.dtpEntregaReservaHora = new System.Windows.Forms.DateTimePicker();
             this.lblEntregaReserva = new System.Windows.Forms.Label();
             this.tlb_RegistroReserva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.picEjemplarReserva)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEjemplarReserva)).BeginInit();
             this.SuspendLayout();
             // 
             // tlb_RegistroReserva
             // 
-            this.tlb_RegistroReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.tlb_RegistroReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tlb_RegistroReserva.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tlb_RegistroReserva.ColumnCount = 6;
             this.tlb_RegistroReserva.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
@@ -105,9 +107,10 @@
             // 
             // lblUsuarioReserva
             // 
-            this.lblUsuarioReserva.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUsuarioReserva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsuarioReserva.AutoSize = true;
-            this.lblUsuarioReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblUsuarioReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarioReserva.Location = new System.Drawing.Point(320, 82);
             this.lblUsuarioReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuarioReserva.Name = "lblUsuarioReserva";
@@ -118,7 +121,8 @@
             // 
             // txtEjemplarReserva
             // 
-            this.txtEjemplarReserva.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEjemplarReserva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEjemplarReserva.Location = new System.Drawing.Point(592, 168);
             this.txtEjemplarReserva.Margin = new System.Windows.Forms.Padding(4);
             this.txtEjemplarReserva.Name = "txtEjemplarReserva";
@@ -128,7 +132,8 @@
             // 
             // lblEjemplarReserva
             // 
-            this.lblEjemplarReserva.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEjemplarReserva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEjemplarReserva.AutoSize = true;
             this.lblEjemplarReserva.Location = new System.Drawing.Point(320, 164);
             this.lblEjemplarReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -140,7 +145,9 @@
             // 
             // lblReserva
             // 
-            this.lblReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblReserva.AutoSize = true;
             this.tlb_RegistroReserva.SetColumnSpan(this.lblReserva, 2);
             this.lblReserva.Location = new System.Drawing.Point(320, 246);
@@ -162,7 +169,7 @@
             // 
             // dtpFechaReserva
             // 
-            this.dtpFechaReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpFechaReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaReserva.Location = new System.Drawing.Point(402, 297);
             this.dtpFechaReserva.Margin = new System.Windows.Forms.Padding(4);
@@ -172,10 +179,12 @@
             // 
             // lblRegistroReserva
             // 
-            this.lblRegistroReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRegistroReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRegistroReserva.AutoSize = true;
             this.tlb_RegistroReserva.SetColumnSpan(this.lblRegistroReserva, 4);
-            this.lblRegistroReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.lblRegistroReserva.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegistroReserva.Location = new System.Drawing.Point(49, 0);
             this.lblRegistroReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegistroReserva.Name = "lblRegistroReserva";
@@ -186,7 +195,9 @@
             // 
             // picEjemplarReserva
             // 
-            this.picEjemplarReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.picEjemplarReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.picEjemplarReserva.Location = new System.Drawing.Point(49, 86);
             this.picEjemplarReserva.Margin = new System.Windows.Forms.Padding(4);
             this.picEjemplarReserva.Name = "picEjemplarReserva";
@@ -198,7 +209,8 @@
             // 
             // cmbUsuarioReserva
             // 
-            this.cmbUsuarioReserva.Anchor = ((System.Windows.Forms.AnchorStyles) (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmbUsuarioReserva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbUsuarioReserva.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbUsuarioReserva.FormattingEnabled = true;
             this.cmbUsuarioReserva.Location = new System.Drawing.Point(591, 85);
@@ -208,7 +220,9 @@
             // 
             // btnCancelarReserva
             // 
-            this.btnCancelarReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelarReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelarReserva.BackColor = System.Drawing.Color.Red;
             this.btnCancelarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelarReserva.ForeColor = System.Drawing.SystemColors.Info;
@@ -223,7 +237,9 @@
             // 
             // btnPrestarReserva
             // 
-            this.btnPrestarReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrestarReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrestarReserva.BackColor = System.Drawing.Color.YellowGreen;
             this.btnPrestarReserva.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPrestarReserva.Location = new System.Drawing.Point(592, 637);
@@ -237,7 +253,7 @@
             // 
             // dtpDevolucionFechaReserva
             // 
-            this.dtpDevolucionFechaReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDevolucionFechaReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpDevolucionFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDevolucionFechaReserva.Location = new System.Drawing.Point(402, 555);
             this.dtpDevolucionFechaReserva.Margin = new System.Windows.Forms.Padding(4);
@@ -256,7 +272,9 @@
             // 
             // lblDevolucionReseva
             // 
-            this.lblDevolucionReseva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDevolucionReseva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDevolucionReseva.AutoSize = true;
             this.tlb_RegistroReserva.SetColumnSpan(this.lblDevolucionReseva, 2);
             this.lblDevolucionReseva.Location = new System.Drawing.Point(320, 504);
@@ -269,14 +287,13 @@
             // 
             // dtpEntregaReservFecha
             // 
-            this.dtpEntregaReservFecha.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpEntregaReservFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpEntregaReservFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEntregaReservFecha.Location = new System.Drawing.Point(402, 426);
             this.dtpEntregaReservFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpEntregaReservFecha.Name = "dtpEntregaReservFecha";
             this.dtpEntregaReservFecha.Size = new System.Drawing.Size(182, 20);
             this.dtpEntregaReservFecha.TabIndex = 16;
-            this.dtpEntregaReservFecha.ValueChanged += new System.EventHandler(this.dtpEntregaReservFecha_ValueChanged);
             // 
             // dtpEntregaReservaHora
             // 
@@ -290,7 +307,9 @@
             // 
             // lblEntregaReserva
             // 
-            this.lblEntregaReserva.Anchor = ((System.Windows.Forms.AnchorStyles) ((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEntregaReserva.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEntregaReserva.AutoSize = true;
             this.tlb_RegistroReserva.SetColumnSpan(this.lblEntregaReserva, 2);
             this.lblEntregaReserva.Location = new System.Drawing.Point(320, 375);
@@ -307,14 +326,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 740);
             this.Controls.Add(this.tlb_RegistroReserva);
-            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistroReserva";
             this.Text = "BINAES";
             this.Load += new System.EventHandler(this.frmRegistroReserva_Load);
             this.tlb_RegistroReserva.ResumeLayout(false);
             this.tlb_RegistroReserva.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize) (this.picEjemplarReserva)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picEjemplarReserva)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion

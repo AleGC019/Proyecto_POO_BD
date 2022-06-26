@@ -16,8 +16,8 @@ namespace BINAES_Proyecto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInicioSesion()); //Se comento el inicio de sesion para no tener que repetir el ingreso cada vez. RECORDAR QUITAR ESTO
-            //Application.Run(new frmBinaesMain());
+            //Application.Run(new frmInicioSesion()); //Se comento el inicio de sesion para no tener que repetir el ingreso cada vez. RECORDAR QUITAR ESTO
+            Application.Run(new frmBinaesMain());
         }
     }
 }

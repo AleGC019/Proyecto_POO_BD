@@ -54,35 +54,25 @@ namespace BINAES_Proyecto
             dtpHoraReserva.Value = hoy;
             dtpHoraReserva.Enabled = false;
 
-            DateTime minimo = (DateTime)ReservaDAO.DisponibleAPartir(eje);
+            DateTime minimo = ReservaDAO.DisponibleAPartir(eje, hoy.Date);
 
             dtpEntregaReservFecha.Value = minimo;
-            dtpEntregaReservFecha.MinDate = minimo;
-            dtpEntregaReservFecha.MaxDate = minimo.AddMonths(1);
+            dtpEntregaReservFecha.Enabled = false;
 
-            dtpDevolucionFechaReserva.Value = dtpEntregaReservFecha.Value.AddDays(1);
-            dtpDevolucionFechaReserva.MinDate = dtpEntregaReservFecha.Value.AddDays(1);
-            dtpDevolucionFechaReserva.MaxDate = dtpEntregaReservFecha.Value.AddDays(14);
+            dtpDevolucionFechaReserva.Value = dtpEntregaReservFecha.Value.AddDays(14);
+            dtpDevolucionFechaReserva.Enabled = false;
 
-            dtpEntregaReservaHora.Value = minimo.AddHours(1);
-            dtpEntregaReservaHora.MinDate = minimo.AddHours(1);
+            dtpEntregaReservaHora.Value = Convert.ToDateTime("3pm");
+            dtpEntregaReservaHora.Enabled = false;
 
             dtpDevolucionHoraReserva.Value = Convert.ToDateTime("2pm");
             dtpDevolucionHoraReserva.Enabled = false;
        
             MessageBox.Show("- El titulo estara disponible a partir de la hora siguiente del momento en que regrese del prestamo."
                             + Environment.NewLine + 
-                            "- Solo podra ser reservado por un periodo minimo de 2 dias y maximo de 14 dias, a partir del dia que regrese del prestamo hasta 1 mes posterior a ello."
+                            "- Solo podra ser reservado por un periodo de 14 dias, a partir del dia que regrese del prestamo hasta 1 mes posterior a ello."
                             + Environment.NewLine + 
                             "- Debera regresar su ejemplar, a mas tardar, a las 2 p.m.", "REGLAS DE RESERVA EN BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-
-        private void dtpEntregaReservFecha_ValueChanged(object sender, EventArgs e)
-        {
-            dtpDevolucionFechaReserva.Value = dtpEntregaReservFecha.Value.AddDays(2);
-            dtpDevolucionFechaReserva.MinDate = dtpEntregaReservFecha.Value.AddDays(1);
-            dtpDevolucionFechaReserva.MaxDate = dtpEntregaReservFecha.Value.AddDays(14);
         }
 
         private void btnCancelarReserva_Click(object sender, EventArgs e)
@@ -100,12 +90,7 @@ namespace BINAES_Proyecto
 
             DateTime R_devolucion = dtpDevolucionFechaReserva.Value.Date + dtpDevolucionHoraReserva.Value.TimeOfDay;
 
-            if (ReservaDAO.VerifyReserva(txtEjemplarReserva.Text, R_entrega.Date, R_devolucion.Date))
-            {
-                MessageBox.Show("Fechas ya reservadas. Elija otras.");
-            }
-            else
-            {
+            
                 if (ReservaDAO.NewReserva(Convert.ToInt32(cmbUsuarioReserva.SelectedValue), eje.ID, momentoReserva, R_entrega, R_devolucion))
                 {
                     MessageBox.Show("Ingreso exitoso!");
@@ -122,7 +107,7 @@ namespace BINAES_Proyecto
 
                     this.Close();
                 }
-            }
+            
         }
     }
 }
