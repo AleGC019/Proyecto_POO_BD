@@ -385,7 +385,7 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string query =
-                    "SELECT RESERVACION.id, EJEMPLAR.nombre AS 'ejemplar', USUARIO.nombre AS 'usuario', RESERVACION.reservacion_hora_fecha,RESERVACION.prestamo_hora_fecha, RESERVACION.devolucion_hora_fecha FROM RESERVACION INNER JOIN EJEMPLAR ON EJEMPLAR.id = RESERVACION.id_ejemplar INNER JOIN USUARIO ON USUARIO.id = RESERVACION.id_usuario";
+                    "SELECT RESERVACION.id, EJEMPLAR.nombre AS 'ejemplarr', USUARIO.nombre AS 'usuario', RESERVACION.reservacion_hora_fecha,RESERVACION.prestamo_hora_fecha, RESERVACION.devolucion_hora_fecha FROM RESERVACION INNER JOIN EJEMPLAR ON EJEMPLAR.id = RESERVACION.id_ejemplar INNER JOIN USUARIO ON USUARIO.id = RESERVACION.id_usuario";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -398,7 +398,7 @@ namespace BINAES_Proyecto
                         
                         eje.id_prestamo = Convert.ToInt32(reader["id"].ToString());
                         
-                        eje.Ejemplar = reader["ejemplar"].ToString();
+                        eje.Ejemplar = reader["ejemplarr"].ToString();
                         
                         eje.Nombre =  reader["usuario"].ToString();
                         

@@ -19,6 +19,9 @@ namespace BINAES_Proyecto.Forms
             dgvMostrarPrestamos.DataSource = null;
             dgvMostrarPrestamos.DataSource = resultado;
             dgvMostrarPrestamos.Columns["FechaReserva"].Visible = false;
+            
+            dgvMostrarPrestamos.Columns["Nombre"].DefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void btnMostrarReservaciones_Click(object sender, EventArgs e)
