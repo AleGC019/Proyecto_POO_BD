@@ -539,5 +539,15 @@ namespace BINAES_Proyecto.Forms
 
             }
         }
+
+        private void txtidEliminarEjemplar_TextChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

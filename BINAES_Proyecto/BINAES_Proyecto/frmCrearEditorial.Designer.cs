@@ -31,6 +31,7 @@ namespace BINAES_Proyecto
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCrearEditorial));
             this.txtNuevaEditorial = new System.Windows.Forms.TextBox();
             this.btnAgregarEditorial = new System.Windows.Forms.Button();
             this.lblNuevaEditorial = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@ namespace BINAES_Proyecto
             // txtNuevaEditorial
             // 
             this.txtNuevaEditorial.Location = new System.Drawing.Point(89, 101);
-            this.txtNuevaEditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNuevaEditorial.Margin = new System.Windows.Forms.Padding(2);
             this.txtNuevaEditorial.Name = "txtNuevaEditorial";
             this.txtNuevaEditorial.Size = new System.Drawing.Size(105, 20);
             this.txtNuevaEditorial.TabIndex = 0;
@@ -47,7 +48,7 @@ namespace BINAES_Proyecto
             // btnAgregarEditorial
             // 
             this.btnAgregarEditorial.Location = new System.Drawing.Point(92, 144);
-            this.btnAgregarEditorial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarEditorial.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarEditorial.Name = "btnAgregarEditorial";
             this.btnAgregarEditorial.Size = new System.Drawing.Size(114, 32);
             this.btnAgregarEditorial.TabIndex = 1;
@@ -72,10 +73,11 @@ namespace BINAES_Proyecto
             this.Controls.Add(this.lblNuevaEditorial);
             this.Controls.Add(this.btnAgregarEditorial);
             this.Controls.Add(this.txtNuevaEditorial);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCrearEditorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CrearEditorial";
+            this.Text = "BINAES";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

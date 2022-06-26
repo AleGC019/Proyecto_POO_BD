@@ -288,7 +288,6 @@ C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_P
 C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearAutor.resources
 C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearEditorial.resources
 C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmCrearPalabrasClave.resources
-C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.RegistroPrestamo.resources
 C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmReserva.resources
 C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmRegistroPrestamo.resources
 C:\Users\User\Desktop\repo2206\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.Forms.frmReserva.resources
@@ -370,3 +369,6 @@ C:\Users\alegc\Documents\SabadoBusqueda\Proyecto_POO_BD\BINAES_Proyecto\BINAES_P
 C:\Users\alegc\Documents\SabadoBusqueda\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.pdb
 C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesUsuario.resources
 C:\Users\fereg\Desktop\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmRegistroReserva.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmBinaesUsuario.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmRegistroReserva.resources
+C:\Users\15gw0024la\OneDrive\Escritorio\Proyecto_POO_BD\BINAES_Proyecto\BINAES_Proyecto\obj\Debug\BINAES_Proyecto.frmRegistroPrestamo.resources
