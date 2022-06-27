@@ -169,14 +169,12 @@ namespace BINAES_Proyecto
         }
         
         //Click del botón Salir, nos permite salir de la aplicación y abre nuevamente el formulario de inicio de sesión 
-        private void btnSalir_Click(object sender, EventArgs e)
+
+        private void btnSalir2_Click(object sender, EventArgs e)
         {
-            
             this.Hide();
             frmInicioSesion frmAux = new frmInicioSesion();
             frmAux.Show();
-            
-            
         }
     }
 }

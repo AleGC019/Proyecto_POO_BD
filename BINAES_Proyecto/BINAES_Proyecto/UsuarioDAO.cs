@@ -15,18 +15,20 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string nonquery =
-                    "INSERT INTO USUARIO (nombre, ocupacion, direccion, correo, telefono, institucion, fotografia)" +
-                    "VALUES (@nuevonombre, @nuevaocupacion, @nuevadireccion, @nuevocorreo, @nuevotelefono, @nuevainstitucion, @nuevafotografia)";
+                "INSERT INTO USUARIO (nombre, ocupacion, direccion, correo, telefono, institucion, fotografia, contra, id_rol)" +
+                    "VALUES (@nuevonombre, @nuevaocupacion, @nuevadireccion, @nuevocorreo, @nuevotelefono, @nuevainstitucion, @nuevafotografia, @nuevacontra, @nuevoid_rol)";
 
-                SqlCommand command = new SqlCommand(nonquery, connection);
-                command.Parameters.AddWithValue("@nuevonombre", user.UsuarioNombre);
-                command.Parameters.AddWithValue("@nuevaocupacion", user.UserOcupacion);
-                command.Parameters.AddWithValue("@nuevadireccion", user.UserDireccion);
-                command.Parameters.AddWithValue("@nuevocorreo", user.UserCorreo);
-                command.Parameters.AddWithValue("@nuevotelefono", user.UserTelefono);
-                command.Parameters.AddWithValue("@nuevainstitucion", user.UserInstitucion);
-                command.Parameters.AddWithValue("@nuevafotografia", user.fotoUsuario);
-
+                    SqlCommand command = new SqlCommand(nonquery, connection);
+                    command.Parameters.AddWithValue("@nuevonombre", user.UsuarioNombre);
+                    command.Parameters.AddWithValue("@nuevaocupacion", user.UserOcupacion);
+                    command.Parameters.AddWithValue("@nuevadireccion", user.UserDireccion);
+                    command.Parameters.AddWithValue("@nuevocorreo", user.UserCorreo);
+                    command.Parameters.AddWithValue("@nuevotelefono", user.UserTelefono);
+                    command.Parameters.AddWithValue("@nuevainstitucion", user.UserInstitucion);
+                    command.Parameters.AddWithValue("@nuevafotografia", user.fotoUsuario);
+                    command.Parameters.AddWithValue("@nuevoid_rol", user.id_rol);
+                    command.Parameters.AddWithValue("@nuevacontra", user.Contra);
+                    
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
@@ -140,7 +142,7 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
             {
                 string noquery =
-                    "UPDATE USUARIO SET nombre = @nuevonombre, ocupacion = @nuevaocupacion, direccion = @nuevadireccion, correo = @nuevocorreo, telefono = @nuevotelefono, institucion = @nuevainstitucin  " +
+                    "UPDATE USUARIO SET nombre = @nuevonombre, ocupacion = @nuevaocupacion, direccion = @nuevadireccion, correo = @nuevocorreo, telefono = @nuevotelefono, institucion = @nuevainstitucin, contra = @nuevacontra, id_rol = @nuevoid_rol  " +
                     "WHERE id = @id";
 
                 SqlCommand command = new SqlCommand(noquery, connection);
@@ -150,7 +152,11 @@ namespace BINAES_Proyecto
                 command.Parameters.AddWithValue("@nuevocorreo", user.UserCorreo);
                 command.Parameters.AddWithValue("@nuevotelefono", user.UserTelefono);
                 command.Parameters.AddWithValue("@nuevainstitucin", user.UserInstitucion);
+                command.Parameters.AddWithValue("@nuevacontra", user.Contra);
+                command.Parameters.AddWithValue("@nuevacontra", user.Contra);
+                command.Parameters.AddWithValue("@nuevoid_rol", user.Contra);
                 command.Parameters.AddWithValue("@id", user.UsuarioID);
+                
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -233,6 +239,36 @@ namespace BINAES_Proyecto
 
                 return UsuarioBuscado;
             }
+        }
+        
+        //llenando el comboBox de Rol
+        public static List<Rol> CargarDatosRol()
+        {
+            string cadena = Resources.Cadena_Conexion;
+            List<Rol> lista = new List<Rol>();
+
+            using (SqlConnection connection = new SqlConnection(cadena))
+            {
+                string query = "SELECT id, rol FROM ROL";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                connection.Open();
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Rol rol = new Rol();
+                        rol.id = Convert.ToInt32(reader["id"].ToString());
+                        rol.rol = reader["rol"].ToString();
+
+                        lista.Add(rol);
+                    }
+                }
+
+                connection.Close();
+            }
+
+            return lista;
         }
         
         

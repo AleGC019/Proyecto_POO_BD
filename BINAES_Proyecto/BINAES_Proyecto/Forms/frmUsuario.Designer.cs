@@ -47,6 +47,8 @@ namespace BINAES_Proyecto.Forms
             this.tc1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cmbRolusuario = new System.Windows.Forms.ComboBox();
             this.lblContra = new System.Windows.Forms.Label();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.picImagenUsuario = new System.Windows.Forms.PictureBox();
@@ -57,7 +59,7 @@ namespace BINAES_Proyecto.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.txtOcupacion = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txt = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtInstitucion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -68,7 +70,9 @@ namespace BINAES_Proyecto.Forms
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.cmbActualizarRol = new System.Windows.Forms.ComboBox();
+            this.txtActualizarContra = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnConfirmarIDusuario = new System.Windows.Forms.Button();
             this.btnActualizarImagen = new System.Windows.Forms.Button();
@@ -154,7 +158,7 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreoUsuario.Location = new System.Drawing.Point(103, 3);
             this.txtCorreoUsuario.Name = "txtCorreoUsuario";
-            this.txtCorreoUsuario.Size = new System.Drawing.Size(94, 20);
+            this.txtCorreoUsuario.Size = new System.Drawing.Size(94, 26);
             this.txtCorreoUsuario.TabIndex = 15;
             // 
             // lblCorreoUsuario
@@ -217,7 +221,7 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(103, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(94, 20);
+            this.textBox1.Size = new System.Drawing.Size(94, 26);
             this.textBox1.TabIndex = 15;
             // 
             // label2
@@ -263,11 +267,10 @@ namespace BINAES_Proyecto.Forms
             this.tc1.Controls.Add(this.tabPage5);
             this.tc1.ItemSize = new System.Drawing.Size(90, 30);
             this.tc1.Location = new System.Drawing.Point(0, 0);
-            this.tc1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tc1.Name = "tc1";
             this.tc1.Padding = new System.Drawing.Point(10, 8);
             this.tc1.SelectedIndex = 0;
-            this.tc1.Size = new System.Drawing.Size(585, 412);
+            this.tc1.Size = new System.Drawing.Size(878, 634);
             this.tc1.TabIndex = 2;
             this.tc1.Tag = "";
             // 
@@ -275,10 +278,9 @@ namespace BINAES_Proyecto.Forms
             // 
             this.tabPage3.Controls.Add(this.panel5);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage3.Size = new System.Drawing.Size(577, 374);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(870, 596);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Agregar Usuario";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -286,6 +288,8 @@ namespace BINAES_Proyecto.Forms
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Controls.Add(this.label23);
+            this.panel5.Controls.Add(this.cmbRolusuario);
             this.panel5.Controls.Add(this.lblContra);
             this.panel5.Controls.Add(this.txtContrasena);
             this.panel5.Controls.Add(this.picImagenUsuario);
@@ -296,7 +300,7 @@ namespace BINAES_Proyecto.Forms
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.txtOcupacion);
             this.panel5.Controls.Add(this.label11);
-            this.panel5.Controls.Add(this.txt);
+            this.panel5.Controls.Add(this.txtCorreo);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.txtInstitucion);
             this.panel5.Controls.Add(this.label4);
@@ -304,42 +308,52 @@ namespace BINAES_Proyecto.Forms
             this.panel5.Controls.Add(this.btnAgregarImagen);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.txtNombreUsuarios);
-            this.panel5.Location = new System.Drawing.Point(0, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Location = new System.Drawing.Point(0, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(516, 388);
+            this.panel5.Size = new System.Drawing.Size(874, 597);
             this.panel5.TabIndex = 23;
+            // 
+            // label23
+            // 
+            this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(504, 388);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(104, 28);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Rol*";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // cmbRolusuario
+            // 
+            this.cmbRolusuario.FormattingEnabled = true;
+            this.cmbRolusuario.Location = new System.Drawing.Point(504, 417);
+            this.cmbRolusuario.Name = "cmbRolusuario";
+            this.cmbRolusuario.Size = new System.Drawing.Size(200, 28);
+            this.cmbRolusuario.TabIndex = 28;
             // 
             // lblContra
             // 
-            this.lblContra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContra.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContra.Location = new System.Drawing.Point(223, 260);
-            this.lblContra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblContra.Location = new System.Drawing.Point(504, 325);
             this.lblContra.Name = "lblContra";
-            this.lblContra.Size = new System.Drawing.Size(69, 18);
+            this.lblContra.Size = new System.Drawing.Size(104, 28);
             this.lblContra.TabIndex = 24;
-            this.lblContra.Text = "Contraseña";
+            this.lblContra.Text = "Contraseña*";
             this.lblContra.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContrasena.Location = new System.Drawing.Point(223, 280);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtContrasena.Location = new System.Drawing.Point(504, 353);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(98, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(245, 26);
             this.txtContrasena.TabIndex = 23;
             // 
             // picImagenUsuario
             // 
-            this.picImagenUsuario.Location = new System.Drawing.Point(336, 17);
+            this.picImagenUsuario.Location = new System.Drawing.Point(504, 26);
+            this.picImagenUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picImagenUsuario.Name = "picImagenUsuario";
-            this.picImagenUsuario.Size = new System.Drawing.Size(175, 147);
+            this.picImagenUsuario.Size = new System.Drawing.Size(262, 226);
             this.picImagenUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImagenUsuario.TabIndex = 22;
             this.picImagenUsuario.TabStop = false;
@@ -350,12 +364,11 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 151);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(30, 232);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 14);
+            this.label7.Size = new System.Drawing.Size(314, 22);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Dirección";
+            this.label7.Text = "Dirección*";
             this.label7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtDireccionUsuario
@@ -363,35 +376,26 @@ namespace BINAES_Proyecto.Forms
             this.txtDireccionUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccionUsuario.Location = new System.Drawing.Point(23, 166);
-            this.txtDireccionUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDireccionUsuario.Location = new System.Drawing.Point(34, 255);
             this.txtDireccionUsuario.Name = "txtDireccionUsuario";
-            this.txtDireccionUsuario.Size = new System.Drawing.Size(181, 20);
+            this.txtDireccionUsuario.Size = new System.Drawing.Size(370, 26);
             this.txtDireccionUsuario.TabIndex = 6;
             // 
             // label8
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(223, 202);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(32, 433);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 18);
+            this.label8.Size = new System.Drawing.Size(104, 28);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Teléfono";
+            this.label8.Text = "Teléfono*";
             this.label8.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.Location = new System.Drawing.Point(226, 222);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefono.Location = new System.Drawing.Point(32, 464);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(98, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(245, 26);
             this.txtTelefono.TabIndex = 8;
             // 
             // label6
@@ -400,12 +404,11 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(20, 99);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(30, 152);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(143, 14);
+            this.label6.Size = new System.Drawing.Size(314, 22);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Ocupación";
+            this.label6.Text = "Ocupación*";
             this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtOcupacion
@@ -413,10 +416,9 @@ namespace BINAES_Proyecto.Forms
             this.txtOcupacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOcupacion.Location = new System.Drawing.Point(23, 115);
-            this.txtOcupacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtOcupacion.Location = new System.Drawing.Point(34, 177);
             this.txtOcupacion.Name = "txtOcupacion";
-            this.txtOcupacion.Size = new System.Drawing.Size(181, 20);
+            this.txtOcupacion.Size = new System.Drawing.Size(370, 26);
             this.txtOcupacion.TabIndex = 4;
             // 
             // label11
@@ -425,24 +427,22 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(20, 256);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(32, 370);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 16);
+            this.label11.Size = new System.Drawing.Size(258, 25);
             this.label11.TabIndex = 14;
-            this.label11.Text = "Correo Electrónico";
+            this.label11.Text = "Correo Electrónico*";
             this.label11.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // txt
+            // txtCorreo
             // 
-            this.txt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt.Location = new System.Drawing.Point(23, 281);
-            this.txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(141, 20);
-            this.txt.TabIndex = 15;
+            this.txtCorreo.Location = new System.Drawing.Point(32, 398);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(310, 26);
+            this.txtCorreo.TabIndex = 15;
             // 
             // label10
             // 
@@ -450,12 +450,11 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 202);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(28, 296);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 18);
+            this.label10.Size = new System.Drawing.Size(314, 28);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Institución";
+            this.label10.Text = "Institución*";
             this.label10.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtInstitucion
@@ -463,10 +462,9 @@ namespace BINAES_Proyecto.Forms
             this.txtInstitucion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtInstitucion.Location = new System.Drawing.Point(23, 224);
-            this.txtInstitucion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInstitucion.Location = new System.Drawing.Point(32, 330);
             this.txtInstitucion.Name = "txtInstitucion";
-            this.txtInstitucion.Size = new System.Drawing.Size(181, 20);
+            this.txtInstitucion.Size = new System.Drawing.Size(370, 26);
             this.txtInstitucion.TabIndex = 11;
             // 
             // label4
@@ -475,10 +473,9 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 17);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(28, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(179, 19);
+            this.label4.Size = new System.Drawing.Size(368, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "Información del usuario";
             // 
@@ -490,10 +487,9 @@ namespace BINAES_Proyecto.Forms
             this.btnCrearUsuario.BackColor = System.Drawing.Color.Green;
             this.btnCrearUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCrearUsuario.Location = new System.Drawing.Point(347, 274);
-            this.btnCrearUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCrearUsuario.Location = new System.Drawing.Point(486, 479);
             this.btnCrearUsuario.Name = "btnCrearUsuario";
-            this.btnCrearUsuario.Size = new System.Drawing.Size(145, 27);
+            this.btnCrearUsuario.Size = new System.Drawing.Size(263, 42);
             this.btnCrearUsuario.TabIndex = 12;
             this.btnCrearUsuario.Text = "Crear usuario";
             this.btnCrearUsuario.UseVisualStyleBackColor = false;
@@ -507,10 +503,9 @@ namespace BINAES_Proyecto.Forms
             this.btnAgregarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
             this.btnAgregarImagen.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarImagen.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAgregarImagen.Location = new System.Drawing.Point(347, 217);
-            this.btnAgregarImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(504, 270);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
-            this.btnAgregarImagen.Size = new System.Drawing.Size(145, 27);
+            this.btnAgregarImagen.Size = new System.Drawing.Size(267, 42);
             this.btnAgregarImagen.TabIndex = 21;
             this.btnAgregarImagen.Text = "Agregar Imagen";
             this.btnAgregarImagen.UseVisualStyleBackColor = false;
@@ -522,12 +517,11 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(20, 49);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(30, 75);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 16);
+            this.label5.Size = new System.Drawing.Size(314, 25);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Nombre y apellido";
+            this.label5.Text = "Nombre y apellido*";
             this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtNombreUsuarios
@@ -535,20 +529,18 @@ namespace BINAES_Proyecto.Forms
             this.txtNombreUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombreUsuarios.Location = new System.Drawing.Point(23, 67);
-            this.txtNombreUsuarios.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombreUsuarios.Location = new System.Drawing.Point(34, 103);
             this.txtNombreUsuarios.Name = "txtNombreUsuarios";
-            this.txtNombreUsuarios.Size = new System.Drawing.Size(181, 20);
+            this.txtNombreUsuarios.Size = new System.Drawing.Size(370, 26);
             this.txtNombreUsuarios.TabIndex = 2;
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.tableLayoutPanel4);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage4.Size = new System.Drawing.Size(577, 374);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(870, 596);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Editar Usuario";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -575,8 +567,7 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.140301F));
             this.tableLayoutPanel4.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel3, 0, 11);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(1, 1);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(-4, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 16;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
@@ -595,7 +586,7 @@ namespace BINAES_Proyecto.Forms
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.864198F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.03086F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(574, 373);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(878, 598);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // panel4
@@ -606,7 +597,9 @@ namespace BINAES_Proyecto.Forms
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tableLayoutPanel4.SetColumnSpan(this.panel4, 13);
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.label24);
+            this.panel4.Controls.Add(this.cmbActualizarRol);
+            this.panel4.Controls.Add(this.txtActualizarContra);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.btnConfirmarIDusuario);
             this.panel4.Controls.Add(this.btnActualizarImagen);
@@ -627,44 +620,55 @@ namespace BINAES_Proyecto.Forms
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.txtActualizarDireccion);
             this.panel4.Controls.Add(this.label14);
-            this.panel4.Location = new System.Drawing.Point(2, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
             this.tableLayoutPanel4.SetRowSpan(this.panel4, 10);
-            this.panel4.Size = new System.Drawing.Size(518, 226);
+            this.panel4.Size = new System.Drawing.Size(800, 364);
             this.panel4.TabIndex = 23;
             // 
-            // textBox2
+            // label24
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label24.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(586, 113);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 28);
+            this.label24.TabIndex = 31;
+            this.label24.Text = "Rol*";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // cmbActualizarRol
+            // 
+            this.cmbActualizarRol.FormattingEnabled = true;
+            this.cmbActualizarRol.Location = new System.Drawing.Point(586, 142);
+            this.cmbActualizarRol.Name = "cmbActualizarRol";
+            this.cmbActualizarRol.Size = new System.Drawing.Size(164, 28);
+            this.cmbActualizarRol.TabIndex = 30;
+            // 
+            // txtActualizarContra
+            // 
+            this.txtActualizarContra.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(394, 70);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(91, 20);
-            this.textBox2.TabIndex = 26;
+            this.txtActualizarContra.Location = new System.Drawing.Point(586, 76);
+            this.txtActualizarContra.Name = "txtActualizarContra";
+            this.txtActualizarContra.Size = new System.Drawing.Size(177, 26);
+            this.txtActualizarContra.TabIndex = 26;
             // 
             // label9
             // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(394, 46);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(587, 52);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 20);
+            this.label9.Size = new System.Drawing.Size(122, 21);
             this.label9.TabIndex = 25;
-            this.label9.Text = "Contraseña";
+            this.label9.Text = "Contraseña*";
             this.label9.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // btnConfirmarIDusuario
             // 
-            this.btnConfirmarIDusuario.Location = new System.Drawing.Point(159, 46);
-            this.btnConfirmarIDusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfirmarIDusuario.Location = new System.Drawing.Point(239, 67);
             this.btnConfirmarIDusuario.Name = "btnConfirmarIDusuario";
-            this.btnConfirmarIDusuario.Size = new System.Drawing.Size(97, 25);
+            this.btnConfirmarIDusuario.Size = new System.Drawing.Size(146, 38);
             this.btnConfirmarIDusuario.TabIndex = 22;
             this.btnConfirmarIDusuario.Text = "Buscar";
             this.btnConfirmarIDusuario.UseVisualStyleBackColor = true;
@@ -675,10 +679,9 @@ namespace BINAES_Proyecto.Forms
             this.btnActualizarImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
             this.btnActualizarImagen.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarImagen.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnActualizarImagen.Location = new System.Drawing.Point(394, 97);
-            this.btnActualizarImagen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizarImagen.Location = new System.Drawing.Point(591, 196);
             this.btnActualizarImagen.Name = "btnActualizarImagen";
-            this.btnActualizarImagen.Size = new System.Drawing.Size(111, 29);
+            this.btnActualizarImagen.Size = new System.Drawing.Size(166, 45);
             this.btnActualizarImagen.TabIndex = 21;
             this.btnActualizarImagen.Text = "Actualizar imagen";
             this.btnActualizarImagen.UseVisualStyleBackColor = false;
@@ -686,10 +689,9 @@ namespace BINAES_Proyecto.Forms
             // label22
             // 
             this.label22.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(44, 46);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Location = new System.Drawing.Point(70, 72);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(25, 23);
+            this.label22.Size = new System.Drawing.Size(38, 22);
             this.label22.TabIndex = 20;
             this.label22.Text = "ID*";
             this.label22.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -697,10 +699,9 @@ namespace BINAES_Proyecto.Forms
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(44, 15);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(66, 23);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(329, 23);
+            this.label17.Size = new System.Drawing.Size(494, 35);
             this.label17.TabIndex = 19;
             this.label17.Text = "Ingrese el número de ID del usuario que desea actualizar ";
             this.label17.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -708,29 +709,26 @@ namespace BINAES_Proyecto.Forms
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(24, 1);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(36, 2);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(189, 23);
+            this.label12.Size = new System.Drawing.Size(284, 35);
             this.label12.TabIndex = 0;
             this.label12.Text = "Editar usuario";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtIDatualizar
             // 
-            this.txtIDatualizar.Location = new System.Drawing.Point(73, 54);
-            this.txtIDatualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIDatualizar.Location = new System.Drawing.Point(114, 71);
             this.txtIDatualizar.Name = "txtIDatualizar";
-            this.txtIDatualizar.Size = new System.Drawing.Size(25, 20);
+            this.txtIDatualizar.Size = new System.Drawing.Size(36, 26);
             this.txtIDatualizar.TabIndex = 18;
             // 
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(44, 166);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(66, 255);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 14);
+            this.label15.Size = new System.Drawing.Size(92, 22);
             this.label15.TabIndex = 5;
             this.label15.Text = "Dirección*";
             this.label15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -740,10 +738,9 @@ namespace BINAES_Proyecto.Forms
             this.btnActualizarUsuario.BackColor = System.Drawing.Color.Green;
             this.btnActualizarUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnActualizarUsuario.Location = new System.Drawing.Point(394, 137);
-            this.btnActualizarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizarUsuario.Location = new System.Drawing.Point(586, 255);
             this.btnActualizarUsuario.Name = "btnActualizarUsuario";
-            this.btnActualizarUsuario.Size = new System.Drawing.Size(118, 33);
+            this.btnActualizarUsuario.Size = new System.Drawing.Size(177, 51);
             this.btnActualizarUsuario.TabIndex = 17;
             this.btnActualizarUsuario.Text = "Actualizar";
             this.btnActualizarUsuario.UseVisualStyleBackColor = false;
@@ -752,10 +749,9 @@ namespace BINAES_Proyecto.Forms
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(233, 70);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(350, 108);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 21);
+            this.label18.Size = new System.Drawing.Size(122, 32);
             this.label18.TabIndex = 10;
             this.label18.Text = "Institución*";
             this.label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -763,61 +759,54 @@ namespace BINAES_Proyecto.Forms
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(233, 119);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(350, 183);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(81, 17);
+            this.label16.Size = new System.Drawing.Size(122, 26);
             this.label16.TabIndex = 7;
             this.label16.Text = "Teléfono*";
             this.label16.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtActualizarOcupacion
             // 
-            this.txtActualizarOcupacion.Location = new System.Drawing.Point(44, 140);
-            this.txtActualizarOcupacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActualizarOcupacion.Location = new System.Drawing.Point(66, 215);
             this.txtActualizarOcupacion.Name = "txtActualizarOcupacion";
-            this.txtActualizarOcupacion.Size = new System.Drawing.Size(135, 20);
+            this.txtActualizarOcupacion.Size = new System.Drawing.Size(200, 26);
             this.txtActualizarOcupacion.TabIndex = 8;
             // 
             // txtActualizarCorreo
             // 
-            this.txtActualizarCorreo.Location = new System.Drawing.Point(233, 181);
-            this.txtActualizarCorreo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActualizarCorreo.Location = new System.Drawing.Point(350, 278);
             this.txtActualizarCorreo.Name = "txtActualizarCorreo";
-            this.txtActualizarCorreo.Size = new System.Drawing.Size(126, 20);
+            this.txtActualizarCorreo.Size = new System.Drawing.Size(187, 26);
             this.txtActualizarCorreo.TabIndex = 11;
             // 
             // txtActualizarInstitucion
             // 
-            this.txtActualizarInstitucion.Location = new System.Drawing.Point(233, 97);
-            this.txtActualizarInstitucion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActualizarInstitucion.Location = new System.Drawing.Point(350, 149);
             this.txtActualizarInstitucion.Name = "txtActualizarInstitucion";
-            this.txtActualizarInstitucion.Size = new System.Drawing.Size(126, 20);
+            this.txtActualizarInstitucion.Size = new System.Drawing.Size(187, 26);
             this.txtActualizarInstitucion.TabIndex = 4;
             // 
             // txtActualizarNombre
             // 
-            this.txtActualizarNombre.Location = new System.Drawing.Point(44, 97);
-            this.txtActualizarNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActualizarNombre.Location = new System.Drawing.Point(66, 149);
             this.txtActualizarNombre.Name = "txtActualizarNombre";
-            this.txtActualizarNombre.Size = new System.Drawing.Size(135, 20);
+            this.txtActualizarNombre.Size = new System.Drawing.Size(200, 26);
             this.txtActualizarNombre.TabIndex = 2;
             // 
             // txtActualizarTelefono
             // 
-            this.txtActualizarTelefono.Location = new System.Drawing.Point(233, 140);
-            this.txtActualizarTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActualizarTelefono.Location = new System.Drawing.Point(350, 215);
             this.txtActualizarTelefono.Name = "txtActualizarTelefono";
-            this.txtActualizarTelefono.Size = new System.Drawing.Size(126, 20);
+            this.txtActualizarTelefono.Size = new System.Drawing.Size(187, 26);
             this.txtActualizarTelefono.TabIndex = 15;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(44, 73);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(66, 112);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(117, 18);
+            this.label13.Size = new System.Drawing.Size(176, 28);
             this.label13.TabIndex = 1;
             this.label13.Text = "Nombre y apellido*";
             this.label13.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -825,29 +814,26 @@ namespace BINAES_Proyecto.Forms
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(233, 164);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(350, 252);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(104, 15);
+            this.label19.Size = new System.Drawing.Size(156, 23);
             this.label19.TabIndex = 14;
             this.label19.Text = "Correo Electrónico*";
             this.label19.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // txtActualizarDireccion
             // 
-            this.txtActualizarDireccion.Location = new System.Drawing.Point(44, 181);
-            this.txtActualizarDireccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtActualizarDireccion.Location = new System.Drawing.Point(66, 278);
             this.txtActualizarDireccion.Name = "txtActualizarDireccion";
-            this.txtActualizarDireccion.Size = new System.Drawing.Size(135, 20);
+            this.txtActualizarDireccion.Size = new System.Drawing.Size(200, 26);
             this.txtActualizarDireccion.TabIndex = 6;
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(44, 121);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(66, 186);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(86, 17);
+            this.label14.Size = new System.Drawing.Size(129, 26);
             this.label14.TabIndex = 3;
             this.label14.Text = "Ocupación*";
             this.label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -864,35 +850,29 @@ namespace BINAES_Proyecto.Forms
             this.panel3.Controls.Add(this.label20);
             this.panel3.Controls.Add(this.btnEliminarUsuario);
             this.panel3.Controls.Add(this.txtIdEliminar);
-            this.panel3.Location = new System.Drawing.Point(2, 255);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Location = new System.Drawing.Point(3, 410);
             this.panel3.Name = "panel3";
             this.tableLayoutPanel4.SetRowSpan(this.panel3, 4);
-            this.panel3.Size = new System.Drawing.Size(518, 86);
+            this.panel3.Size = new System.Drawing.Size(800, 141);
             this.panel3.TabIndex = 22;
             // 
             // label21
             // 
             this.label21.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.label21.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(73, 32);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(110, 37);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(214, 18);
+            this.label21.Size = new System.Drawing.Size(321, 28);
             this.label21.TabIndex = 21;
             this.label21.Text = "Número de ID del usuario a eliminar";
             this.label21.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(117, 8);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(176, 13);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(110, 15);
+            this.label20.Size = new System.Drawing.Size(159, 24);
             this.label20.TabIndex = 20;
             this.label20.Text = "Eliminar usuario";
             // 
@@ -901,10 +881,9 @@ namespace BINAES_Proyecto.Forms
             this.btnEliminarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(129)))), ((int)(((byte)(239)))));
             this.btnEliminarUsuario.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(391, 32);
-            this.btnEliminarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(586, 49);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(121, 31);
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(182, 48);
             this.btnEliminarUsuario.TabIndex = 16;
             this.btnEliminarUsuario.Text = "Eliminar";
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
@@ -912,20 +891,18 @@ namespace BINAES_Proyecto.Forms
             // 
             // txtIdEliminar
             // 
-            this.txtIdEliminar.Location = new System.Drawing.Point(141, 59);
-            this.txtIdEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdEliminar.Location = new System.Drawing.Point(227, 81);
             this.txtIdEliminar.Name = "txtIdEliminar";
-            this.txtIdEliminar.Size = new System.Drawing.Size(37, 20);
+            this.txtIdEliminar.Size = new System.Drawing.Size(54, 26);
             this.txtIdEliminar.TabIndex = 19;
             // 
             // Mostrar
             // 
             this.Mostrar.Controls.Add(this.tlpMostrarUsuario);
             this.Mostrar.Location = new System.Drawing.Point(4, 34);
-            this.Mostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Mostrar.Name = "Mostrar";
-            this.Mostrar.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Mostrar.Size = new System.Drawing.Size(577, 374);
+            this.Mostrar.Padding = new System.Windows.Forms.Padding(3);
+            this.Mostrar.Size = new System.Drawing.Size(870, 596);
             this.Mostrar.TabIndex = 2;
             this.Mostrar.Text = "Mostrar";
             this.Mostrar.UseVisualStyleBackColor = true;
@@ -938,20 +915,19 @@ namespace BINAES_Proyecto.Forms
             this.tlpMostrarUsuario.ColumnCount = 4;
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.93578F));
             this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.06422F));
-            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.tlpMostrarUsuario.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 215F));
             this.tlpMostrarUsuario.Controls.Add(this.dgvMostrarUser, 1, 2);
             this.tlpMostrarUsuario.Controls.Add(this.btnMostrar, 2, 0);
-            this.tlpMostrarUsuario.Location = new System.Drawing.Point(2, 2);
-            this.tlpMostrarUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tlpMostrarUsuario.Location = new System.Drawing.Point(3, 3);
             this.tlpMostrarUsuario.Name = "tlpMostrarUsuario";
             this.tlpMostrarUsuario.RowCount = 4;
             this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.287926F));
             this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.572755F));
             this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 68.73065F));
             this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.25387F));
-            this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tlpMostrarUsuario.Size = new System.Drawing.Size(576, 384);
+            this.tlpMostrarUsuario.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpMostrarUsuario.Size = new System.Drawing.Size(864, 591);
             this.tlpMostrarUsuario.TabIndex = 2;
             // 
             // dgvMostrarUser
@@ -961,12 +937,11 @@ namespace BINAES_Proyecto.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMostrarUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tlpMostrarUsuario.SetColumnSpan(this.dgvMostrarUser, 2);
-            this.dgvMostrarUser.Location = new System.Drawing.Point(71, 58);
-            this.dgvMostrarUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvMostrarUser.Location = new System.Drawing.Point(104, 89);
             this.dgvMostrarUser.Name = "dgvMostrarUser";
             this.dgvMostrarUser.RowHeadersWidth = 62;
             this.dgvMostrarUser.RowTemplate.Height = 28;
-            this.dgvMostrarUser.Size = new System.Drawing.Size(366, 260);
+            this.dgvMostrarUser.Size = new System.Drawing.Size(541, 400);
             this.dgvMostrarUser.TabIndex = 0;
             // 
             // btnMostrar
@@ -975,10 +950,9 @@ namespace BINAES_Proyecto.Forms
             this.btnMostrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft YaHei", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnMostrar.Location = new System.Drawing.Point(302, 2);
-            this.btnMostrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMostrar.Location = new System.Drawing.Point(443, 3);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(135, 31);
+            this.btnMostrar.Size = new System.Drawing.Size(202, 48);
             this.btnMostrar.TabIndex = 1;
             this.btnMostrar.Text = "Mostrar Usuarios";
             this.btnMostrar.UseVisualStyleBackColor = false;
@@ -989,9 +963,10 @@ namespace BINAES_Proyecto.Forms
             this.tabPage5.Controls.Add(this.comboBox1);
             this.tabPage5.Controls.Add(this.panelResultado);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage5.Size = new System.Drawing.Size(577, 374);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tabPage5.Size = new System.Drawing.Size(870, 596);
             this.tabPage5.TabIndex = 3;
             this.tabPage5.Text = "Código QR";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1000,9 +975,10 @@ namespace BINAES_Proyecto.Forms
             // 
             this.comboBox1.Enabled = false;
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(477, 132);
+            this.comboBox1.Location = new System.Drawing.Point(716, 203);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(10, 21);
+            this.comboBox1.Size = new System.Drawing.Size(13, 28);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Visible = false;
             // 
@@ -1015,43 +991,48 @@ namespace BINAES_Proyecto.Forms
             this.panelResultado.Controls.Add(this.picQR);
             this.panelResultado.Controls.Add(this.btnGuardar);
             this.panelResultado.Controls.Add(this.btnGenerar);
-            this.panelResultado.Location = new System.Drawing.Point(82, 23);
+            this.panelResultado.Location = new System.Drawing.Point(123, 35);
+            this.panelResultado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelResultado.Name = "panelResultado";
-            this.panelResultado.Size = new System.Drawing.Size(324, 311);
+            this.panelResultado.Size = new System.Drawing.Size(485, 477);
             this.panelResultado.TabIndex = 0;
             // 
             // lblUsuario
             // 
-            this.lblUsuario.Location = new System.Drawing.Point(64, 229);
+            this.lblUsuario.Location = new System.Drawing.Point(96, 352);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(201, 17);
+            this.lblUsuario.Size = new System.Drawing.Size(302, 26);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Ingrese el nombre del usuario";
             // 
             // txtValor1
             // 
-            this.txtValor1.Location = new System.Drawing.Point(64, 249);
+            this.txtValor1.Location = new System.Drawing.Point(96, 383);
+            this.txtValor1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtValor1.MaxLength = 50;
             this.txtValor1.Name = "txtValor1";
-            this.txtValor1.Size = new System.Drawing.Size(184, 20);
+            this.txtValor1.Size = new System.Drawing.Size(274, 26);
             this.txtValor1.TabIndex = 3;
             // 
             // picQR
             // 
             this.picQR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.picQR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picQR.Location = new System.Drawing.Point(64, 34);
+            this.picQR.Location = new System.Drawing.Point(96, 52);
+            this.picQR.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.picQR.Name = "picQR";
-            this.picQR.Size = new System.Drawing.Size(183, 184);
+            this.picQR.Size = new System.Drawing.Size(274, 282);
             this.picQR.TabIndex = 2;
             this.picQR.TabStop = false;
             // 
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.LightCyan;
-            this.btnGuardar.Location = new System.Drawing.Point(164, 272);
+            this.btnGuardar.Location = new System.Drawing.Point(246, 418);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(69, 27);
+            this.btnGuardar.Size = new System.Drawing.Size(104, 42);
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar ";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -1060,9 +1041,10 @@ namespace BINAES_Proyecto.Forms
             // btnGenerar
             // 
             this.btnGenerar.BackColor = System.Drawing.Color.LightCyan;
-            this.btnGenerar.Location = new System.Drawing.Point(74, 272);
+            this.btnGenerar.Location = new System.Drawing.Point(111, 418);
+            this.btnGenerar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(71, 27);
+            this.btnGenerar.Size = new System.Drawing.Size(106, 42);
             this.btnGenerar.TabIndex = 0;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = false;
@@ -1070,12 +1052,11 @@ namespace BINAES_Proyecto.Forms
             // 
             // frmUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 412);
+            this.ClientSize = new System.Drawing.Size(878, 634);
             this.Controls.Add(this.tc1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmUsuario";
             this.Text = "frmUsuario";
             this.Load += new System.EventHandler(this.frmUsuario_Load);
@@ -1107,10 +1088,17 @@ namespace BINAES_Proyecto.Forms
 
         }
 
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.ComboBox cmbActualizarRol;
+
+        private System.Windows.Forms.Label label23;
+
+        private System.Windows.Forms.ComboBox cmbRolusuario;
+
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label lblContra;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtActualizarContra;
 
         private System.Windows.Forms.Button btnActualizarImagen;
         private System.Windows.Forms.Button btnConfirmarIDusuario;
@@ -1164,7 +1152,7 @@ namespace BINAES_Proyecto.Forms
 
         private System.Windows.Forms.TableLayoutPanel tlpMostrarUsuario;
 
-        private System.Windows.Forms.TextBox txt;
+        private System.Windows.Forms.TextBox txtCorreo;
 
         private System.Windows.Forms.Label label11;
 
