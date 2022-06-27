@@ -157,7 +157,7 @@ namespace BINAES_Proyecto.Forms
 
                 SqlCommand command =
                     new SqlCommand(
-                        "SELECT nombre, ocupacion, direccion, correo, fotografia, telefono, institucion  FROM USUARIO WHERE id = @id",
+                        "SELECT nombre, ocupacion, direccion, correo, fotografia, telefono, institucion, contra, id_rol  FROM USUARIO WHERE id = @id",
                         connection);
                 command.Parameters.AddWithValue("@id", txtIDatualizar.Text);
 
@@ -172,6 +172,8 @@ namespace BINAES_Proyecto.Forms
                     imagen = reader["fotografia"].ToString();
                     txtActualizarTelefono.Text = reader["telefono"].ToString();
                     txtActualizarInstitucion.Text = reader["institucion"].ToString();
+                    txtActualizarContra.Text = reader["contra"].ToString(); 
+                    cmbActualizarRol.SelectedValue = Convert.ToInt32(reader["id_rol"]);
 
 
 
