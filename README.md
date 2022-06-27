@@ -17,6 +17,6 @@ AVISO:
 Los manuales de usuario y tecnico se encuentran dentro de la carpeta antes mencionada.
 
 METODO DE ACCESO:
-Previo a la ejecucion del programa, se debe crear la base de datos, cuyos comandos estan dentro del archivo con terminacion .sql.
+Previo a la ejecucion del programa, se debe crear la base de datos, cuyos comandos estan dentro del archivo BDPVersion6.5.sql
 Se debe tomar en cuenta que debe utilizarse el ejecutable que se encuentra dentro del proyecto, como a su vez leer el manual de usuario donde se 
 encontrarán las contraseñas y los nombres de usuario para poder acceder al sistema. 
