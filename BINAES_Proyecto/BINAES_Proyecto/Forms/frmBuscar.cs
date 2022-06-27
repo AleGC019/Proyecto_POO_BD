@@ -10,11 +10,14 @@ namespace BINAES_Proyecto.Forms
         {
             InitializeComponent();
         }
+        
+        /*Click del botón Buscar, El evento clic nos permite acceder a traves de un switch a los
+        diferentes accesos de busqueda dentro de nuestra clase BuscarEjemplarDAO*/
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             switch (cmbOpcionesBuscar.Text.Trim())
             {
-                // Aqui pones el nombre que le hayas puesto a la combobox
+                // En razon del texto de nuestra combobox entraremos en una de las condiciones de nuestro switch
                 case "Titulo completo":
                 {
                     List<Ejemplar> resultado = BuscarEjemplarDAO.FiltrarPorTitulo(txtBuscarEjemplar.Text.Trim()); // Ponele el nombre de la txt box
@@ -24,7 +27,7 @@ namespace BINAES_Proyecto.Forms
                     dgvResultadosBusqueda.DataSource = resultado;
                     
                    
-                
+                    // A partados de formato general de las tablas a mostrar en la DataGridView
                     dgvResultadosBusqueda.Columns["ID"].DefaultCellStyle.Alignment =
                         DataGridViewContentAlignment.MiddleCenter;
                     dgvResultadosBusqueda.Columns["Nombre_Ejemplar"].DefaultCellStyle.Alignment =
@@ -51,6 +54,7 @@ namespace BINAES_Proyecto.Forms
                         DataGridViewContentAlignment.MiddleCenter;
 
                     dgvResultadosBusqueda.Columns["Portada"].Visible = false;
+                    
                     
                     DataGridViewImageColumn columna = (DataGridViewImageColumn)dgvResultadosBusqueda.Columns["fotoEjemplarAUX"];
                     columna.ImageLayout = DataGridViewImageCellLayout.Zoom;
@@ -346,9 +350,6 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
-        private void frmBuscar_Load(object sender, EventArgs e)
-        {
-            // en el click del data grid view tenemos que cambiarlo a true 
-        }
+        
     }
 }

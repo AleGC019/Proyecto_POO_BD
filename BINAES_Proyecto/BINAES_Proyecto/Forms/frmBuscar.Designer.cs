@@ -116,7 +116,6 @@ namespace BINAES_Proyecto.Forms
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmBuscar";
             this.Text = "frmBuscar";
-            this.Load += new System.EventHandler(this.frmBuscar_Load);
             this.tlpBusqueda.ResumeLayout(false);
             this.tlpBusqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultadosBusqueda)).EndInit();

@@ -26,7 +26,8 @@ namespace BINAES_Proyecto
             InitializeComponent();
             
         }
-
+        
+        //Esta función permite que el color del botón donde se esta dando click sea actualizado al color Bisque.
         private void ActivateButton(Object btnSender)
         {
             if (btnSender != null)
@@ -41,6 +42,7 @@ namespace BINAES_Proyecto
             }
         }
 
+        //Esta función regresa al botón a su color original.
         private void DisableButton()
         {
             foreach (Control previousBtn in tlpMenu.Controls)
@@ -71,54 +73,36 @@ namespace BINAES_Proyecto
 
         }
 
+        /*Click del botón Inicio, este evento click activa el color del botón donde estamos seleccionando
+         utilizando la funcion ActivateButton y abre el formulario frmInicio
+        */
         private void btnInicio_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             OpenChildForm(new Forms.frmInicio(),sender);
         }
 
+        /*Click del botón Buscar, este evento click activa el color del botón donde estamos seleccionando
+         utilizando la funcion ActivateButton y abre el formulario frmBuscar
+        */
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
             OpenChildForm(new Forms.frmBuscar(),sender);
         }
 
+        /*Click del botón Eventos, este evento click activa el color del botón donde estamos seleccionando
+         utilizando la funcion ActivateButton y abre el formulario frmEventos
+        */
         private void btnEventos_Click_1(object sender, EventArgs e)
         {
             ActivateButton(sender);
             OpenChildForm(new Forms.frmEvento(),sender);
         }
 
-        private void btnColecciones_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new Forms.frmColeccion(),sender);
-        }
-
-        private void btnEjemplares_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new Forms.frmEjemplar(),sender);
-        }
-
-        private void btnUsuarios_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new Forms.frmUsuario(),sender);
-        }
-
-        private void btnPrestamos_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new Forms.frmPrestamo(),sender);
-        }
-
-        private void btnReservas_Click_1(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            OpenChildForm(new Forms.frmReserva(),sender);
-        }
         
+
+        //Evento load del formulario BinaesMain, se cargan las imagenes que serán utilizadas en el programa
 
         private void frmBinaesMain_Load(object sender, EventArgs e)
         {
@@ -134,12 +118,14 @@ namespace BINAES_Proyecto
             }
         }
 
+        //Función Application.Exit() para cerrar todas las ventas que puedan seguir corriendo de nuestro programa
         private void frmBinaesMain_FormClosing(object sender, FormClosingEventArgs e)
         {
             
             Application.Exit();
         }
 
+        //Click del botón Salir, nos permite salir de la aplicación y abre nuevamente el formulario de inicio de sesión 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Hide();

@@ -17,19 +17,11 @@ namespace BINAES_Proyecto
             InitializeComponent();
         }
 
-
+        
+        //Evento click del botón Login, lo que no permitira acceder a nuestro formulario principal
         private void btnLogIn_Click(object sender, EventArgs e)
-        {
-            
-            /*
-            List<Usuario> ListaUsuarios = new List<Usuario>();
-            
-            string usuario = UsuarioDAO.AdminLoginInfo().ToString();
-            
-            ListaUsuarios.Add(usuario);
-            
-            */
-
+        {   
+            //Utilizamos la condicional if para validar la información del usuario 
             if(txtusuario.TextLength == 0 || txtContra.TextLength == 0)
             {
                 MessageBox.Show("Campos de inicio de sesión no completos.", "Complete el formulario.", MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -64,27 +56,16 @@ namespace BINAES_Proyecto
                 }
             }
             
-
-            /*
-            if (txtusuario.Text == "admin" && txtContra.Text == "1234")
-            {
-                this.Hide();
-                frmBinaesMain frmAux = new frmBinaesMain();
-                frmAux.Show();
-            }
-
-            else
-            {
-                lblError.Text = "Credenciales no válidas.";
-            }
-            */
+            
         }
-
+        
+        //Cerramos aplicación utilizando el evento FormClosed
         private void frmInicioSesion_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
-
+        
+        //En el evento load de nuestro formulario InicioSesion, configuramos el label de error.
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
             lblError.Text = "";
