@@ -18,70 +18,83 @@ namespace BINAES_Proyecto.Forms
         //Click del botón buscar, nos permite buscar eventos
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            if (cmbEvento.Text == "Nombre del evento") 
+            switch (cmbEvento.Text)
             {
-                List<Evento> resultado = EventoDAO.NombreEvento(txtBuscarEvento.Text.Trim());
-                txtBuscarEvento.Clear();
+                case "Nombre del evento":
+                {
+                    List<Evento> resultado = EventoDAO.NombreEvento(txtBuscarEvento.Text.Trim());
+                    txtBuscarEvento.Clear();
 
-                dgvEvento.DataSource = null;
-                dgvEvento.DataSource = resultado;
-
-
-
-                dgvEvento.Columns["ID"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Titulo_Evento"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-
-
-                dgvEvento.Columns["Portada"].Visible = false;
-                dgvEvento.Columns["id_area"].Visible = false;
-
-
-                dgvEvento.Columns["Cantidad_de_asistentes"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Inicio_del_vento"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Finalizacion_del_evento"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Area"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Objetivos"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-
-            }
-
-            else
-            {
-                List<Evento> resultado = EventoDAO.Eventos();
-                txtBuscarEvento.Clear();
-
-                dgvEvento.DataSource = null;
-                dgvEvento.DataSource = resultado;
-
-                dgvEvento.Columns["ID"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Titulo_Evento"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-
-
-                dgvEvento.Columns["Portada"].Visible = false;
-                dgvEvento.Columns["id_area"].Visible = false;
-
-
-                dgvEvento.Columns["Cantidad_de_asistentes"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Inicio_del_vento"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Finalizacion_del_evento"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Area"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
-                dgvEvento.Columns["Objetivos"].DefaultCellStyle.Alignment =
-                    DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.RowTemplate.Height = 50;
+                    dgvEvento.DataSource = null;
+                    dgvEvento.DataSource = resultado;
 
 
 
+                    dgvEvento.Columns["ID"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Titulo_Evento"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+
+
+                    dgvEvento.Columns["Portada"].Visible = false;
+                    dgvEvento.Columns["id_area"].Visible = false;
+                    dgvEvento.Columns["Imagen_evento"].Visible = false;
+
+
+                    dgvEvento.Columns["Cantidad_de_asistentes"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Inicio_del_vento"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Finalizacion_del_evento"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Area"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Objetivos"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    
+                    DataGridViewImageColumn columna = (DataGridViewImageColumn)dgvEvento.Columns["Imagen_del_evento"];
+                    columna.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                    
+                    break;
+                }
+                
+                default:
+                {
+                    List<Evento> resultado = EventoDAO.Eventos();
+                    txtBuscarEvento.Clear();
+
+                    
+                    dgvEvento.RowTemplate.Height = 50;
+                    dgvEvento.DataSource = null;
+                    dgvEvento.DataSource = resultado;
+
+                    dgvEvento.Columns["ID"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Titulo_Evento"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+
+
+                    dgvEvento.Columns["Portada"].Visible = false;
+                    dgvEvento.Columns["id_area"].Visible = false;
+                    dgvEvento.Columns["Imagen_evento"].Visible = false;
+
+
+                    dgvEvento.Columns["Cantidad_de_asistentes"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Inicio_del_vento"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Finalizacion_del_evento"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Area"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    dgvEvento.Columns["Objetivos"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleCenter;
+                    DataGridViewImageColumn columna = (DataGridViewImageColumn)dgvEvento.Columns["Imagen_del_evento"];
+                    columna.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                    
+                    break;
+                }
             }
         }
 

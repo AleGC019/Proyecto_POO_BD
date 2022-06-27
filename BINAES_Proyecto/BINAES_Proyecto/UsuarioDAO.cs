@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
 using BINAES_Proyecto.Properties;
 
@@ -43,7 +44,7 @@ namespace BINAES_Proyecto
             using (SqlConnection connection = new SqlConnection(cadena))
 
             {
-                string query = "SELECT id, nombre, ocupacion, direccion, correo, telefono, institucion FROM USUARIO";
+                string query = "SELECT id, nombre, ocupacion, fotografia,  direccion, correo, telefono, institucion FROM USUARIO";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 //abrir la conexion, ejecutar la query 
@@ -56,6 +57,8 @@ namespace BINAES_Proyecto
                         Usuario user = new Usuario();
 
                         user.UsuarioID = Convert.ToInt32(reader["id"].ToString());
+                        user.fotoUsuario = reader["fotografia"].ToString();
+                        user.fotoUsuarioAUX = (Bitmap)Image.FromFile(user.fotoUsuario);
                         user.UsuarioNombre = reader["nombre"].ToString();
                         user.UserOcupacion = reader["ocupacion"].ToString();
                         user.UserDireccion = reader["direccion"].ToString();

@@ -37,7 +37,7 @@ namespace BINAES_Proyecto
                         Evento eje = new Evento();
                         eje.Titulo_Evento = reader["titulo"].ToString();
                         eje.Portada = reader["imagen"].ToString();
-                        //eje.Imagen_del_evento = EventoDAO.obtenerimagen(eje.Portada);
+                        eje.Imagen_del_evento = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Cantidad_de_asistentes = Convert.ToInt32(reader["asistentes_cantidad"].ToString());
                         eje.Area = reader["nombre"].ToString();
@@ -77,7 +77,7 @@ namespace BINAES_Proyecto
                         Evento eje = new Evento();
                         eje.Titulo_Evento = reader["titulo"].ToString();
                         eje.Portada = reader["imagen"].ToString();
-                        //eje.Imagen_del_evento = obtenerimagen(eje.Portada);
+                        eje.Imagen_del_evento = (Bitmap)Image.FromFile(eje.Portada);
                         eje.ID = Convert.ToInt32(reader["id"].ToString());
                         eje.Cantidad_de_asistentes = Convert.ToInt32(reader["asistentes_cantidad"].ToString());
                         eje.Area = reader["nombre"].ToString();

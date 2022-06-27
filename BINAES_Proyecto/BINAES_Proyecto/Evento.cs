@@ -12,13 +12,13 @@ namespace BINAES_Proyecto
     public class Evento
     {
         public int ID { get; set; }
-        
+         public Bitmap Imagen_del_evento { get; set; }
         public int id_area { get; set; }
         public string Titulo_Evento { get; set; }
         
         public string Portada { get; set; }
         
-        public Bitmap Imagen_del_evento { get; set; }
+       
         
         public string Imagen_evento { get; set; }
         
