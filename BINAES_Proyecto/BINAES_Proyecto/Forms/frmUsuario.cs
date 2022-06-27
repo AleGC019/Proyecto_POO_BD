@@ -41,8 +41,13 @@ namespace BINAES_Proyecto.Forms
 
         private void btnMostrar_Click_1(object sender, EventArgs e)
         {
+            dgvMostrarUser.RowTemplate.Height = 50;
+
             dgvMostrarUser.DataSource = null;
             dgvMostrarUser.DataSource = UsuarioDAO.MostrarUsuarios();
+
+            DataGridViewImageColumn columna = (DataGridViewImageColumn)dgvMostrarUser.Columns["fotoUsuarioAUX"];
+            columna.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
         
         private void btnActualizarUsuario_Click_1(object sender, EventArgs e)
@@ -152,7 +157,10 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
-       
+        private void frmUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
         
