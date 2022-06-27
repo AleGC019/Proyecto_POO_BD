@@ -14,13 +14,12 @@ namespace BINAES_Proyecto
     {
         //Propiedades de formulario
 
-        public Ejemplar eje { get; set; }
+        public Ejemplar eje { get; set; } //Ejemplar buscado a reservar
 
-        public List<Usuario> usuarios { get; set; }
+        public List<Usuario> usuarios { get; set; } //Lista de puebleo de combobox
 
 
         //Metodos de formulario
-
         public frmRegistroReserva(Ejemplar actualEjemplar)
         {
             InitializeComponent();
@@ -28,8 +27,10 @@ namespace BINAES_Proyecto
             eje = actualEjemplar;
         }
 
+        //Metodo de carga del formulario
         private void frmRegistroReserva_Load(object sender, EventArgs e)
         {
+            //Poblado de la combobox de usuarios disponibles
             List<Usuario> poblado = new List<Usuario>();
 
             poblado = UsuarioDAO.MostrarUsuariosCMB();
@@ -45,6 +46,9 @@ namespace BINAES_Proyecto
             txtEjemplarReserva.Text = eje.Nombre_Ejemplar;
 
             picEjemplarReserva.Image = Image.FromFile(eje.Portada);
+
+
+            //Parametrizacion del dia en que se realiza la reserva, y la referencia de cuando podra hacerse la misma
 
             DateTime hoy = DateTime.Now;
 
@@ -68,6 +72,7 @@ namespace BINAES_Proyecto
             dtpDevolucionHoraReserva.Value = Convert.ToDateTime("2pm");
             dtpDevolucionHoraReserva.Enabled = false;
        
+            //Impresion de reglas de reserva para el usuario
             MessageBox.Show("- El titulo estara disponible a partir de la hora siguiente del momento en que regrese del prestamo."
                             + Environment.NewLine + 
                             "- Solo podra ser reservado por un periodo de 14 dias, a partir del dia que regrese del prestamo hasta 1 mes posterior a ello."
@@ -75,6 +80,8 @@ namespace BINAES_Proyecto
                             "- Debera regresar su ejemplar, a mas tardar, a las 2 p.m.", "REGLAS DE RESERVA EN BINAES", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+
+        //Metodo de boton cancelar reserva
         private void btnCancelarReserva_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -82,6 +89,8 @@ namespace BINAES_Proyecto
             this.Close();
         }
 
+
+        //Metodo de boton para confirmar reserva
         private void btnPrestarReserva_Click(object sender, EventArgs e)
         {
             DateTime momentoReserva = dtpFechaReserva.Value.Date + dtpHoraReserva.Value.TimeOfDay;
@@ -90,7 +99,7 @@ namespace BINAES_Proyecto
 
             DateTime R_devolucion = dtpDevolucionFechaReserva.Value.Date + dtpDevolucionHoraReserva.Value.TimeOfDay;
 
-            
+                //Si esta verificacion devuelve algo falso, el ingreso de la reserva fue erroneo y no se hizo
                 if (ReservaDAO.NewReserva(Convert.ToInt32(cmbUsuarioReserva.SelectedValue), eje.ID, momentoReserva, R_entrega, R_devolucion))
                 {
                     MessageBox.Show("¡Ingreso exitoso!", "Exito en el registro de reserva.", MessageBoxButtons.OK, MessageBoxIcon.None);
