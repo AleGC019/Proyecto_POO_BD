@@ -93,7 +93,7 @@ namespace BINAES_Proyecto
             
                 if (ReservaDAO.NewReserva(Convert.ToInt32(cmbUsuarioReserva.SelectedValue), eje.ID, momentoReserva, R_entrega, R_devolucion))
                 {
-                    MessageBox.Show("Ingreso exitoso!");
+                    MessageBox.Show("¡Ingreso exitoso!", "Exito en el registro de reserva.", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                     this.DialogResult = DialogResult.OK;
 
@@ -101,7 +101,7 @@ namespace BINAES_Proyecto
                 }
                 else
                 {
-                    MessageBox.Show("Ingreso fallido!");
+                    MessageBox.Show("¡Ingreso fallido!", "Falla en el registro de reserva.", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                     this.DialogResult = DialogResult.Abort;
 

@@ -12,17 +12,19 @@ namespace BINAES_Proyecto.Forms
 {
     public partial class frmPrestamo : Form
     {
-        public Ejemplar Buscado { get; set; }
+        //Instancias a usar dentro del formulario
+        public Ejemplar Buscado { get; set; } //Ejemplar a buscar dentro de los metodos
 
-        public Usuario actualUser { get; set; }
-
+        //Creacion del formulario
         public frmPrestamo()
         {
             InitializeComponent();
         }
 
+        //Metodo de carga del formulario 
         private void frmPrestamo_Load(object sender, System.EventArgs e)
         {
+            //Invisibilizacion de campos no deseados hasta que se encuentre el ejemplar
             pnlFoundItem_Prestamo.Visible = false;
 
             pnlPrestamoContainer.BackColor = Color.FromArgb(5, 29, 64);
@@ -30,22 +32,21 @@ namespace BINAES_Proyecto.Forms
             cmbTipoBusqueda_Prestamo.Text = "Titulo completo";
 
             grpVerificarExistencia_Prestamo.BackColor = Color.White;
-
-            /*MessageBox.Show("Antes de solicitar un prestamo, se requiere buscar el ejemplar deseado para saber su existencia y disponibilidad.", "AVISO", 
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);*/
         }
 
+        //Metodo de busqueda de ejemplar al presionar el boton Buscar
         private void btnBuscar_Prestamo_Click(object sender, System.EventArgs e)
         {
+            //Validaciones de txt vacias
             if (txtBusqueda_Prestamo.TextLength > 0)
             {
                 switch (cmbTipoBusqueda_Prestamo.Text)
                 {
                     case "Titulo completo":
 
-                        Buscado = PrestamoDAO.TituloCompleto(txtBusqueda_Prestamo.Text.Trim());
+                        Buscado = PrestamoDAO.TituloCompleto(txtBusqueda_Prestamo.Text.Trim()); //Asignacion de campos del ejemplar buscado
 
-                        if (Buscado.ID != -1)
+                        if (Buscado.ID != -1) //Parametro personalizado para verificacion de existencia.
                         {
                             MessageBox.Show("Su ejemplar si existe en la base de datos.", "CONFIRMACION DE EXISTENCIA.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -145,15 +146,16 @@ namespace BINAES_Proyecto.Forms
                     break;
                 }
             }
-            else if (txtBusqueda_Prestamo.TextLength == 0)
+            else if (txtBusqueda_Prestamo.TextLength == 0) //Si la barra de busqueda esta vacia, pedir texto antes de correr el programa
             {
                 MessageBox.Show("Ingrese texto en la barra de busqueda para proseguir.", "Sin parametros de busqueda", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
+        //Una vez encontrado el ejemplar, hacer clic en la imagnen para verificar si esta disponible para prestamo o reserva
         private void picFoundItem_Prestamo_Click(object sender, EventArgs e)
         {
-            if(PrestamoDAO.VerifyPrestamo(Buscado, DateTime.Now))
+            if(PrestamoDAO.VerifyPrestamo(Buscado, DateTime.Now)) //El tiempo a comparar es el del momento en el que la aplicacion esta corriendo
             {
                 MessageBox.Show("Actualmente, el libro no esta disponible. Se encuentra prestado, pero puede reservarlo", "No disponible",
                     MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);

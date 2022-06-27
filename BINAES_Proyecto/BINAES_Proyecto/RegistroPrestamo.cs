@@ -58,7 +58,7 @@ namespace BINAES_Proyecto
 
             cmbUsuarioPresta.DataSource = poblado;
 
-            MessageBox.Show("BINAES le otorgará el material por un periodo de 14 días en los que, al terminar, usted deber regresar lo prestado.");
+            MessageBox.Show("BINAES le otorgará el material por un periodo de 14 días en los que, al terminar, usted deber regresar lo prestado a mas tardar, a las 2pm.");
 
         }
 
@@ -77,7 +77,7 @@ namespace BINAES_Proyecto
 
             if (PrestamoDAO.NewPrestamo(Convert.ToInt32(cmbUsuarioPresta.SelectedValue), eje.ID, R_entrega, R_devolucion))
             {
-                MessageBox.Show("Ingreso exitoso!");
+                MessageBox.Show("¡Ingreso exitoso!", "Exito en el registro de prestamo.", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                 this.DialogResult = DialogResult.OK;
 
@@ -85,7 +85,7 @@ namespace BINAES_Proyecto
             }
             else
             {
-                MessageBox.Show("Ingreso fallido!");
+                MessageBox.Show("¡Ingreso fallido!", "Falla en el registro de prestamo.", MessageBoxButtons.OK, MessageBoxIcon.None);
 
                 this.DialogResult = DialogResult.Abort;
 
