@@ -10,7 +10,7 @@ namespace BINAES_Proyecto.Forms
         {
             InitializeComponent();
         }
-
+        /*Click para mostrar préstamos*/
         private void btnMostrarPrestamos_Click(object sender, EventArgs e)
         {
             List<PrestamoEjemplar> resultado = PrestamoDAO.MostrarTodo(); // Ponele el nombre de la txt box
@@ -24,6 +24,7 @@ namespace BINAES_Proyecto.Forms
                 DataGridViewContentAlignment.MiddleCenter;
         }
 
+        /*Click para mostrar reservaciones*/
         private void btnMostrarReservaciones_Click(object sender, EventArgs e)
         {
             List<PrestamoEjemplar> resultado = PrestamoDAO.MostrarTodoReservaciones(); // Ponele el nombre de la txt box

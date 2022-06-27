@@ -8,6 +8,7 @@ namespace BINAES_Proyecto.Forms
 {
     public partial class frmInicio : Form
     {
+        /*Lista de imagenes para el timer*/
         private List<Bitmap> listaImagenes;
         public frmInicio()
         {
@@ -32,7 +33,8 @@ namespace BINAES_Proyecto.Forms
         {
             throw new System.NotImplementedException();
         }
-
+        
+        /*Contador para que funcione el timer*/
         private int contadorInicio = 0;
         private void trmInicio_Tick(object sender, EventArgs e)
         {

@@ -20,7 +20,7 @@ namespace BINAES_Proyecto.Forms
             InitializeComponent();
         }
 
-
+        /*Click para crear un usuario*/
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
             if(txtNombreUsuarios.TextLength > 0 && txtOcupacion.TextLength >0 && txtDireccionUsuario.TextLength > 0 && txtInstitucion.TextLength > 0 && txtTelefono.TextLength >0 && txtCorreo.TextLength > 0 && imagen.Length > 0 && txtContrasena.TextLength> 0 && cmbRolusuario.Text.Length >0) { 
@@ -48,7 +48,7 @@ namespace BINAES_Proyecto.Forms
 
         }
 
-
+        /*Click para mostrar los usuarios*/
         private void btnMostrar_Click_1(object sender, EventArgs e)
         {
             dgvMostrarUser.RowTemplate.Height = 50;
@@ -60,6 +60,7 @@ namespace BINAES_Proyecto.Forms
             columna.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
 
+        /*Click para actualizar usuario*/
         private void btnActualizarUsuario_Click_1(object sender, EventArgs e)
         {
             if (txtNombreUsuarios.TextLength > 0 && txtOcupacion.TextLength > 0 && txtDireccionUsuario.TextLength > 0 && txtInstitucion.TextLength > 0 && txtTelefono.TextLength > 0 && txtCorreo.TextLength > 0 && imagen.Length > 0 && txtContrasena.TextLength > 0 && cmbRolusuario.Text.Length > 0)
@@ -84,7 +85,7 @@ namespace BINAES_Proyecto.Forms
 
             }
         }
-
+         /*Click para eliminar usuario*/
         private void btnEliminarUsuario_Click_1(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtIdEliminar.Text);
@@ -93,6 +94,7 @@ namespace BINAES_Proyecto.Forms
             MessageBox.Show("Usuario con id: " + id + " eliminado con éxito");
         }
 
+        /*Generador de un código QR*/
         private void btnGenerar_Click(object sender, EventArgs e)
         {
             QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
@@ -112,6 +114,7 @@ namespace BINAES_Proyecto.Forms
             btnGuardar.Enabled = true;
         }
 
+        /*Guardar el código QR del usuario*/
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Image imgFinal = (Image) picQR.BackgroundImage.Clone();
@@ -127,7 +130,8 @@ namespace BINAES_Proyecto.Forms
             imgFinal.Dispose();
         }
 
-
+ 
+        /*Agregar imagen usuario*/
         private void btnAgregarImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog obtener = new OpenFileDialog();
@@ -144,7 +148,7 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
-
+        /*Confirmar ID del usuario*/
         private void btnConfirmarIDusuario_Click(object sender, EventArgs e)
         {
             string cadena = Resources.Cadena_Conexion;

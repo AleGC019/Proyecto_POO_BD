@@ -221,62 +221,7 @@ namespace BINAES_Proyecto
 
             try
             {
-                /*foreach (var evento in lista)
-                {
-                    if ((DateTime.Compare(fechini, evento.fechFin) > 0 
-                         && DateTime.Compare(fechfin, evento.fechInicio) < 0) && idarea == evento.idareaeve)
-                    {
-                        alguna = true;
-                        todos1 = false;
-                        todos2 = false;
-                    }
-                    else
-                    {
-                        if ((DateTime.Compare(fechini, evento.fechFin) < 0 
-                             && DateTime.Compare(fechfin, evento.fechInicio) < 0) && idarea == evento.idareaeve)//todos1
-                        {
-                            //todos2 = false;
-                            contsameareamin++;
-                        }
-                        else
-                        {
-                            if ((DateTime.Compare(fechini, evento.fechFin) > 0 
-                                 && DateTime.Compare(fechfin, evento.fechInicio) > 0) && idarea == evento.idareaeve)//todos2
-                            {
-                                contsameareamay++;
-                                //todos1 = false;
-                            }
-                            else
-                            {
-                                if (idarea != evento.idareaeve)
-                                {
-                                    contareasdif++;
-                                }
-                                else
-                                {
-                                    todos1 = false;
-                                    todos2 = false;
-                                    alguna = false;   
-                                }
-                            }
-                        }
-                    }
-                    //contador
-                    loops++;//calcula la cantidad de datos/veces q se ha recorrido el bucle
-                }
-
-                loops = loops - contareasdif;//veces recorrido - veces q se comparo con un area diferente
-                if (loops == contsameareamin)
-                {
-                    todos2 = false;
-                }else if (loops == contsameareamay)
-                {
-                    todos1 = false;
-                }else if (loops == 0)
-                {
-                    verify = true;
-                }*/
-                //----PRUEBA DE VERIFICACION DE FECHAS CON BUCLE FOR-----------------
+               
                 
                 int lis = lista.Count;//contar elementos de la lista
                 

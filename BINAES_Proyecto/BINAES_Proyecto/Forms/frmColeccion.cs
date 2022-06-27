@@ -14,7 +14,8 @@ namespace BINAES_Proyecto.Forms
             InitializeComponent();
 
         }
-
+    /*En el formulario de colección se han hecho uso de combo box para poder llenar 
+     la información de las colecciones*/
         private void frmColeccion_Load(object sender, EventArgs e)
         {
 
@@ -50,7 +51,8 @@ namespace BINAES_Proyecto.Forms
             cmbActualizarArea.DataSource = GeneroDAO.CargarDatosArea();
 
         }
-
+        
+        /*Click para mostrar la colección */
         private void btnMostrarColeccion_Click(object sender, EventArgs e)
         {
             
@@ -65,7 +67,7 @@ namespace BINAES_Proyecto.Forms
 
         }
 
-
+        /*Click para crear una colección */
         private void btnCrearColeccion_Click(object sender, EventArgs e)
         {
             if(txtNombreColeccion.TextLength >0 && cmbGenero.Text.Length >0 && cmbTipoColeccion.Text.Length >0 && cmbAreaColeccion.Text.Length >0 ){
@@ -85,7 +87,7 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
-
+        /*Click para botón de eliminar una colección */
         private void btnEliminarColeccion_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtidEliminarColeccion.Text);
@@ -93,7 +95,8 @@ namespace BINAES_Proyecto.Forms
 
             MessageBox.Show("Colección con id: " + id + " eliminada con éxito");
         }
-
+        
+        /*Click para botón de actualizar una colección */
         private void btnActualizarColeccion_Click(object sender, EventArgs e)
         {
             if (txtActualizarColeccion.TextLength > 0 && cmbActualizarGenero.Text.Length > 0 && cmbActualizarTipo.Text.Length > 0 &&
@@ -117,7 +120,7 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
-
+        /*Click para buscar un ID de una colección */
         private void btnBuscarIDcoleccion_Click(object sender, EventArgs e)
         {
             string cadena = Resources.Cadena_Conexion;

@@ -61,7 +61,8 @@ namespace BINAES_Proyecto.Forms
             cmbActualizarIdioma.DisplayMember = "nombreIdioma";
             cmbActualizarIdioma.DataSource = EjemplarDAO.CargarDatosIdiomas();
         }
-
+        
+        /*Click para crear ejemplar*/
         private void btnCrearEjemplar_Click(object sender, EventArgs e)
         {
             if(txtNombreEjemplar.TextLength > 0 && dtpFechaEjemplar.Text.Length >0 && cmbColeccionEjemplar.Text.Length > 0 && cmbEditorial.Text.Length >0 && cmbFomato.Text.Length >0 && cmbIdioma.Text.Length > 0 && imagen.Length > 0 && (txtIsbn.TextLength>0 || txtissn.TextLength > 0 || txtDoi.TextLength >0 )){
@@ -90,7 +91,7 @@ namespace BINAES_Proyecto.Forms
             
         }
         
-
+        /*Click para buscar ejemplar*/
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             switch (cmbOpcionesBuscar.Text.Trim())
@@ -432,17 +433,19 @@ namespace BINAES_Proyecto.Forms
             throw new System.NotImplementedException();
         }
 
-
+        /*Click para crear las palabras clave */
         private void btnCrearPalabrasClave_Click(object sender, EventArgs e)
         {
             new frmCrearPalabrasClave().Show();
         }
-
+        
+        /*Click para crear autores */
         private void btnCrearAutor_Click(object sender, EventArgs e)
         {
             new frmCrearAutor().Show();
         }
-
+        
+        /*Click para agregar imagen de un ejemplar */
         private void btnAgregarImagenEjemplar_Click(object sender, EventArgs e)
         {
             OpenFileDialog obtener = new OpenFileDialog();
@@ -459,6 +462,7 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
+        /*Click para actualizar ejemplar */
         private void btnActualizarEejmplar_Click(object sender, EventArgs e)
         {
             if (txtActualizarNombreEjemplar.TextLength > 0 && dtpActualizarFechaEjemplar.Text.Length > 0 &&
@@ -491,7 +495,8 @@ namespace BINAES_Proyecto.Forms
             
 
         }
-
+        
+        /*Click para actualizar imagen */
         private void btnActualizarImagen_Click(object sender, EventArgs e)
         {
             OpenFileDialog obtener = new OpenFileDialog();
@@ -508,6 +513,7 @@ namespace BINAES_Proyecto.Forms
             }
         }
 
+        /*Click para confirmar ID */
         private void bntConfirmarID_Click(object sender, EventArgs e)
         {
             string cadena = Resources.Cadena_Conexion;
@@ -561,6 +567,7 @@ namespace BINAES_Proyecto.Forms
         }
 
 
+        /*Click para actualizar autor */
         private void btnActualizarAutor_Click(object sender, EventArgs e)
         {
             new frmActualizarAutor().Show();
